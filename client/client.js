@@ -831,7 +831,7 @@ void main(){
 		}
 		//#endregion
 		//#region \0dsh-css:C:\Users\johnl\Documents\dsh-wallpapers\src\client\BlackholeWallpaper.module.css.mjs
-		const css$3 = ".l1FXsa_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.l1FXsa_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.l1FXsa_host[data-interactive] .l1FXsa_canvas{pointer-events:auto;cursor:grab}.l1FXsa_host[data-interactive] .l1FXsa_canvas:active{cursor:grabbing}.l1FXsa_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.l1FXsa_host[data-collapsed] .l1FXsa_panel{transform:translate(calc(100% + 22px))}.l1FXsa_panel::-webkit-scrollbar{width:6px}.l1FXsa_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.l1FXsa_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.l1FXsa_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.l1FXsa_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:14px;right:14px}.l1FXsa_host[data-collapsed] .l1FXsa_open{display:block}.l1FXsa_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.l1FXsa_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.l1FXsa_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.l1FXsa_stats{gap:6px;margin-top:14px;display:flex}.l1FXsa_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.l1FXsa_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.l1FXsa_presets{gap:6px;margin-top:12px;display:flex}.l1FXsa_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.l1FXsa_presets button:hover{background:#ff9a4d33}.l1FXsa_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.l1FXsa_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.l1FXsa_row{margin-bottom:10px}.l1FXsa_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.l1FXsa_labline em{opacity:.7;font-size:10px;font-style:normal}.l1FXsa_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.l1FXsa_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.l1FXsa_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.l1FXsa_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.l1FXsa_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.l1FXsa_checkline{justify-content:space-between;align-items:center;display:flex}.l1FXsa_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.l1FXsa_checkline input[type=checkbox]{accent-color:#ff9a4d}.l1FXsa_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.l1FXsa_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.l1FXsa_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.l1FXsa_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.l1FXsa_panel{width:min(300px,82vw)}}";
+		const css$3 = ".BlackholeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.BlackholeWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas{pointer-events:auto;cursor:grab}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas:active{cursor:grabbing}.BlackholeWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_panel{transform:translate(calc(100% + 22px))}.BlackholeWallpaper-module_panel::-webkit-scrollbar{width:6px}.BlackholeWallpaper-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.BlackholeWallpaper-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.BlackholeWallpaper-module_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:14px;right:14px}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_open{display:block}.BlackholeWallpaper-module_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.BlackholeWallpaper-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.BlackholeWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.BlackholeWallpaper-module_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.BlackholeWallpaper-module_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.BlackholeWallpaper-module_presets{gap:6px;margin-top:12px;display:flex}.BlackholeWallpaper-module_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.BlackholeWallpaper-module_presets button:hover{background:#ff9a4d33}.BlackholeWallpaper-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.BlackholeWallpaper-module_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.BlackholeWallpaper-module_row{margin-bottom:10px}.BlackholeWallpaper-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.BlackholeWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.BlackholeWallpaper-module_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.BlackholeWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.BlackholeWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.BlackholeWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.BlackholeWallpaper-module_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.BlackholeWallpaper-module_checkline input[type=checkbox]{accent-color:#ff9a4d}.BlackholeWallpaper-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.BlackholeWallpaper-module_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.BlackholeWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.BlackholeWallpaper-module_panel{width:min(300px,82vw)}}";
 		const tagId$3 = "dsh-wallpapers/BlackholeWallpaper.module.css";
 		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$3) + "]") === null) {
 			const tag = document.createElement("style");
@@ -841,24 +841,24 @@ void main(){
 			document.head.appendChild(tag);
 		}
 		var BlackholeWallpaper_module_css_default = {
-			"mini": "l1FXsa_mini",
-			"checkline": "l1FXsa_checkline",
-			"panel": "l1FXsa_panel",
-			"toggle": "l1FXsa_toggle",
-			"open": "l1FXsa_open",
-			"head": "l1FXsa_head",
-			"stats": "l1FXsa_stats",
-			"row": "l1FXsa_row",
-			"host": "l1FXsa_host",
-			"stat": "l1FXsa_stat",
-			"val": "l1FXsa_val",
-			"presets": "l1FXsa_presets",
-			"sub": "l1FXsa_sub",
-			"foot": "l1FXsa_foot",
-			"labline": "l1FXsa_labline",
-			"canvas": "l1FXsa_canvas",
-			"fatal": "l1FXsa_fatal",
-			"sec": "l1FXsa_sec"
+			"canvas": "BlackholeWallpaper-module_canvas",
+			"checkline": "BlackholeWallpaper-module_checkline",
+			"fatal": "BlackholeWallpaper-module_fatal",
+			"foot": "BlackholeWallpaper-module_foot",
+			"head": "BlackholeWallpaper-module_head",
+			"host": "BlackholeWallpaper-module_host",
+			"labline": "BlackholeWallpaper-module_labline",
+			"mini": "BlackholeWallpaper-module_mini",
+			"open": "BlackholeWallpaper-module_open",
+			"panel": "BlackholeWallpaper-module_panel",
+			"presets": "BlackholeWallpaper-module_presets",
+			"row": "BlackholeWallpaper-module_row",
+			"sec": "BlackholeWallpaper-module_sec",
+			"stat": "BlackholeWallpaper-module_stat",
+			"stats": "BlackholeWallpaper-module_stats",
+			"sub": "BlackholeWallpaper-module_sub",
+			"toggle": "BlackholeWallpaper-module_toggle",
+			"val": "BlackholeWallpaper-module_val"
 		};
 		//#endregion
 		//#region src/client/BlackholeWallpaper.tsx
@@ -2424,7 +2424,7 @@ void main(){
 		}
 		//#endregion
 		//#region \0dsh-css:C:\Users\johnl\Documents\dsh-wallpapers\src\client\OrbBackdrop.module.css.mjs
-		const css$2 = ".qfHguq_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.qfHguq_canvas{opacity:.5;width:100%;height:100%;position:absolute;inset:0}.qfHguq_wash{opacity:0;transition:opacity 1s;position:absolute;inset:0}.qfHguq_wash[data-on]{opacity:1}.qfHguq_washError{background:radial-gradient(70vmax 55vmax at 50% 46%, color-mix(in srgb, var(--dsw-alias-state-error-primary) 16%, transparent), transparent 68%)}.qfHguq_washSettle{background:radial-gradient(70vmax 55vmax at 50% 46%, color-mix(in srgb, var(--dsw-alias-state-success-primary) 13%, transparent), transparent 68%)}@media (prefers-reduced-motion:reduce){.qfHguq_canvas{opacity:.35}.qfHguq_wash{transition:none}}";
+		const css$2 = ".OrbBackdrop-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.OrbBackdrop-module_canvas{opacity:.5;width:100%;height:100%;position:absolute;inset:0}.OrbBackdrop-module_wash{opacity:0;transition:opacity 1s;position:absolute;inset:0}.OrbBackdrop-module_wash[data-on]{opacity:1}.OrbBackdrop-module_washError{background:radial-gradient(70vmax 55vmax at 50% 46%, color-mix(in srgb, var(--dsw-alias-state-error-primary) 16%, transparent), transparent 68%)}.OrbBackdrop-module_washSettle{background:radial-gradient(70vmax 55vmax at 50% 46%, color-mix(in srgb, var(--dsw-alias-state-success-primary) 13%, transparent), transparent 68%)}@media (prefers-reduced-motion:reduce){.OrbBackdrop-module_canvas{opacity:.35}.OrbBackdrop-module_wash{transition:none}}";
 		const tagId$2 = "dsh-wallpapers/OrbBackdrop.module.css";
 		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$2) + "]") === null) {
 			const tag = document.createElement("style");
@@ -2434,15 +2434,15 @@ void main(){
 			document.head.appendChild(tag);
 		}
 		var OrbBackdrop_module_css_default = {
-			"wash": "qfHguq_wash",
-			"washError": "qfHguq_washError",
-			"host": "qfHguq_host",
-			"washSettle": "qfHguq_washSettle",
-			"canvas": "qfHguq_canvas"
+			"canvas": "OrbBackdrop-module_canvas",
+			"host": "OrbBackdrop-module_host",
+			"wash": "OrbBackdrop-module_wash",
+			"washError": "OrbBackdrop-module_washError",
+			"washSettle": "OrbBackdrop-module_washSettle"
 		};
 		//#endregion
 		//#region \0dsh-css:C:\Users\johnl\Documents\dsh-wallpapers\src\client\OrbsPanel.module.css.mjs
-		const css$1 = ".E6h5wq_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:272px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.E6h5wq_panel[data-collapsed]{transform:translate(calc(100% + 22px))}.E6h5wq_panel::-webkit-scrollbar{width:6px}.E6h5wq_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.E6h5wq_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.E6h5wq_toggle:hover{color:#8fd0ff;border-color:#8fd0ffcc}.E6h5wq_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:14px;right:14px}.E6h5wq_open[data-show]{display:block}.E6h5wq_open:hover{color:#8fd0ff;border-color:#8fd0ffcc}.E6h5wq_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:17px;font-weight:600}.E6h5wq_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.E6h5wq_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.E6h5wq_sec h2{letter-spacing:.22em;color:#8fd0ffcc;margin:0 0 9px;font-size:11px;font-weight:600}.E6h5wq_row{margin-bottom:10px}.E6h5wq_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.E6h5wq_val{color:#8fd0ff;font-family:Consolas,monospace;font-size:12px}.E6h5wq_select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.E6h5wq_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#8fd0ff66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.E6h5wq_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#9fd6ff;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #8fd0ffa6}.E6h5wq_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#9fd6ff;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #8fd0ffa6}.E6h5wq_checkline{justify-content:space-between;align-items:center;display:flex}.E6h5wq_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.E6h5wq_mini:hover{color:#8fd0ff;border-color:#8fd0ffcc}.E6h5wq_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}@media (width<=640px){.E6h5wq_panel{width:min(280px,82vw)}}";
+		const css$1 = ".OrbsPanel-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:272px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.OrbsPanel-module_panel[data-collapsed]{transform:translate(calc(100% + 22px))}.OrbsPanel-module_panel::-webkit-scrollbar{width:6px}.OrbsPanel-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.OrbsPanel-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.OrbsPanel-module_toggle:hover{color:#8fd0ff;border-color:#8fd0ffcc}.OrbsPanel-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:14px;right:14px}.OrbsPanel-module_open[data-show]{display:block}.OrbsPanel-module_open:hover{color:#8fd0ff;border-color:#8fd0ffcc}.OrbsPanel-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:17px;font-weight:600}.OrbsPanel-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.OrbsPanel-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.OrbsPanel-module_sec h2{letter-spacing:.22em;color:#8fd0ffcc;margin:0 0 9px;font-size:11px;font-weight:600}.OrbsPanel-module_row{margin-bottom:10px}.OrbsPanel-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.OrbsPanel-module_val{color:#8fd0ff;font-family:Consolas,monospace;font-size:12px}.OrbsPanel-module_select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.OrbsPanel-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#8fd0ff66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.OrbsPanel-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#9fd6ff;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #8fd0ffa6}.OrbsPanel-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#9fd6ff;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #8fd0ffa6}.OrbsPanel-module_checkline{justify-content:space-between;align-items:center;display:flex}.OrbsPanel-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.OrbsPanel-module_mini:hover{color:#8fd0ff;border-color:#8fd0ffcc}.OrbsPanel-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}@media (width<=640px){.OrbsPanel-module_panel{width:min(280px,82vw)}}";
 		const tagId$1 = "dsh-wallpapers/OrbsPanel.module.css";
 		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$1) + "]") === null) {
 			const tag = document.createElement("style");
@@ -2452,19 +2452,19 @@ void main(){
 			document.head.appendChild(tag);
 		}
 		var OrbsPanel_module_css_default = {
-			"foot": "E6h5wq_foot",
-			"checkline": "E6h5wq_checkline",
-			"head": "E6h5wq_head",
-			"panel": "E6h5wq_panel",
-			"mini": "E6h5wq_mini",
-			"sec": "E6h5wq_sec",
-			"labline": "E6h5wq_labline",
-			"select": "E6h5wq_select",
-			"val": "E6h5wq_val",
-			"row": "E6h5wq_row",
-			"toggle": "E6h5wq_toggle",
-			"open": "E6h5wq_open",
-			"sub": "E6h5wq_sub"
+			"checkline": "OrbsPanel-module_checkline",
+			"foot": "OrbsPanel-module_foot",
+			"head": "OrbsPanel-module_head",
+			"labline": "OrbsPanel-module_labline",
+			"mini": "OrbsPanel-module_mini",
+			"open": "OrbsPanel-module_open",
+			"panel": "OrbsPanel-module_panel",
+			"row": "OrbsPanel-module_row",
+			"sec": "OrbsPanel-module_sec",
+			"select": "OrbsPanel-module_select",
+			"sub": "OrbsPanel-module_sub",
+			"toggle": "OrbsPanel-module_toggle",
+			"val": "OrbsPanel-module_val"
 		};
 		//#endregion
 		//#region src/client/OrbBackdrop.tsx
@@ -3012,7 +3012,7 @@ void main(){
 		}
 		//#endregion
 		//#region \0dsh-css:C:\Users\johnl\Documents\dsh-wallpapers\src\client\WallpaperSection.module.css.mjs
-		const css = ".Terida_page{color:var(--dsw-alias-label-primary);text-align:left;flex-direction:column;gap:6px;padding:4px 0 12px;font-size:13px;display:flex}.Terida_intro{color:var(--dsw-alias-label-tertiary);margin:2px 0 8px;font-size:12px;line-height:1.6}.Terida_opt{width:100%;color:var(--dsw-alias-label-primary);cursor:pointer;text-align:left;box-sizing:border-box;background:0 0;border:none;border-radius:10px;align-items:center;gap:12px;padding:11px 12px;font-family:inherit;font-size:13px;transition:background .12s;display:flex}.Terida_opt:hover{background:var(--dsw-alias-interactive-bg-hover)}.Terida_on{background:var(--dsw-alias-interactive-bg-hover-accent)}.Terida_dot{border:1.5px solid var(--dsw-alias-label-tertiary);box-sizing:border-box;border-radius:50%;flex:none;width:16px;height:16px;position:relative}.Terida_on .Terida_dot{border-color:var(--dsw-alias-state-business-primary)}.Terida_on .Terida_dot:after{content:\"\";background:var(--dsw-alias-state-business-primary);border-radius:50%;position:absolute;inset:3px}.Terida_opttxt{flex-direction:column;gap:2px;min-width:0;display:flex}.Terida_optlabel{font-size:13px;font-weight:500;line-height:19px}.Terida_optnote{color:var(--dsw-alias-label-tertiary);font-size:11.5px;line-height:16px}.Terida_hint{border:1px solid var(--dsw-alias-border-l1);color:var(--dsw-alias-label-tertiary);border-radius:10px;margin-top:10px;padding:10px 12px;font-size:11.5px;line-height:1.6}";
+		const css = ".WallpaperSection-module_page{color:var(--dsw-alias-label-primary);text-align:left;flex-direction:column;gap:6px;padding:4px 0 12px;font-size:13px;display:flex}.WallpaperSection-module_intro{color:var(--dsw-alias-label-tertiary);margin:2px 0 8px;font-size:12px;line-height:1.6}.WallpaperSection-module_opt{width:100%;color:var(--dsw-alias-label-primary);cursor:pointer;text-align:left;box-sizing:border-box;background:0 0;border:none;border-radius:10px;align-items:center;gap:12px;padding:11px 12px;font-family:inherit;font-size:13px;transition:background .12s;display:flex}.WallpaperSection-module_opt:hover{background:var(--dsw-alias-interactive-bg-hover)}.WallpaperSection-module_on{background:var(--dsw-alias-interactive-bg-hover-accent)}.WallpaperSection-module_dot{border:1.5px solid var(--dsw-alias-label-tertiary);box-sizing:border-box;border-radius:50%;flex:none;width:16px;height:16px;position:relative}.WallpaperSection-module_on .WallpaperSection-module_dot{border-color:var(--dsw-alias-state-business-primary)}.WallpaperSection-module_on .WallpaperSection-module_dot:after{content:\"\";background:var(--dsw-alias-state-business-primary);border-radius:50%;position:absolute;inset:3px}.WallpaperSection-module_opttxt{flex-direction:column;gap:2px;min-width:0;display:flex}.WallpaperSection-module_optlabel{font-size:13px;font-weight:500;line-height:19px}.WallpaperSection-module_optnote{color:var(--dsw-alias-label-tertiary);font-size:11.5px;line-height:16px}.WallpaperSection-module_hint{border:1px solid var(--dsw-alias-border-l1);color:var(--dsw-alias-label-tertiary);border-radius:10px;margin-top:10px;padding:10px 12px;font-size:11.5px;line-height:1.6}";
 		const tagId = "dsh-wallpapers/WallpaperSection.module.css";
 		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId) + "]") === null) {
 			const tag = document.createElement("style");
@@ -3022,15 +3022,15 @@ void main(){
 			document.head.appendChild(tag);
 		}
 		var WallpaperSection_module_css_default = {
-			"intro": "Terida_intro",
-			"opttxt": "Terida_opttxt",
-			"opt": "Terida_opt",
-			"on": "Terida_on",
-			"page": "Terida_page",
-			"optnote": "Terida_optnote",
-			"hint": "Terida_hint",
-			"dot": "Terida_dot",
-			"optlabel": "Terida_optlabel"
+			"dot": "WallpaperSection-module_dot",
+			"hint": "WallpaperSection-module_hint",
+			"intro": "WallpaperSection-module_intro",
+			"on": "WallpaperSection-module_on",
+			"opt": "WallpaperSection-module_opt",
+			"optlabel": "WallpaperSection-module_optlabel",
+			"optnote": "WallpaperSection-module_optnote",
+			"opttxt": "WallpaperSection-module_opttxt",
+			"page": "WallpaperSection-module_page"
 		};
 		//#endregion
 		//#region src/client/WallpaperSection.tsx

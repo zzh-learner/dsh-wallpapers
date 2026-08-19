@@ -93,11 +93,19 @@ export default defineConfig([
         const { code, exports: cssExports } = transform({
           filename: stableName,
           code: source,
-          cssModules: { pattern: '[hash]_[local]' },
+          // [hash] carries a per-process random salt in lightningcss, so two
+          // builds of the same tree never agree byte-for-byte. [name]_[local]
+          // is deterministic and unique while css module basenames are
+          // distinct (they are: five files, five basenames).
+          cssModules: { pattern: '[name]_[local]' },
           minify: true,
         })
+        // lightningcss returns the export map in a per-process order; sort so
+        // the emitted class-map object is byte-stable across builds.
         const classMap: Record<string, string> = {}
-        for (const [local, exp] of Object.entries(cssExports ?? {})) classMap[local] = exp.name
+        for (const [local, exp] of Object.entries(cssExports ?? {}).sort(([a], [b]) => a.localeCompare(b))) {
+          classMap[local] = exp.name
+        }
         // One <style data-plugin> per module file; idempotent under re-evaluation.
         return [
           `const css = ${JSON.stringify(code.toString())};`,
