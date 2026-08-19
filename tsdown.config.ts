@@ -9,7 +9,7 @@
  * tag at factory execution (the loader removes plugin-owned tags on unload).
  */
 import { readFile } from 'node:fs/promises'
-import { basename, dirname, resolve as resolvePath } from 'node:path'
+import { basename, dirname, relative, resolve as resolvePath } from 'node:path'
 import { defineConfig } from 'tsdown'
 import { transform } from 'lightningcss'
 
@@ -33,6 +33,9 @@ const CSS_VIRTUAL_SUFFIX = '.mjs'
 function sourceAssetPath(source: string, importer: string): string {
   return resolvePath(dirname(importer), source)
 }
+
+/** Physical stylesheet path per stable virtual id (see the css plugin below). */
+const cssFiles = new Map<string, string>()
 
 export default defineConfig([
   {
@@ -77,11 +80,18 @@ export default defineConfig([
       resolveId(source: string, importer: string | undefined) {
         if (!source.endsWith('.module.css')) return null
         const abs = importer !== undefined ? sourceAssetPath(source, importer) : source
-        return CSS_VIRTUAL_PREFIX + abs + CSS_VIRTUAL_SUFFIX
+        // rolldown stamps the module id into //#region comments, so the id
+        // must not carry the checkout-specific absolute path; physical paths
+        // ride the side table instead.
+        const stable = relative(process.cwd(), abs).split('\\').join('/')
+        const virtualId = CSS_VIRTUAL_PREFIX + stable + CSS_VIRTUAL_SUFFIX
+        cssFiles.set(virtualId, abs)
+        return virtualId
       },
       async load(virtualId: string) {
         if (!virtualId.startsWith(CSS_VIRTUAL_PREFIX)) return null
-        const fileId = virtualId.slice(CSS_VIRTUAL_PREFIX.length, -CSS_VIRTUAL_SUFFIX.length)
+        const fileId = cssFiles.get(virtualId)
+        if (fileId === undefined) return null
         // The virtual id otherwise hides the physical stylesheet from watch graphs.
         this.addWatchFile(fileId)
         const source = await readFile(fileId)
