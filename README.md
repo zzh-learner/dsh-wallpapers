@@ -16,14 +16,9 @@ Requires the `dsh` CLI. Into the `web` profile (or any profile name):
 dsh plugin --profile web add github:zzh-learner/dsh-wallpapers
 ```
 
-pnpm ≥ 10 refuses to run a git dependency's `prepare` script until you allow it: after the first `add` fails, copy the package key pnpm prints into that profile's `pnpm-workspace.yaml` and re-run:
+The install runs no build scripts: `lib/` and `client/` build artifacts are committed, and the package deliberately carries no `prepare` script, so pnpm ≥ 10 has nothing to block — no `allowBuilds` entry needed. CI verifies the committed artifacts match `pnpm run build` on every push.
 
-```yaml
-allowBuilds:
-  dsh-wallpapers: true
-```
-
-Lock to a commit with `github:zzh-learner/dsh-wallpapers#<sha>` so later pushes cannot change what runs. Publishing to npm or packing a tarball (`pnpm pack`, then `dsh plugin --profile web add ./dsh-wallpapers-0.1.0.tgz`) avoids the build permission entirely.
+Lock to a commit with `github:zzh-learner/dsh-wallpapers#<sha>` so later pushes cannot change what runs.
 
 Verify the layer, then start:
 

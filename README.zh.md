@@ -16,14 +16,9 @@
 dsh plugin --profile web add github:zzh-learner/dsh-wallpapers
 ```
 
-pnpm ≥ 10 默认拒绝运行 git 依赖的 `prepare` 脚本：首次 `add` 失败后，把 pnpm 打印的包键加进该 profile 的 `pnpm-workspace.yaml` 再执行一次：
+安装过程不运行任何构建脚本：`lib/` 与 `client/` 产物直接提交在仓库里，包内刻意不设 `prepare` 脚本，pnpm ≥ 10 无脚本可拦——不需要任何 `allowBuilds` 授权。CI 会在每次推送时校验已提交产物与 `pnpm run build` 一致。
 
-```yaml
-allowBuilds:
-  dsh-wallpapers: true
-```
-
-锁定 commit 用 `github:zzh-learner/dsh-wallpapers#<sha>`，避免后续推送悄悄改变实际运行内容。发布到 npm 或直接交付 tarball（`pnpm pack` 后 `dsh plugin --profile web add ./dsh-wallpapers-0.1.0.tgz`）则完全不需要构建授权。
+锁定 commit 用 `github:zzh-learner/dsh-wallpapers#<sha>`，避免后续推送悄悄改变实际运行内容。
 
 验证层并启动：
 

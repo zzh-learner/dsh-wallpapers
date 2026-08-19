@@ -49,7 +49,6 @@
   "scripts": {
     "build": "tsdown",
     "prepack": "tsdown",
-    "prepare": "tsdown",
     "typecheck": "tsc -p tsconfig.json"
   },
   "dependencies": {
