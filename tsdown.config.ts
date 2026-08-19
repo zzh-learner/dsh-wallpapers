@@ -85,8 +85,13 @@ export default defineConfig([
         // The virtual id otherwise hides the physical stylesheet from watch graphs.
         this.addWatchFile(fileId)
         const source = await readFile(fileId)
+        // The class-name hash input must be machine-independent: lightningcss
+        // hashes the filename it is given, and the absolute path differs per
+        // checkout, which would make committed artifacts non-reproducible. A
+        // stable package-relative name keeps [hash] identical everywhere.
+        const stableName = `${id}/${basename(fileId)}`
         const { code, exports: cssExports } = transform({
-          filename: fileId,
+          filename: stableName,
           code: source,
           cssModules: { pattern: '[hash]_[local]' },
           minify: true,
