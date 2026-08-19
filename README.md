@@ -16,6 +16,12 @@ Requires the `dsh` CLI. Into the `web` profile (or any profile name):
 dsh plugin --profile web add github:zzh-learner/dsh-wallpapers
 ```
 
+How you invoke `dsh` depends on the install form of DeepSeek Harness:
+
+- npm global install (`npm i -g @deepseek-ai/dsh`): `dsh ...` as written above.
+- No install: prefix with npx — `npx @deepseek-ai/dsh plugin --profile web add ...`.
+- Source checkout: run `pnpm dsh ...` from the repository root — the checkout puts no `dsh` on PATH.
+
 The install runs no build scripts: `lib/` and `client/` build artifacts are committed, and the package deliberately carries no `prepare` script, so pnpm ≥ 10 has nothing to block — no `allowBuilds` entry needed. CI verifies the committed artifacts match `pnpm run build` on every push.
 
 Lock to a commit with `github:zzh-learner/dsh-wallpapers#<sha>` so later pushes cannot change what runs.

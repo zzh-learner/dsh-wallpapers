@@ -16,6 +16,12 @@
 dsh plugin --profile web add github:zzh-learner/dsh-wallpapers
 ```
 
+`dsh` 的调用形式取决于 DeepSeek Harness 的安装方式：
+
+- npm 全局安装（`npm i -g @deepseek-ai/dsh`）：按上文的 `dsh ...` 直接使用。
+- 免安装：加 npx 前缀 —— `npx @deepseek-ai/dsh plugin --profile web add ...`。
+- 源码检出：在仓库根目录用 `pnpm dsh ...` 调用 —— 检出本身不会把 `dsh` 放进 PATH。
+
 安装过程不运行任何构建脚本：`lib/` 与 `client/` 产物直接提交在仓库里，包内刻意不设 `prepare` 脚本，pnpm ≥ 10 无脚本可拦——不需要任何 `allowBuilds` 授权。CI 会在每次推送时校验已提交产物与 `pnpm run build` 一致。
 
 锁定 commit 用 `github:zzh-learner/dsh-wallpapers#<sha>`，避免后续推送悄悄改变实际运行内容。
