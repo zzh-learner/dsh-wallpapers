@@ -15,8 +15,8 @@ import type { OrbPhase } from './phase.ts'
 export interface OrbsConfig {
   /** Phase → mode overrides; phases absent here keep the shipped mapping. */
   readonly phaseModes: Partial<Record<OrbPhase, OrbMode>>
-  /** The idle (drift) mode: 'auto' rotates the curated tour, else pinned. */
-  readonly idleMode: 'auto' | OrbMode
+  /** The idle (drift) mode: 'auto' rotates the curated tour, 'none' hides the orb, else pinned. */
+  readonly idleMode: 'auto' | 'none' | OrbMode
   /** Particle-count multiplier (scales every mode's count knobs). */
   readonly density: number
   /** Animation-speed multiplier on top of the busyness factor. */

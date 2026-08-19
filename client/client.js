@@ -2577,6 +2577,7 @@ void main(){
 				let raf = 0;
 				let disposed = false;
 				let runningLoop = true;
+				let orbAlpha = configRef.current.idleMode === "none" ? 0 : 1;
 				let mode = "morph";
 				let prevMode = null;
 				let since = 0;
@@ -2608,7 +2609,7 @@ void main(){
 				/** The configured mode for a phase; null keeps the shipped behavior. */
 				function modeForPhase(phase) {
 					const cfg = configRef.current;
-					if (phase === "drift") return cfg.idleMode === "auto" ? null : cfg.idleMode;
+					if (phase === "drift") return cfg.idleMode === "auto" || cfg.idleMode === "none" ? null : cfg.idleMode;
 					return cfg.phaseModes[phase] ?? null;
 				}
 				/** Resolve the mode for a phase, rotating while idle and crossfading changes. */
@@ -2640,12 +2641,17 @@ void main(){
 					}
 					return mode;
 				}
-				function draw(now, phase) {
+				function draw(now, phase, dt) {
 					if (width <= 0 || cellSize <= 0) return;
 					const cfg = configRef.current;
 					const dpr = dprOf();
 					g.setTransform(dpr, 0, 0, dpr, 0, 0);
 					g.clearRect(0, 0, width, height);
+					orbAlpha = phase === "drift" && cfg.idleMode === "none" ? Math.max(0, orbAlpha - dt / FADE_SECONDS) : Math.min(1, orbAlpha + dt / FADE_SECONDS);
+					if (orbAlpha <= 0) {
+						prevMode = null;
+						return;
+					}
 					const speed = orbSpeed(countersRef.current.runningCount, countersRef.current.toolsOpen) * cfg.speed;
 					const currentMode = modeFor(now, phase);
 					const k = prevMode === null ? 1 : Math.min(1, (now - since) / FADE_SECONDS);
@@ -2653,10 +2659,10 @@ void main(){
 					g.save();
 					g.translate(cellX - cellSize / 2, cellY - cellSize / 2);
 					if (prevMode !== null) {
-						g.globalAlpha = 1 - k;
+						g.globalAlpha = (1 - k) * orbAlpha;
 						paintScene(g, orbScene(prevMode, cellSize, now * ORB_SPEEDS[prevMode] * speed, densityOverrides(prevMode, cfg.density)), dark);
 					}
-					g.globalAlpha = k;
+					g.globalAlpha = k * orbAlpha;
 					const dense = densityOverrides(currentMode, cfg.density);
 					paintScene(g, orbScene(currentMode, cellSize, now * ORB_SPEEDS[currentMode] * speed, dense), dark);
 					g.restore();
@@ -2690,7 +2696,7 @@ void main(){
 					draw(clock, orbPhase(factsRef.current, {
 						error: wall < errorUntil,
 						settle: wall < settleUntil
-					}));
+					}), dt);
 				}
 				relayout();
 				dark = pageIsDark(canvas);
@@ -2715,7 +2721,7 @@ void main(){
 					else pauseLoop();
 				};
 				visibility.apply(visibility.desired);
-				if (reduced) draw(.6, "drift");
+				if (reduced) draw(.6, "drift", 0);
 				else raf = requestAnimationFrame(frame);
 				return () => {
 					disposed = true;
@@ -2733,10 +2739,13 @@ void main(){
 			const setPhaseMode = (phase, value) => {
 				setConfig((prev) => {
 					if (phase === "drift") {
-						const idleMode = value === "auto" ? "auto" : value;
+						if (value === "auto" || value === "none") return {
+							...prev,
+							idleMode: value
+						};
 						return {
 							...prev,
-							idleMode
+							idleMode: value
 						};
 					}
 					if (value === "default") {
@@ -2823,10 +2832,13 @@ void main(){
 										onChange: (e) => {
 											setPhaseMode(phase, e.target.value);
 										},
-										children: [phase === "drift" ? /* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
+										children: [phase === "drift" ? /* @__PURE__ */ (0, react_jsx_runtime.jsxs)(react_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
 											value: "auto",
 											children: "自动轮换"
-										}) : /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("option", {
+										}), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
+											value: "none",
+											children: "无（空闲时隐藏）"
+										})] }) : /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("option", {
 											value: "default",
 											children: [
 												"默认（",

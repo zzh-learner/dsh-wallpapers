@@ -126,6 +126,9 @@ export function OrbBackdrop({ useSessions }: OrbBackdropProps) {
     let disposed = false
     let runningLoop = true
 
+    // Master display alpha: eases to 0 while idle is configured 'none' so
+    // the orb fades out on entering idle and fades back in on any activity.
+    let orbAlpha = configRef.current.idleMode === 'none' ? 0 : 1
     // One orb's mode bookkeeping.
     let mode: OrbMode = 'morph'
     let prevMode: OrbMode | null = null
@@ -165,7 +168,9 @@ export function OrbBackdrop({ useSessions }: OrbBackdropProps) {
     function modeForPhase(phase: OrbPhase): OrbMode | null {
       const cfg = configRef.current
       if (phase === 'drift') {
-        return cfg.idleMode === 'auto' ? null : cfg.idleMode
+        // 'none' hides the orb at the draw level (master alpha), not here:
+        // the mode system keeps rotating so a fading-out frame still paints.
+        return cfg.idleMode === 'auto' || cfg.idleMode === 'none' ? null : cfg.idleMode
       }
       return cfg.phaseModes[phase] ?? null
     }
@@ -203,12 +208,23 @@ export function OrbBackdrop({ useSessions }: OrbBackdropProps) {
       return mode
     }
 
-    function draw(now: number, phase: OrbPhase): void {
+    function draw(now: number, phase: OrbPhase, dt: number): void {
       if (width <= 0 || cellSize <= 0) return
       const cfg = configRef.current
       const dpr = dprOf()
       g.setTransform(dpr, 0, 0, dpr, 0, 0)
       g.clearRect(0, 0, width, height)
+      // Idle-'none' hides the whole orb: ease the master alpha toward its
+      // target (0 hidden, 1 shown) so both edges of idle crossfade instead
+      // of popping. dt=0 (the reduced-motion single draw) samples the
+      // initialized value without easing.
+      const hidden = phase === 'drift' && cfg.idleMode === 'none'
+      orbAlpha = hidden ? Math.max(0, orbAlpha - dt / FADE_SECONDS)
+        : Math.min(1, orbAlpha + dt / FADE_SECONDS)
+      if (orbAlpha <= 0) {
+        prevMode = null
+        return
+      }
       const speed = orbSpeed(countersRef.current.runningCount, countersRef.current.toolsOpen) * cfg.speed
       const currentMode = modeFor(now, phase)
       const k = prevMode === null ? 1 : Math.min(1, (now - since) / FADE_SECONDS)
@@ -216,10 +232,10 @@ export function OrbBackdrop({ useSessions }: OrbBackdropProps) {
       g.save()
       g.translate(cellX - cellSize / 2, cellY - cellSize / 2)
       if (prevMode !== null) {
-        g.globalAlpha = 1 - k
+        g.globalAlpha = (1 - k) * orbAlpha
         paintScene(g, orbScene(prevMode, cellSize, now * ORB_SPEEDS[prevMode] * speed, densityOverrides(prevMode, cfg.density)), dark)
       }
-      g.globalAlpha = k
+      g.globalAlpha = k * orbAlpha
       const dense = densityOverrides(currentMode, cfg.density)
       paintScene(g, orbScene(currentMode, cellSize, now * ORB_SPEEDS[currentMode] * speed, dense), dark)
       g.restore()
@@ -255,7 +271,7 @@ export function OrbBackdrop({ useSessions }: OrbBackdropProps) {
         setOutcome(nextOutcome)
       }
 
-      draw(clock, orbPhase(factsRef.current, { error: wall < errorUntil, settle: wall < settleUntil }))
+      draw(clock, orbPhase(factsRef.current, { error: wall < errorUntil, settle: wall < settleUntil }), dt)
     }
 
     relayout()
@@ -288,7 +304,7 @@ export function OrbBackdrop({ useSessions }: OrbBackdropProps) {
     visibility.apply(visibility.desired)
 
     if (reduced) {
-      draw(0.6, 'drift')
+      draw(0.6, 'drift', 0)
     } else {
       raf = requestAnimationFrame(frame)
     }
@@ -309,8 +325,8 @@ export function OrbBackdrop({ useSessions }: OrbBackdropProps) {
   const setPhaseMode = (phase: OrbPhase, value: string): void => {
     setConfig((prev) => {
       if (phase === 'drift') {
-        const idleMode = value === 'auto' ? 'auto' as const : value as OrbMode
-        return { ...prev, idleMode }
+        if (value === 'auto' || value === 'none') return { ...prev, idleMode: value }
+        return { ...prev, idleMode: value as OrbMode }
       }
       if (value === 'default') {
         const kept = Object.fromEntries(
@@ -352,7 +368,10 @@ export function OrbBackdrop({ useSessions }: OrbBackdropProps) {
                 onChange={(e) => { setPhaseMode(phase, e.target.value) }}
               >
                 {phase === 'drift'
-                  ? <option value="auto">自动轮换</option>
+                  ? <>
+                    <option value="auto">自动轮换</option>
+                    <option value="none">无（空闲时隐藏）</option>
+                  </>
                   : <option value="default">默认（{MODE_LABELS[PHASE_MODE[phase]]}）</option>}
                 {ALL_MODES.map(m => <option key={m} value={m}>{MODE_LABELS[m]}</option>)}
               </select>
