@@ -1,0 +1,71 @@
+{
+  "name": "dsh-wallpapers",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness wallpapers: the wallpaper registry (Settings section + background-layer service), the thinking-orb canvas, the GARGANTUA black-hole WebGL2 layer, and the orbActivity session projection that feeds them · DSH 壁纸三件套：思考球体 + 黑洞 + 壁纸注册表",
+  "type": "module",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "wallpaper"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzh-learner/dsh-wallpapers.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md",
+    "README.zh.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "prepack": "tsdown",
+    "prepare": "tsdown",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-client-ui-settings": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-client-ui-layout": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-client-ui-slots": "0.1.0-rc.7",
+    "@deepseek-ai/dsh-session-projection": "0.1.0-rc.7",
+    "@types/react": "~18.3.1",
+    "lightningcss": "^1.33.0",
+    "react": "^18.3.1",
+    "tsdown": "^0.22.14",
+    "typescript": "^7.0.2"
+  }
+}
