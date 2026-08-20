@@ -147,7 +147,7 @@ export function BlackholeWallpaper() {
   const [quality, setQualityState] = useState(1)
   const [autoRotate, setAutoRotate] = useState(true)
   const [interactive, setInteractive] = useState(false)
-  const [collapsed, setCollapsed] = useState(false)
+  const [collapsed, setCollapsed] = useState(true)
   const [error, setError] = useState('')
 
   useEffect(() => {

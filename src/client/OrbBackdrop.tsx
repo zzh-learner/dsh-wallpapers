@@ -68,7 +68,7 @@ export function OrbBackdrop({ useSessions }: OrbBackdropProps) {
   const hostRef = useRef<HTMLDivElement | null>(null)
   const [outcome, setOutcome] = useState<'error' | 'settle' | null>(null)
   const [config, setConfig] = useState<OrbsConfig>(loadConfig)
-  const [collapsed, setCollapsed] = useState(false)
+  const [collapsed, setCollapsed] = useState(true)
   const configRef = useRef(config)
   configRef.current = config
 

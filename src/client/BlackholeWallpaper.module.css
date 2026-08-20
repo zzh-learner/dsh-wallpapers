@@ -89,7 +89,9 @@
 .open {
   display: none;
   position: fixed;
-  top: 14px;
+  /* Below the conversation header (≈44px incl. the Session log utilities row)
+     and the details-column header (≈55px), so the pill never covers them. */
+  top: 60px;
   right: 14px;
   z-index: 2;
   pointer-events: auto;
