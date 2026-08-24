@@ -1,7 +1,8 @@
 /**
  * Browser half of dsh-wallpapers: the wallpaper registry (a page-local
  * service background layers register into) plus its Settings section, the
- * thinking-orb canvas, and the GARGANTUA black-hole layer. Selection persists
+ * thinking-orb canvas, the GARGANTUA black-hole layer, and the Kerr-Newman
+ * black-hole layer. Selection persists
  * in localStorage; wallpapers that register while not selected are hidden
  * through their own `show`/`hide` callbacks (a hidden layer pauses its
  * render loop), so no slot shadowing is involved.
@@ -15,6 +16,7 @@ import type { ClientContext } from '@deepseek-ai/dsh-client-runtime/client'
 import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
 import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
 import { BlackholeWallpaper, visibility as blackholeVisibility } from './BlackholeWallpaper.tsx'
+import { KerrNewmanWallpaper, visibility as kerrNewmanVisibility } from './KerrNewmanWallpaper.tsx'
 import { OrbBackdrop, visibility as orbsVisibility } from './OrbBackdrop.tsx'
 import { createWallpaperRegistry } from './registry.ts'
 import type { WallpaperRegistry } from './registry.ts'
@@ -87,4 +89,23 @@ export function apply(ctx: ClientContext): void {
     },
   })
   ctx.effect(() => stopBlackhole)
+
+  ctx.slots.inject('shell.overlay', () => ctx.slots.register(
+    { name: 'shell.overlay', id: 'kerr-newman-wallpaper', order: -1900, label: 'Kerr–Newman 黑洞壁纸' },
+    KerrNewmanWallpaper,
+  ))
+  const stopKerrNewman = registry.register({
+    id: 'kerr-newman',
+    label: 'Kerr–Newman 黑洞',
+    note: 'KN 度规哈密顿光追 · 体积吸积盘',
+    show: () => {
+      kerrNewmanVisibility.desired = true
+      kerrNewmanVisibility.apply?.(true)
+    },
+    hide: () => {
+      kerrNewmanVisibility.desired = false
+      kerrNewmanVisibility.apply?.(false)
+    },
+  })
+  ctx.effect(() => stopKerrNewman)
 }

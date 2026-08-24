@@ -1,10 +1,11 @@
 # dsh-wallpapers
 
-[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）的壁纸插件组合包：壁纸注册表 + 思考球体 + GARGANTUA 黑洞。
+[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）的壁纸插件组合包：壁纸注册表 + 思考球体 + GARGANTUA 黑洞 + Kerr–Newman 黑洞。
 
 - **壁纸注册表** —— 页面级 `wallpaper.registry` 服务，背景层向它注册；设置 → 壁纸 分区负责列出与切换，选择持久化在 localStorage。
 - **思考球体** —— 居中主视觉画布，按会话实时相位（进行中的工具名、流式位、回合结果）渲染对应模式，数据来自 `orbActivity` 会话投影；可折叠面板支持相位→模式映射、闲置模式、密度/速度/尺寸。
 - **GARGANTUA 黑洞** —— 零依赖 WebGL2 黑洞光线追踪（引力透镜、吸积盘、泛光），半透明背景层，自带控制面板。
+- **Kerr–Newman 黑洞** —— 严格 KN 度规（ingoing Kerr–Schild 笛卡尔坐标）下的哈密顿光子追踪：RK4 + 零约束再投影、自适应自然仿射步长、红移发散间接判定视界、含多普勒/引力频移与红化消光的湍流体积吸积盘、奇环另一侧反宇宙（天空补色）、a/Q 可调超过 1 观察裸奇环；后处理含泛光/色散/ACES。单文件原型在 `playground/kerr-newman.html`。
 
 宿主半边通过 session-projection 接口注册 `orbActivity` 投影；浏览器半边是全部 UI。通过注册表隐藏壁纸会暂停其渲染循环。
 
@@ -41,7 +42,7 @@ pnpm run build       # tsdown：lib/（宿主半边）+ client/（浏览器 bund
 pnpm run typecheck
 ```
 
-源码布局：`src/index.ts` 是宿主半边（投影注册）；`src/client/` 是浏览器半边（注册表、设置分区、球体、黑洞）。client bundle 是包裹 `window.__ModuleLoader__.load` 的闭包工厂产物，react 经 loader 模块表外部化——即 harness 客户端预设的外部包移植。
+源码布局：`src/index.ts` 是宿主半边（投影注册）；`src/client/` 是浏览器半边（注册表、设置分区、球体、黑洞、kerr-newman）。client bundle 是包裹 `window.__ModuleLoader__.load` 的闭包工厂产物，react 经 loader 模块表外部化——即 harness 客户端预设的外部包移植。
 
 ## 许可
 

@@ -294,7 +294,7 @@ void main(){
 		*
 		* @module dsh-wallpapers/src/client/engine
 		*/
-		const QUALITIES = [
+		const QUALITIES$1 = [
 			{
 				scale: .5,
 				steps: 130
@@ -308,13 +308,13 @@ void main(){
 				steps: 320
 			}
 		];
-		const FALLBACK_QUALITY = {
+		const FALLBACK_QUALITY$1 = {
 			scale: .75,
 			steps: 220
 		};
 		const FOV_TAN = Math.tan(31 * Math.PI / 180);
 		/** Scene-pass uniform names (drives the LS mapped type). */
-		const SCENE_UNIFORMS = [
+		const SCENE_UNIFORMS$1 = [
 			"uRes",
 			"uTime",
 			"uCamPos",
@@ -343,11 +343,11 @@ void main(){
 			"uRes",
 			"uDim"
 		];
-		const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+		const clamp$1 = (x, a, b) => Math.min(b, Math.max(a, x));
 		/* v8 ignore next -- qualityIdx is only written via clamp(i, 0, 2), so the index always lands inside QUALITIES */
-		const qualityAt = (i) => QUALITIES[i] ?? FALLBACK_QUALITY;
+		const qualityAt$1 = (i) => QUALITIES$1[i] ?? FALLBACK_QUALITY$1;
 		/** Dead API handed back when WebGL2 is unavailable; every method is a no-op. */
-		const deadEngine = (report, message) => ({
+		const deadEngine$1 = (report, message) => ({
 			setParams() {
 				report(message);
 			},
@@ -393,7 +393,7 @@ void main(){
 			const report = (m) => {
 				cbs.onFatal?.(m);
 			};
-			if (canvasParam === null) return deadEngine(report, "画布未就绪。");
+			if (canvasParam === null) return deadEngine$1(report, "画布未就绪。");
 			const canvas = canvasParam;
 			const glRaw = canvas.getContext("webgl2", {
 				antialias: false,
@@ -402,7 +402,7 @@ void main(){
 				alpha: true,
 				powerPreference: "high-performance"
 			});
-			if (glRaw === null) return deadEngine(report, "当前浏览器不支持 WebGL2，无法渲染黑洞壁纸。");
+			if (glRaw === null) return deadEngine$1(report, "当前浏览器不支持 WebGL2，无法渲染黑洞壁纸。");
 			const gl = glRaw;
 			let qualityIdx = 1;
 			let qualityLocked = false;
@@ -462,7 +462,7 @@ void main(){
 				progBright = program(VERT_SRC, BRIGHT_FRAG);
 				progBlur = program(VERT_SRC, BLUR_FRAG);
 				progComp = program(VERT_SRC, COMPOSITE_FRAG);
-				LS = locs(progScene, SCENE_UNIFORMS);
+				LS = locs(progScene, SCENE_UNIFORMS$1);
 				LB = locs(progBright, ["uTex"]);
 				LBl = locs(progBlur, ["uTex", "uDir"]);
 				LC = locs(progComp, COMPOSITE_UNIFORMS);
@@ -482,7 +482,7 @@ void main(){
 				gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
 				gl.bindVertexArray(null);
 			} catch {
-				return deadEngine(report, "WebGL2 初始化失败。");
+				return deadEngine$1(report, "WebGL2 初始化失败。");
 			}
 			function makeTarget(w, h) {
 				const tex = gl.createTexture();
@@ -516,7 +516,7 @@ void main(){
 			let RH = 2;
 			function resize() {
 				const dpr = Math.min(window.devicePixelRatio || 1, 2);
-				const s = shotScale > 0 ? shotScale : qualityAt(qualityIdx).scale;
+				const s = shotScale > 0 ? shotScale : qualityAt$1(qualityIdx).scale;
 				RW = Math.max(2, Math.round(canvas.clientWidth * dpr * s));
 				RH = Math.max(2, Math.round(canvas.clientHeight * dpr * s));
 				if (canvas.width !== RW || canvas.height !== RH) {
@@ -549,8 +549,8 @@ void main(){
 					cam.vyaw *= d;
 					cam.vpitch *= d;
 				}
-				cam.pitch = clamp(cam.pitch, -1.45, 1.45);
-				cam.dist = clamp(cam.dist, 2.2, 70);
+				cam.pitch = clamp$1(cam.pitch, -1.45, 1.45);
+				cam.dist = clamp$1(cam.dist, 2.2, 70);
 				const cp = Math.cos(cam.pitch), sp = Math.sin(cam.pitch);
 				const cy = Math.cos(cam.yaw), sy = Math.sin(cam.yaw);
 				camPos[0] = cam.dist * cp * sy;
@@ -645,7 +645,7 @@ void main(){
 				gl.uniform3fv(LS.uCamPos, camPos);
 				gl.uniformMatrix3fv(LS.uCamMat, false, camMat);
 				gl.uniform1f(LS.uFovTan, FOV_TAN);
-				gl.uniform1i(LS.uSteps, qualityAt(qualityIdx).steps);
+				gl.uniform1i(LS.uSteps, qualityAt$1(qualityIdx).steps);
 				gl.uniform1f(LS.uRs, P.rs);
 				gl.uniform1f(LS.uDiskIn, P.diskIn * P.rs);
 				gl.uniform1f(LS.uDiskOut, P.diskOut * P.rs);
@@ -705,7 +705,7 @@ void main(){
 			}
 			const nowMs = () => performance.now();
 			function setQuality(i, locked) {
-				qualityIdx = clamp(i, 0, 2);
+				qualityIdx = clamp$1(i, 0, 2);
 				if (locked) qualityLocked = true;
 				resize();
 				cbs.onQuality?.(qualityIdx);
@@ -716,7 +716,7 @@ void main(){
 				const dt = Math.min((now - last) / 1e3, .1);
 				last = now;
 				if (shotPending) {
-					shotScale = Math.min(1, qualityAt(qualityIdx).scale);
+					shotScale = Math.min(1, qualityAt$1(qualityIdx).scale);
 					resize();
 				}
 				updateCamera(dt);
@@ -734,7 +734,7 @@ void main(){
 					cbs.onStats?.({
 						fps: String(Math.round(fps)),
 						res: `${RW}\u00d7${RH}`,
-						steps: String(qualityAt(qualityIdx).steps)
+						steps: String(qualityAt$1(qualityIdx).steps)
 					});
 					if (!qualityLocked && qualityIdx > 0 && fps < 26) setQuality(qualityIdx - 1, false);
 				}
@@ -831,13 +831,13 @@ void main(){
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/BlackholeWallpaper.module.css.mjs
-		const css$3 = ".BlackholeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.BlackholeWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas{pointer-events:auto;cursor:grab}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas:active{cursor:grabbing}.BlackholeWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_panel{transform:translate(calc(100% + 22px))}.BlackholeWallpaper-module_panel::-webkit-scrollbar{width:6px}.BlackholeWallpaper-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.BlackholeWallpaper-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.BlackholeWallpaper-module_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_open{display:block}.BlackholeWallpaper-module_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.BlackholeWallpaper-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.BlackholeWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.BlackholeWallpaper-module_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.BlackholeWallpaper-module_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.BlackholeWallpaper-module_presets{gap:6px;margin-top:12px;display:flex}.BlackholeWallpaper-module_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.BlackholeWallpaper-module_presets button:hover{background:#ff9a4d33}.BlackholeWallpaper-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.BlackholeWallpaper-module_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.BlackholeWallpaper-module_row{margin-bottom:10px}.BlackholeWallpaper-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.BlackholeWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.BlackholeWallpaper-module_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.BlackholeWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.BlackholeWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.BlackholeWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.BlackholeWallpaper-module_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.BlackholeWallpaper-module_checkline input[type=checkbox]{accent-color:#ff9a4d}.BlackholeWallpaper-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.BlackholeWallpaper-module_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.BlackholeWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.BlackholeWallpaper-module_panel{width:min(300px,82vw)}}";
-		const tagId$3 = "dsh-wallpapers/BlackholeWallpaper.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$3) + "]") === null) {
+		const css$4 = ".BlackholeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.BlackholeWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas{pointer-events:auto;cursor:grab}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas:active{cursor:grabbing}.BlackholeWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_panel{transform:translate(calc(100% + 22px))}.BlackholeWallpaper-module_panel::-webkit-scrollbar{width:6px}.BlackholeWallpaper-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.BlackholeWallpaper-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.BlackholeWallpaper-module_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_open{display:block}.BlackholeWallpaper-module_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.BlackholeWallpaper-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.BlackholeWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.BlackholeWallpaper-module_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.BlackholeWallpaper-module_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.BlackholeWallpaper-module_presets{gap:6px;margin-top:12px;display:flex}.BlackholeWallpaper-module_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.BlackholeWallpaper-module_presets button:hover{background:#ff9a4d33}.BlackholeWallpaper-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.BlackholeWallpaper-module_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.BlackholeWallpaper-module_row{margin-bottom:10px}.BlackholeWallpaper-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.BlackholeWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.BlackholeWallpaper-module_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.BlackholeWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.BlackholeWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.BlackholeWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.BlackholeWallpaper-module_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.BlackholeWallpaper-module_checkline input[type=checkbox]{accent-color:#ff9a4d}.BlackholeWallpaper-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.BlackholeWallpaper-module_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.BlackholeWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.BlackholeWallpaper-module_panel{width:min(300px,82vw)}}";
+		const tagId$4 = "dsh-wallpapers/BlackholeWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$4) + "]") === null) {
 			const tag = document.createElement("style");
 			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$3;
-			tag.textContent = css$3;
+			tag.dataset.pluginCss = tagId$4;
+			tag.textContent = css$4;
 			document.head.appendChild(tag);
 		}
 		var BlackholeWallpaper_module_css_default = {
@@ -872,7 +872,7 @@ void main(){
 		*
 		* @module dsh-wallpapers/src/client/BlackholeWallpaper
 		*/
-		const DEFAULTS = {
+		const DEFAULTS$1 = {
 			diskIn: 3,
 			diskOut: 14,
 			temp: .85,
@@ -890,7 +890,7 @@ void main(){
 			dim: 0,
 			cssOpacity: .25
 		};
-		const PRESETS = {
+		const PRESETS$1 = {
 			movie: {
 				rs: 1,
 				lens: 1,
@@ -925,7 +925,7 @@ void main(){
 				exposure: 1
 			}
 		};
-		const SECTIONS = [
+		const SECTIONS$1 = [
 			{
 				title: "吸积盘",
 				rows: [
@@ -1050,33 +1050,33 @@ void main(){
 				]
 			}
 		];
-		const STORAGE_KEY$1 = "dsh.ui-blackhole.params.v1";
-		function loadParams() {
+		const STORAGE_KEY$2 = "dsh.ui-blackhole.params.v1";
+		function loadParams$1() {
 			try {
-				const raw = localStorage.getItem(STORAGE_KEY$1);
-				if (raw === null) return DEFAULTS;
+				const raw = localStorage.getItem(STORAGE_KEY$2);
+				if (raw === null) return DEFAULTS$1;
 				const parsed = JSON.parse(raw);
-				if (typeof parsed !== "object" || parsed === null) return DEFAULTS;
+				if (typeof parsed !== "object" || parsed === null) return DEFAULTS$1;
 				return {
-					...DEFAULTS,
+					...DEFAULTS$1,
 					...parsed
 				};
 			} catch {
-				return DEFAULTS;
+				return DEFAULTS$1;
 			}
 		}
-		function saveParams(p) {
+		function saveParams$1(p) {
 			try {
-				localStorage.setItem(STORAGE_KEY$1, JSON.stringify(p));
+				localStorage.setItem(STORAGE_KEY$2, JSON.stringify(p));
 			} catch {}
 		}
 		/** Registry → component visibility bridge; set on mount, read at registration time. */
-		const visibility$1 = {
+		const visibility$2 = {
 			apply: null,
 			desired: true
 		};
 		/** One labeled range slider row. */
-		function SliderRow(props) {
+		function SliderRow$1(props) {
 			const { row, p } = props;
 			return /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
 				className: BlackholeWallpaper_module_css_default.row,
@@ -1103,7 +1103,7 @@ void main(){
 			const canvasRef = (0, react.useRef)(null);
 			const hostRef = (0, react.useRef)(null);
 			const engineRef = (0, react.useRef)(null);
-			const [p, setP] = (0, react.useState)(loadParams);
+			const [p, setP] = (0, react.useState)(loadParams$1);
 			const [stats, setStats] = (0, react.useState)({
 				fps: "--",
 				res: "--",
@@ -1125,23 +1125,23 @@ void main(){
 					}
 				});
 				engineRef.current = api;
-				visibility$1.apply = (on) => {
+				visibility$2.apply = (on) => {
 					if (hostRef.current !== null) hostRef.current.style.display = on ? "" : "none";
 					if (engineRef.current !== null) {
 						if (on) engineRef.current.resume();
 						else engineRef.current.pause();
 					}
 				};
-				visibility$1.apply(visibility$1.desired);
+				visibility$2.apply(visibility$2.desired);
 				return () => {
-					visibility$1.apply = null;
+					visibility$2.apply = null;
 					api.dispose();
 					engineRef.current = null;
 				};
 			}, []);
 			(0, react.useEffect)(() => {
 				engineRef.current?.setParams(p);
-				saveParams(p);
+				saveParams$1(p);
 			}, [p]);
 			(0, react.useEffect)(() => {
 				engineRef.current?.setAutoRotate(autoRotate);
@@ -1153,14 +1153,14 @@ void main(){
 				}));
 			};
 			const applyPreset = (id) => {
-				const preset = PRESETS[id];
+				const preset = PRESETS$1[id];
 				/* v8 ignore next -- the three preset buttons pass fixed ids that all exist in PRESETS */
 				if (preset !== void 0) setP((prev) => ({
 					...prev,
 					...preset
 				}));
 			};
-			const slider = (row) => /* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow, {
+			const slider = (row) => /* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow$1, {
 				row,
 				p,
 				onChange: upd
@@ -1250,7 +1250,7 @@ void main(){
 								className: BlackholeWallpaper_module_css_default.sec,
 								children: [
 									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("h2", { children: "壁纸" }),
-									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow, {
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow$1, {
 										p,
 										row: {
 											label: "壁纸浓度",
@@ -1263,7 +1263,7 @@ void main(){
 										},
 										onChange: upd
 									}),
-									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow, {
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow$1, {
 										p,
 										row: {
 											label: "背景暗化",
@@ -1288,7 +1288,7 @@ void main(){
 									})
 								]
 							}),
-							SECTIONS.map((s) => /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("section", {
+							SECTIONS$1.map((s) => /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("section", {
 								className: BlackholeWallpaper_module_css_default.sec,
 								children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("h2", { children: s.title }), s.rows.map(slider)]
 							}, s.title)),
@@ -1324,7 +1324,7 @@ void main(){
 											]
 										})]
 									}),
-									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow, {
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow$1, {
 										p,
 										row: {
 											label: "泛光强度",
@@ -1337,7 +1337,7 @@ void main(){
 										},
 										onChange: upd
 									}),
-									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow, {
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow$1, {
 										p,
 										row: {
 											label: "曝光",
@@ -1374,6 +1374,1848 @@ void main(){
 									"开启交互模式后：拖拽旋转 · 滚轮/双指缩放",
 									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("br", {}),
 									"关闭交互模式即恢复界面正常操作；透镜强度拉到 0 可对比平直时空"
+								]
+							})
+						]
+					})
+				]
+			});
+		}
+		//#endregion
+		//#region src/client/kerrnewman/shaders.ts
+		/**
+		* Shader sources for the Kerr-Newman wallpaper, ported verbatim from the
+		* validated single-file prototype (playground/kerr-newman.html). The
+		* physics core (ingoing Kerr-Schild metric, Hamiltonian photon paths,
+		* RK4 with null-constraint re-projection, adaptive natural affine steps,
+		* volumetric disk with Doppler/gravitational shift) is byte-identical to
+		* the prototype that passed: Schwarzschild b_crit = 3*sqrt(3) M to 0.02%,
+		* Kerr prograde/retrograde shadow asymmetry, exact Keplerian Omega(r),
+		* Doppler g-factor sign, antiverse sheet flip, extremal/naked stability.
+		*
+		* @module dsh-wallpapers/src/client/kerrnewman/shaders
+		*/
+		const VERT = `#version 300 es
+precision highp float;
+out vec2 vUv;
+void main() {
+  vec2 p = vec2((gl_VertexID << 1) & 2, gl_VertexID & 2);
+  vUv = p;
+  gl_Position = vec4(p * 2.0 - 1.0, 0.0, 1.0);
+}
+`;
+		const SCENE = `#version 300 es
+precision highp float;
+precision highp int;
+
+in vec2 vUv;
+out vec4 outColor;
+
+uniform vec2 uRes;
+uniform float uTime;
+uniform vec3 uCamPos;
+uniform vec3 uCamRight;
+uniform vec3 uCamUp;
+uniform vec3 uCamFwd;
+uniform float uFovTan;
+uniform vec2 uJitter;
+uniform float uSpin;      // a
+uniform float uCharge;    // Q
+uniform int uSteps;
+uniform float uStepC;
+uniform float uFar;
+
+uniform float uDiskIn, uDiskOut, uDiskH;
+uniform float uTemp, uTempExp, uBright, uBrightExp, uDens, uDensExp;
+uniform float uTurb, uTurbScale, uDoppler, uOrbit, uExtinct;
+uniform float uStarDens, uStarBright, uNebula;
+uniform float uDebug;
+
+/* ---------- PCG hashing & value noise ---------- */
+uint pcg(uint v) {
+  uint s = v * 747796405u + 2891336453u;
+  uint w = ((s >> ((s >> 28u) + 4u)) ^ s) * 277803737u;
+  return (w >> 22u) ^ w;
+}
+float hash1(uvec3 c) {
+  uint h = pcg(pcg(pcg(c.x + 1u) ^ (c.y + 37u)) ^ (c.z + 517u));
+  return float(h) / 4294967295.0;
+}
+vec3 hash3(uvec3 c) {
+  uint h = pcg(pcg(pcg(c.x + 1u) ^ (c.y + 37u)) ^ (c.z + 517u));
+  return vec3(float(h & 1023u), float((h >> 10u) & 1023u), float((h >> 20u) & 1023u)) * (1.0 / 1023.0);
+}
+float vnoise(vec3 p) {
+  vec3 i = floor(p), f = p - i;
+  vec3 u = f * f * (3.0 - 2.0 * f);
+  vec3 m = mod(i, 256.0);
+  uvec3 base = uvec3(m);
+  float a = hash1(base);
+  float b = hash1(base + uvec3(1u, 0u, 0u));
+  float c = hash1(base + uvec3(0u, 1u, 0u));
+  float d = hash1(base + uvec3(1u, 1u, 0u));
+  float e = hash1(base + uvec3(0u, 0u, 1u));
+  float f1 = hash1(base + uvec3(1u, 0u, 1u));
+  float g = hash1(base + uvec3(0u, 1u, 1u));
+  float h = hash1(base + uvec3(1u, 1u, 1u));
+  return mix(mix(mix(a, b, u.x), mix(c, d, u.x), u.y),
+             mix(mix(e, f1, u.x), mix(g, h, u.x), u.y), u.z);
+}
+float fbm(vec3 p) {
+  float s = 0.0, amp = 0.5;
+  for (int i = 0; i < 4; i++) {
+    s += amp * vnoise(p);
+    p = p * 2.03 + vec3(11.7, 5.1, 17.3);
+    amp *= 0.5;
+  }
+  return s * 1.0667;
+}
+
+/* ---------- blackbody chroma (Tanner Helland fit) ---------- */
+vec3 blackbodyRGB(float K) {
+  float t = clamp(K, 1000.0, 40000.0) / 100.0;
+  float r = t <= 66.0 ? 1.0 : clamp(1.29293618606 * pow(t - 60.0, -0.1332047592), 0.0, 1.0);
+  float g = t <= 66.0 ? clamp(0.39008157876 * log(t) - 0.63184144378, 0.0, 1.0)
+                      : clamp(1.12989086089 * pow(t - 60.0, -0.0755148492), 0.0, 1.0);
+  float b = t >= 66.0 ? 1.0 : (t <= 19.0 ? 0.0 : clamp(0.54320678911 * log(t - 10.0) - 1.19625408914, 0.0, 1.0));
+  return vec3(r, g, b);
+}
+
+/* ---------- Kerr–Newman metric in ingoing Kerr–Schild Cartesian ---------- */
+/* derived quantities + analytic gradients */
+void geoAll(vec3 X, float a, float Q, float rn,
+            out float f, out vec3 kv, out float r, out float r2, out float Sig, out float D,
+            out vec3 df, out vec3 dkx, out vec3 dky, out vec3 dkz) {
+  float R2 = dot(X, X);
+  float A = R2 - a * a;
+  D = sqrt(A * A + 4.0 * a * a * X.z * X.z);
+  r2 = 0.5 * (A + D);
+  float rAbs = sqrt(max(r2, 1e-12));
+  r = rn * rAbs;
+  float u = r2 + a * a;
+  float zr2 = max(r2, 1e-12);
+  Sig = r2 + a * a * X.z * X.z / zr2;
+  float den = max(r2 * r2 + a * a * X.z * X.z, 1e-12);
+  f = (2.0 * r - Q * Q) * r2 / den;
+  float rr = r == 0.0 ? 1e-12 : r;
+  kv = vec3((r * X.x + a * X.y) / u, (r * X.y - a * X.x) / u, X.z / rr);
+
+  float gx = r * X.x / Sig;
+  float gy = r * X.y / Sig;
+  float gz = X.z * u / (rr * Sig);
+  float dSx = 2.0 * X.x * (2.0 * r2 - Sig) / Sig;
+  float dSy = 2.0 * X.y * (2.0 * r2 - Sig) / Sig;
+  float dSz = 2.0 * X.z * (2.0 * u - Sig) / Sig;
+  df = vec3(2.0 * gx - f * dSx, 2.0 * gy - f * dSy, 2.0 * gz - f * dSz) / Sig;
+
+  float uu = u * u;
+  float cx = 2.0 * r * (r * X.x + a * X.y);
+  float cy = 2.0 * r * (r * X.y - a * X.x);
+  dkx = vec3(((X.x * gx + r) * u - cx * gx) / uu,
+             ((X.x * gy + a) * u - cx * gy) / uu,
+             (X.x * gz * u - cx * gz) / uu);
+  dky = vec3(((X.y * gx - a) * u - cy * gx) / uu,
+             ((X.y * gy + r) * u - cy * gy) / uu,
+             (X.y * gz * u - cy * gz) / uu);
+  float r4 = rr * rr;
+  dkz = vec3(-X.z * gx / r4, -X.z * gy / r4, (rr - X.z * gz) / r4);
+}
+
+/* Hamiltonian RHS: state = position X + covariant spatial momentum P */
+void rhsEval(vec3 X, vec3 P, float pt, float a, float Q, float rn,
+             out vec3 dX, out vec3 dP, out float dtUp, out float Phi, out float f, out vec3 kvO, out float rO) {
+  vec3 df, dkx, dky, dkz, kv;
+  float r, r2, Sig, D;
+  geoAll(X, a, Q, rn, f, kv, r, r2, Sig, D, df, dkx, dky, dkz);
+  Phi = -pt + dot(kv, P);
+  kvO = kv;
+  rO = r;
+  dX = P - f * Phi * kv;
+  dP = 0.5 * Phi * Phi * df + f * Phi * vec3(
+    dkx.x * P.x + dky.x * P.y + dkz.x * P.z,
+    dkx.y * P.x + dky.y * P.y + dkz.y * P.z,
+    dkx.z * P.x + dky.z * P.y + dkz.z * P.z);
+  dtUp = -pt + f * Phi;
+}
+
+/* null-constraint re-projection: rescale spatial P (p_t fixed) so H = 0 */
+bool fixNull(inout vec3 P, float pt, float f, vec3 kv) {
+  float K = dot(kv, P);
+  float c2 = dot(P, P) - f * K * K;
+  float c1 = 2.0 * f * pt * K;
+  float c0 = -(1.0 + f) * pt * pt;
+  float disc = c1 * c1 - 4.0 * c2 * c0;
+  if (disc < 0.0 || abs(c2) < 1e-14) return false;
+  float sq = sqrt(disc);
+  float r1 = (-c1 + sq) / (2.0 * c2);
+  float r2o = (-c1 - sq) / (2.0 * c2);
+  float al = abs(r1 - 1.0) < abs(r2o - 1.0) ? r1 : r2o;
+  if (!(al > 0.0)) return false;
+  P *= al;
+  return true;
+}
+
+/* natural adaptive affine step (no division into fixed spatial length;
+   stiffness-aware so horizon asymptotes resolve). Metric data (f, Phi, |r|)
+   comes from the cached post-step evaluation of the previous RK4 step. */
+float stepLen(vec3 X, float a, float Q, float f, float Phi, float ra, float C) {
+  float rho = length(X.xy);
+  float dRing = distance(vec2(rho, X.z), vec2(abs(a), 0.0));
+  float Pm = 2.0 * ra - Q * Q;
+  float Lgrav = Pm > 0.05 ? max(0.12, 0.5 * ra * ra / (3.0 * Pm)) : 1.2;
+  float Lring = max(0.012, dRing * 0.22);
+  float Lr = max(0.045, ra * 0.32);
+  float Lpos = min(min(Lgrav, Lring), Lr);
+  float stiff = 1.0 + abs(Phi) * max(1.0, abs(f));
+  float h = C * Lpos / stiff;
+  /* refine inside the disk slab for volume sampling (error control only) */
+  float H = uDiskH * (0.55 + 0.14 * ra);
+  if (rho > uDiskIn * 0.4 && rho < uDiskOut + 4.0 && abs(X.z) < 3.0 * H + 0.8) {
+    h = min(h, 0.035 + 0.34 * abs(X.z));
+  }
+  return clamp(h, 2e-4, 2.5);
+}
+
+/* co-rotating equatorial circular-orbit angular velocity (exact KN, KS-native).
+   M is the sheet sign (+1 normal sheet, -1 through-the-ring sheet); the
+   co-rotating root is chosen by the sign of a*M. Validated: Kerr exact
+   Omega = 1/(r^1.5 + a) for a>0, M=1. */
+float omegaOf(float r, float a, float Q, float M) {
+  if (r < 0.35) return 0.0;
+  float dgtt = -2.0 * M / (r * r) + 2.0 * Q * Q / (r * r * r);
+  float dgtp = a * (2.0 * M / (r * r) - 2.0 * Q * Q / (r * r * r));
+  float dgpp = 2.0 * r + a * a * (-2.0 * M / (r * r) + 2.0 * Q * Q / (r * r * r));
+  float disc = dgtp * dgtp - dgtt * dgpp;
+  if (disc <= 0.0 || dgpp == 0.0) return 0.0;
+  float sq = sqrt(disc);
+  return (a * M >= 0.0) ? (-dgtp + sq) / dgpp : (-dgtp - sq) / dgpp;
+}
+
+/* ---------- procedural sky ---------- */
+vec3 starLayer(vec3 dir, float scale, float thr, float px) {
+  vec3 p = dir * scale;
+  vec3 id = floor(p);
+  vec3 h = hash3(uvec3(mod(id, 256.0)));
+  if (h.y > thr) return vec3(0.0);
+  float mag = pow(h.x, 14.0);
+  vec3 sp = id + 0.5 + (h - 0.5) * 1.26;
+  float d2 = dot(p - sp, p - sp);
+  float sig = 0.045 + px * scale * 0.62;
+  float I = exp(-d2 / (2.0 * sig * sig)) * mag;
+  vec3 col = mix(vec3(1.0, 0.72, 0.52), vec3(0.62, 0.76, 1.0), h.z);
+  col = mix(col, vec3(1.0), 0.35);
+  return col * I;
+}
+vec3 skyColor(vec3 dir, bool anti) {
+  float px = 2.0 * uFovTan / uRes.y;
+  vec3 c = vec3(0.0);
+  c += starLayer(dir, 22.0, 1.0 - 0.28 * uStarDens, px) * 1.35;
+  c += starLayer(dir + 3.17, 47.0, 1.0 - 0.55 * uStarDens, px) * 0.7;
+  c += starLayer(dir + 9.31, 89.0, 1.0 - 0.85 * min(uStarDens, 1.0), px) * 0.4;
+  c *= uStarBright * 3.4;
+  vec3 bandN = normalize(vec3(0.28, 0.9, 0.34));
+  float band = exp(-pow(abs(dot(dir, bandN)) / 0.26, 2.2));
+  float neb = fbm(dir * 3.1) * 0.65 + fbm(dir * 7.7) * 0.35;
+  vec3 nebCol = mix(vec3(0.1, 0.16, 0.38), vec3(0.42, 0.14, 0.3), fbm(dir * 1.7 + 4.0));
+  c += uNebula * band * neb * nebCol * 0.85;
+  c += uNebula * 0.05 * nebCol * (1.0 - band * 0.5);
+  if (anti) c = vec3(1.62) - c;
+  return c;
+}
+
+/* ---------- volumetric accretion disk sample ---------- */
+void diskSample(vec3 X, vec3 P, float pt, float ds, float rn, float a, float Q, float Eobs,
+                float jit, inout vec3 acc, inout vec3 trans) {
+  float rho2 = X.x * X.x + X.y * X.y;
+  float rho = sqrt(rho2);
+  if (rho < uDiskIn * 0.55 || rho > uDiskOut * 1.05) return;
+
+  /* equatorial r for this cylinder radius (rho^2 = r^2 + a^2 on the plane) */
+  float aAbs = abs(a);
+  if (rho <= aAbs) return;
+  float req = sqrt(rho2 - a * a);
+  float rr = req;
+  if (rr < uDiskIn * 0.62 || rr > uDiskOut) return;
+  float win = smoothstep(uDiskIn * 0.75, uDiskIn * 1.3, rr) * (1.0 - smoothstep(uDiskOut * 0.7, uDiskOut, rr));
+  if (win < 0.002) return;
+
+  float H = uDiskH * (0.55 + 0.14 * rr);
+  float vert = exp(-pow(abs(X.z) / H, 1.65));
+  if (vert < 0.004) return;
+
+  float omE0 = omegaOf(rr, a, Q, rn < 0.0 ? -1.0 : 1.0);
+  float phi = atan(X.y, X.x) - omE0 * uTime * uOrbit * 9.0;
+  vec3 q = vec3(log(rr + 1.0) * 2.3, phi * (rr * 0.4) * 0.32, X.z / H * 1.15) * uTurbScale;
+  float tb = fbm(q) * 1.55;
+  tb = mix(0.72, tb, uTurb);
+  float dens = uDens * win * vert * tb * exp(-(rr - uDiskIn) * uDensExp);
+  if (dens < 5e-4) return;
+
+  /* Doppler + gravitational shift: g = E_obs / E_emit */
+  float fr = rn < 0.0 ? -(2.0 * req - Q * Q) / (req * req) : (2.0 * req - Q * Q) / (req * req);
+  float gvv = -1.0 + fr;
+  float gvp = -fr * a;
+  float gpp = rho2 + fr * a * a;
+  float omE = omE0;
+  float nrm = -(gvv + 2.0 * omE * gvp + omE * omE * gpp);
+  if (nrm <= 1e-9) return;
+  float uv = 1.0 / sqrt(nrm);
+  float ppsi = -X.y * P.x + X.x * P.y;
+  float pem = uv * (pt + omE * ppsi);
+  if (pem >= -1e-9) return;
+  float g = clamp(Eobs / (-pem), 0.05, 24.0);
+  float gg = mix(1.0, g, clamp(uDoppler, 0.0, 1.0));
+  float gL = mix(1.0, g, clamp(uDoppler, 0.0, 1.5));
+
+  float Tobs = gg * uTemp * exp(-(rr - uDiskIn) * uTempExp);
+  vec3 bb = blackbodyRGB(Tobs);
+  float lum = uBright * exp(-(rr - uDiskIn) * uBrightExp) * dens;
+  acc += trans * bb * (lum * gL * gL * gL) * ds;
+  trans *= exp(-uExtinct * dens * ds * vec3(1.0, 1.34, 1.78));
+}
+
+void main() {
+  vec2 uv = (gl_FragCoord.xy + uJitter) / uRes * 2.0 - 1.0;
+  uv.x *= uRes.x / uRes.y;
+  vec3 dir = normalize(uCamFwd + uFovTan * (uv.x * uCamRight + uv.y * uCamUp));
+  float a = uSpin, Q = uCharge;
+
+  /* static-observer orthonormal tetrad via Gram–Schmidt on {dt,dx,dy,dz} */
+  vec3 df, dkx, dky, dkz, kv;
+  float f, r, r2, Sig, D;
+  geoAll(uCamPos, a, Q, 1.0, f, kv, r, r2, Sig, D, df, dkx, dky, dkz);
+  float Eobs = 1.0 / sqrt(max(1.0 - f, 1e-6));
+  vec4 e0 = vec4(Eobs, 0.0, 0.0, 0.0);
+  vec4 b1 = vec4(0.0, 1.0, 0.0, 0.0);
+  vec4 b2 = vec4(0.0, 0.0, 1.0, 0.0);
+  vec4 b3 = vec4(0.0, 0.0, 0.0, 1.0);
+  vec4 k4 = vec4(1.0, kv);
+  #define GDOT(u, v) ((-(u).x * (v).x + dot((u).yzw, (v).yzw)) + f * ((u).x + dot((u).yzw, kv)) * ((v).x + dot((v).yzw, kv)))
+  b1 -= GDOT(b1, e0) * e0; b1 *= inversesqrt(max(GDOT(b1, b1), 1e-9));
+  b2 -= GDOT(b2, e0) * e0 + GDOT(b2, b1) * b1; b2 *= inversesqrt(max(GDOT(b2, b2), 1e-9));
+  b3 -= GDOT(b3, e0) * e0 + GDOT(b3, b1) * b1 + GDOT(b3, b2) * b2; b3 *= inversesqrt(max(GDOT(b3, b3), 1e-9));
+  #undef GDOT
+
+  /* arriving photon (ingoing chart, spin +a): tetrad momentum points at the
+     camera. The view direction is decomposed onto the tetrad legs themselves
+     (dot with each leg's spatial part), so the mapping is exact for any f. */
+  vec4 pu = e0 - (dot(dir, b1.yzw) * b1 + dot(dir, b2.yzw) * b2 + dot(dir, b3.yzw) * b3);
+  float kf = pu.x + dot(pu.yzw, kv);
+  float pt = -pu.x + f * kf;
+  vec3 P = pu.yzw + f * kf * kv;
+
+  vec3 X = uCamPos;
+  float rn = 1.0;
+  vec3 acc = vec3(0.0);
+  vec3 trans = vec3(1.0);
+  bool sky = false;
+  bool anti = false;
+  vec3 skyDir = vec3(0.0, 0.0, 1.0);
+  float pixSeed = dot(gl_FragCoord.xy, vec2(0.754, 0.569)) + fract(uTime * 61.7);
+  float dead = 0.0;
+  float minR = 1e9;
+  float usedSteps = 0.0;
+  float diskHits = 0.0;
+
+  /* cache from the post-step evaluation (prime it at the camera) */
+  vec3 dXs, dPs, kvC;
+  float ptUp, PhiC, fC, rC;
+  rhsEval(X, P, pt, a, Q, 1.0, dXs, dPs, ptUp, PhiC, fC, kvC, rC);
+
+  for (int i = 0; i < 2200; i++) {
+    if (i >= uSteps || dead > 0.5) break;
+    usedSteps = float(i) + 1.0;
+    minR = min(minR, abs(rC));
+    float h = -stepLen(X, a, Q, fC, PhiC, abs(rC), uStepC);
+    vec3 X0 = X;
+
+    vec3 dX1, dP1, dX2, dP2, dX3, dP3, dX4, dP4, kvT;
+    float t1, t2, t3, t4, p1, p2, p3, p4, fT, rT;
+    rhsEval(X, P, pt, a, Q, rn, dX1, dP1, t1, p1, fT, kvT, rT);
+    rhsEval(X + 0.5 * h * dX1, P + 0.5 * h * dP1, pt, a, Q, rn, dX2, dP2, t2, p2, fT, kvT, rT);
+    rhsEval(X + 0.5 * h * dX2, P + 0.5 * h * dP2, pt, a, Q, rn, dX3, dP3, t3, p3, fT, kvT, rT);
+    rhsEval(X + h * dX3, P + h * dP3, pt, a, Q, rn, dX4, dP4, t4, p4, fT, kvT, rT);
+    X += (h / 6.0) * (dX1 + 2.0 * dX2 + 2.0 * dX3 + dX4);
+    P += (h / 6.0) * (dP1 + 2.0 * dP2 + 2.0 * dP3 + dP4);
+
+    /* equatorial-plane crossing inside the ring: pass to the other r-sheet */
+    if (X0.z * X.z < 0.0) {
+      float tt = X0.z / (X0.z - X.z);
+      vec2 xc = mix(X0.xy, X.xy, tt);
+      if (dot(xc, xc) < a * a) rn = -rn;
+    }
+
+    /* post-step evaluation: constraint fix + capture tests + escape direction */
+    float R2 = dot(X, X);
+    if (!(R2 < 1e12)) { dead = 1.0; break; }
+    rhsEval(X, P, pt, a, Q, rn, dXs, dPs, ptUp, PhiC, fC, kvC, rC);
+    if (!fixNull(P, pt, fC, kvC)) { dead = 1.0; break; }
+    if (abs(ptUp) > 9e3) { dead = 1.0; break; }      /* horizon: redshift divergence */
+    if (abs(fC) > 4e3) { dead = 1.0; break; }        /* ring singularity */
+    if (R2 > uFar * uFar) {
+      sky = true;
+      anti = rn < 0.0;
+      skyDir = -normalize(dXs);
+      break;
+    }
+
+    /* volume sample along the segment */
+    float jit = fract(hash1(uvec3(gl_FragCoord.xy, i)) + pixSeed);
+    float ds = length(X - X0);
+    if (ds > 1e-6) {
+      vec3 acc0 = acc;
+      diskSample(mix(X0, X, jit), P, pt, ds, rn, a, Q, Eobs, jit, acc, trans);
+      if (dot(acc - acc0, acc - acc0) > 0.0) diskHits += 1.0;
+    }
+    if (max(trans.x, max(trans.y, trans.z)) < 0.004) break;
+  }
+
+  vec3 col = acc;
+  if (sky) col += trans * skyColor(skyDir, anti);
+  if (uDebug > 1.5) {
+    outColor = vec4(clamp(minR / 14.0, 0.0, 1.0), clamp(usedSteps / float(uSteps), 0.0, 1.0), clamp(diskHits / 8.0, 0.0, 1.0), 1.0);
+  } else if (uDebug > 0.5) {
+    vec3 dbg;
+    if (dead > 0.5) dbg = vec3(1.0, 0.15, 0.1);
+    else if (sky) dbg = anti ? vec3(0.1, 1.0, 1.0) : vec3(0.12, 0.55, 0.12);
+    else dbg = vec3(0.12, 0.15, 1.0);
+    outColor = vec4(dbg * (0.25 + 0.75 * usedSteps / float(uSteps)), 1.0);
+  } else {
+    outColor = vec4(col, 1.0);
+  }
+}
+`;
+		const BLEND = `#version 300 es
+precision highp float;
+in vec2 vUv;
+out vec4 outColor;
+uniform sampler2D uPrev;
+uniform sampler2D uCur;
+uniform float uMix;
+void main() {
+  vec4 prev = texture(uPrev, vUv);
+  vec4 cur = texture(uCur, vUv);
+  outColor = mix(prev, cur, uMix);
+}
+`;
+		const BRIGHT = `#version 300 es
+precision highp float;
+in vec2 vUv;
+out vec4 outColor;
+uniform sampler2D uSrc;
+uniform float uThr;
+void main() {
+  vec3 c = texture(uSrc, vUv).rgb;
+  float l = max(max(c.r, c.g), c.b);
+  float k = max(l - uThr, 0.0);
+  k = k / (1.0 + k);
+  outColor = vec4(c * k, 1.0);
+}
+`;
+		const DOWN = `#version 300 es
+precision highp float;
+in vec2 vUv;
+out vec4 outColor;
+uniform sampler2D uSrc;
+uniform vec2 uTexel;
+void main() {
+  vec3 c = texture(uSrc, vUv + uTexel * vec2(-1.0, -1.0)).rgb;
+  c += texture(uSrc, vUv + uTexel * vec2(1.0, -1.0)).rgb;
+  c += texture(uSrc, vUv + uTexel * vec2(-1.0, 1.0)).rgb;
+  c += texture(uSrc, vUv + uTexel * vec2(1.0, 1.0)).rgb;
+  outColor = vec4(c * 0.25, 1.0);
+}
+`;
+		const UP = `#version 300 es
+precision highp float;
+in vec2 vUv;
+out vec4 outColor;
+uniform sampler2D uSrc;
+uniform sampler2D uPrev;
+uniform vec2 uTexel;
+void main() {
+  vec2 t = uTexel;
+  vec3 c = texture(uSrc, vUv).rgb * 4.0;
+  c += texture(uSrc, vUv + t * vec2(2.0, 0.0)).rgb + texture(uSrc, vUv - t * vec2(2.0, 0.0)).rgb;
+  c += texture(uSrc, vUv + t * vec2(0.0, 2.0)).rgb + texture(uSrc, vUv - t * vec2(0.0, 2.0)).rgb;
+  c += texture(uSrc, vUv + t * vec2(1.0, 1.0)).rgb + texture(uSrc, vUv + t * vec2(1.0, -1.0)).rgb;
+  c += texture(uSrc, vUv - t * vec2(1.0, 1.0)).rgb + texture(uSrc, vUv + t * vec2(-1.0, 1.0)).rgb;
+  c /= 12.0;
+  outColor = vec4(c + texture(uPrev, vUv).rgb, 1.0);
+}
+`;
+		const COMPOSITE = `#version 300 es
+precision highp float;
+in vec2 vUv;
+out vec4 outColor;
+uniform sampler2D uScene;
+uniform sampler2D uBloom;
+uniform float uBloomStr;
+uniform float uCA;
+uniform float uExposure;
+uniform float uVignette;
+uniform float uTime;
+uniform vec2 uRes;
+
+vec3 aces(vec3 x) {
+  return clamp((x * (2.51 * x + 0.03)) / (x * (2.43 * x + 0.59) + 0.14), 0.0, 1.0);
+}
+float hash12(vec2 p) {
+  vec3 p3 = fract(vec3(p.xyx) * 0.1031);
+  p3 += dot(p3, p3.yzx + 33.33);
+  return fract((p3.x + p3.y) * p3.z);
+}
+void main() {
+  vec2 fromC = vUv - 0.5;
+  fromC.x *= uRes.x / uRes.y;
+  float r2 = dot(fromC, fromC);
+  vec2 dir = fromC * (uCA * 0.0028) * (0.35 + r2);
+  vec3 col;
+  col.r = texture(uScene, vUv + dir).r;
+  col.g = texture(uScene, vUv).g;
+  col.b = texture(uScene, vUv - dir).b;
+  vec3 bloom;
+  bloom.r = texture(uBloom, vUv + dir * 1.6).r;
+  bloom.g = texture(uBloom, vUv).g;
+  bloom.b = texture(uBloom, vUv - dir * 1.6).b;
+  col += bloom * uBloomStr;
+  col *= uExposure;
+  col *= 1.0 - uVignette * smoothstep(0.15, 0.95, r2);
+  col = aces(col);
+  col = pow(col, vec3(1.0 / 2.2));
+  col += (hash12(vUv * uRes + fract(uTime) * 100.0) - 0.5) * 0.007;
+  outColor = vec4(col, 1.0);
+}
+`;
+		//#endregion
+		//#region src/client/kerrnewman/engine.ts
+		/**
+		* The Kerr-Newman WebGL2 render engine: geodesic ray-marched main pass into
+		* an offscreen HDR target with temporal accumulation, five-level bloom
+		* pyramid, and a composite pass (chromatic aberration, ACES tonemap,
+		* vignette, grain). The physics lives in shaders.ts; this module owns the
+		* GL plumbing, the quality ladder, the pausable render loop, and the stats
+		* feed. Ported from the validated playground/kerr-newman.html prototype.
+		*
+		* @module dsh-wallpapers/src/client/kerrnewman/engine
+		*/
+		const QUALITIES = [
+			{
+				scale: .45,
+				steps: 300,
+				stepC: .9
+			},
+			{
+				scale: .6,
+				steps: 500,
+				stepC: .78
+			},
+			{
+				scale: .78,
+				steps: 760,
+				stepC: .65
+			},
+			{
+				scale: 1,
+				steps: 1150,
+				stepC: .55
+			}
+		];
+		const FALLBACK_QUALITY = QUALITIES[1] ?? {
+			scale: .6,
+			steps: 500,
+			stepC: .78
+		};
+		const BLOOM_LEVELS = 5;
+		const AUTO_DROP_FPS = 22;
+		const AUTO_DROP_WINDOW_MS = 2600;
+		const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+		const qualityAt = (i) => QUALITIES[i] ?? FALLBACK_QUALITY;
+		/** Dead API handed back when WebGL2 is unavailable; every method is a no-op. */
+		const deadEngine = (report, message) => ({
+			setParams() {
+				report(message);
+			},
+			setQuality() {
+				report(message);
+			},
+			setAutoRotate() {
+				report(message);
+			},
+			setInteractive() {
+				report(message);
+			},
+			capture() {
+				report(message);
+			},
+			pause() {},
+			resume() {
+				report(message);
+			},
+			dispose() {}
+		});
+		/** Uniform names the scene pass uploads (drives defensive lookups). */
+		const SCENE_UNIFORMS = [
+			"uRes",
+			"uTime",
+			"uCamPos",
+			"uCamRight",
+			"uCamUp",
+			"uCamFwd",
+			"uFovTan",
+			"uJitter",
+			"uSpin",
+			"uCharge",
+			"uSteps",
+			"uStepC",
+			"uFar",
+			"uDiskIn",
+			"uDiskOut",
+			"uDiskH",
+			"uTemp",
+			"uTempExp",
+			"uBright",
+			"uBrightExp",
+			"uDens",
+			"uDensExp",
+			"uTurb",
+			"uTurbScale",
+			"uDoppler",
+			"uOrbit",
+			"uExtinct",
+			"uStarDens",
+			"uStarBright",
+			"uNebula"
+		];
+		/**
+		* Create the engine against one canvas.
+		* @param canvasParam - the canvas to render into (WebGL2 context is taken here).
+		* @param cbs - stats / quality / fatal callbacks.
+		* @returns the engine API.
+		*/
+		function createKnEngine(canvasParam, cbs = {}) {
+			if (canvasParam === null) return deadEngine(cbs.onFatal ?? (() => {}), "画布不可用");
+			const canvas = canvasParam;
+			const glMaybe = canvas.getContext("webgl2", {
+				antialias: false,
+				alpha: false,
+				depth: false,
+				stencil: false,
+				powerPreference: "high-performance"
+			});
+			if (glMaybe === null) return deadEngine(cbs.onFatal ?? (() => {}), "此浏览器不支持 WebGL2，无法渲染 Kerr-Newman 壁纸。");
+			if (glMaybe.getExtension("EXT_color_buffer_float") === null) return deadEngine(cbs.onFatal ?? (() => {}), "缺少 EXT_color_buffer_float 扩展（浮点渲染目标），无法渲染。");
+			const gl = glMaybe;
+			const report = (m) => {
+				cbs.onFatal?.(m);
+			};
+			function compile(type, src) {
+				const s = gl.createShader(type);
+				/* v8 ignore next -- a null shader object only appears on context loss. */
+				if (s === null) throw new Error("着色器创建失败");
+				gl.shaderSource(s, src);
+				gl.compileShader(s);
+				if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error("着色器编译失败：" + String(gl.getShaderInfoLog(s)));
+				return s;
+			}
+			function makeProgram(fragSrc, names) {
+				const p = gl.createProgram();
+				/* v8 ignore next -- null only on context loss. */
+				if (p === null) throw new Error("程序创建失败");
+				gl.attachShader(p, compile(gl.VERTEX_SHADER, VERT));
+				gl.attachShader(p, compile(gl.FRAGMENT_SHADER, fragSrc));
+				gl.linkProgram(p);
+				if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error("着色器链接失败：" + String(gl.getProgramInfoLog(p)));
+				const uni = {};
+				for (const n of names) uni[n] = gl.getUniformLocation(p, n);
+				return {
+					p,
+					uni
+				};
+			}
+			let progScene;
+			let progBlend;
+			let progBright;
+			let progDown;
+			let progUp;
+			let progComp;
+			try {
+				progScene = makeProgram(SCENE, SCENE_UNIFORMS);
+				progBlend = makeProgram(BLEND, [
+					"uPrev",
+					"uCur",
+					"uMix"
+				]);
+				progBright = makeProgram(BRIGHT, ["uSrc", "uThr"]);
+				progDown = makeProgram(DOWN, ["uSrc", "uTexel"]);
+				progUp = makeProgram(UP, [
+					"uSrc",
+					"uPrev",
+					"uTexel"
+				]);
+				progComp = makeProgram(COMPOSITE, [
+					"uScene",
+					"uBloom",
+					"uBloomStr",
+					"uCA",
+					"uExposure",
+					"uVignette",
+					"uTime",
+					"uRes"
+				]);
+			} catch (err) {
+				report(err instanceof Error ? err.message : String(err));
+				return deadEngine(() => {}, "初始化失败");
+			}
+			const vao = gl.createVertexArray();
+			gl.bindVertexArray(vao);
+			function makeTarget(w, h) {
+				const tex = gl.createTexture();
+				gl.bindTexture(gl.TEXTURE_2D, tex);
+				gl.texStorage2D(gl.TEXTURE_2D, 1, gl.RGBA16F, w, h);
+				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+				gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+				const fbo = gl.createFramebuffer();
+				gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
+				gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, tex, 0);
+				gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+				return {
+					tex,
+					fbo,
+					w,
+					h
+				};
+			}
+			function delTarget(t) {
+				if (t === null) return;
+				gl.deleteTexture(t.tex);
+				gl.deleteFramebuffer(t.fbo);
+			}
+			function draw(target) {
+				gl.bindFramebuffer(gl.FRAMEBUFFER, target === null ? null : target.fbo);
+				const w = target === null ? gl.drawingBufferWidth : target.w;
+				const h = target === null ? gl.drawingBufferHeight : target.h;
+				gl.viewport(0, 0, w, h);
+				gl.drawArrays(gl.TRIANGLES, 0, 3);
+			}
+			const params = {
+				spin: .9,
+				charge: .45,
+				diskIn: 2.4,
+				diskOut: 13,
+				diskH: .28,
+				temp: 8200,
+				tempExp: .14,
+				bright: 1,
+				brightExp: .16,
+				dens: 1.3,
+				densExp: .18,
+				turb: .55,
+				turbScale: 1.1,
+				doppler: 1,
+				orbit: 1,
+				extinct: .85,
+				camDist: 15,
+				camTilt: 7,
+				fov: 55,
+				rotSpeed: .6,
+				starDens: .7,
+				starBright: 1,
+				nebula: .5,
+				bloom: .7,
+				bloomThr: .8,
+				ca: 1.1,
+				exposure: 1.05,
+				vignette: .5,
+				dim: 0,
+				cssOpacity: .9
+			};
+			let qualityIdx = 1;
+			let qualityLocked = false;
+			let autoRotate = true;
+			let interactive = false;
+			let camAzim = -1.15;
+			let dragging = false;
+			let lastX = 0;
+			let lastY = 0;
+			let velAz = 0;
+			let velTilt = 0;
+			let W = 0;
+			let H = 0;
+			let rtScene = null;
+			let accum = [null, null];
+			let accumIdx = 0;
+			let bloom = [];
+			let blendFull = 1;
+			function resize() {
+				const dpr = Math.min(2, window.devicePixelRatio || 1);
+				const cw = Math.max(2, Math.round(canvas.clientWidth * dpr));
+				const ch = Math.max(2, Math.round(canvas.clientHeight * dpr));
+				if (canvas.width !== cw) canvas.width = cw;
+				if (canvas.height !== ch) canvas.height = ch;
+				const q = qualityAt(qualityIdx);
+				const w = Math.max(2, Math.round(cw * q.scale));
+				const h = Math.max(2, Math.round(ch * q.scale));
+				if (w === W && h === H && rtScene !== null) return;
+				W = w;
+				H = h;
+				delTarget(rtScene);
+				delTarget(accum[0]);
+				delTarget(accum[1]);
+				for (const b of bloom) delTarget(b);
+				rtScene = makeTarget(W, H);
+				accum = [makeTarget(W, H), makeTarget(W, H)];
+				bloom = [];
+				let bw = Math.max(2, W >> 1);
+				let bh = Math.max(2, H >> 1);
+				for (let i = 0; i < BLOOM_LEVELS; i++) {
+					bloom.push(makeTarget(bw, bh));
+					bw = Math.max(2, bw >> 1);
+					bh = Math.max(2, bh >> 1);
+				}
+				blendFull = 1;
+			}
+			const onPointerDown = (e) => {
+				if (!interactive) return;
+				dragging = true;
+				lastX = e.clientX;
+				lastY = e.clientY;
+				canvas.setPointerCapture(e.pointerId);
+			};
+			const onPointerUp = () => {
+				dragging = false;
+			};
+			const onPointerMove = (e) => {
+				if (!interactive || !dragging) return;
+				velAz = (e.clientX - lastX) * .005;
+				velTilt = (e.clientY - lastY) * .22;
+				camAzim += velAz;
+				params.camTilt = clamp(params.camTilt + velTilt, -85, 85);
+				lastX = e.clientX;
+				lastY = e.clientY;
+				blendFull = 1;
+			};
+			const onWheel = (e) => {
+				if (!interactive) return;
+				e.preventDefault();
+				params.camDist = clamp(params.camDist * (1 + Math.sign(e.deltaY) * .07), 4, 40);
+				blendFull = 1;
+			};
+			canvas.addEventListener("pointerdown", onPointerDown);
+			canvas.addEventListener("pointerup", onPointerUp);
+			canvas.addEventListener("pointermove", onPointerMove);
+			canvas.addEventListener("wheel", onWheel, { passive: false });
+			let raf = 0;
+			let running = false;
+			let disposed = false;
+			let lastT = 0;
+			let fpsAcc = 0;
+			let fpsN = 0;
+			let lowSince = 0;
+			function frame(tms) {
+				if (disposed || !running) return;
+				raf = requestAnimationFrame(frame);
+				const t = tms * .001;
+				const dt = lastT === 0 ? .016 : Math.min(.1, t - lastT);
+				lastT = t;
+				resize();
+				if (!dragging) {
+					if (autoRotate) camAzim += params.rotSpeed * (Math.PI / 180) * dt;
+					if (Math.abs(velAz) > 1e-5) {
+						camAzim += velAz * .6;
+						velAz *= .85;
+					}
+				}
+				const moving = autoRotate && params.rotSpeed > .001 || Math.abs(velAz) > 1e-4;
+				const mixVal = blendFull >= 1 ? 1 : moving ? .45 : .14;
+				const tilt = params.camTilt * Math.PI / 180;
+				const dist = params.camDist;
+				const cx = Math.cos(camAzim) * Math.cos(tilt);
+				const cy = Math.sin(camAzim) * Math.cos(tilt);
+				const cz = Math.sin(tilt);
+				const camPos = [
+					dist * cx,
+					dist * cy,
+					dist * cz
+				];
+				const fwd = [
+					-cx,
+					-cy,
+					-cz
+				];
+				const right = [
+					Math.sin(camAzim),
+					-Math.cos(camAzim),
+					0
+				];
+				const up = [
+					fwd[1] * right[2] - fwd[2] * right[1],
+					fwd[2] * right[0] - fwd[0] * right[2],
+					fwd[0] * right[1] - fwd[1] * right[0]
+				];
+				const fovTan = Math.tan(params.fov * Math.PI / 360);
+				const q = qualityAt(qualityIdx);
+				const jit = [Math.random() * 2 - 1, Math.random() * 2 - 1];
+				const u = progScene.uni;
+				gl.useProgram(progScene.p);
+				const setF = (n, v) => {
+					const loc = u[n];
+					if (loc !== null) gl.uniform1f(loc, v);
+				};
+				const set2f = (n, v) => {
+					const loc = u[n];
+					if (loc !== null) gl.uniform2f(loc, v[0], v[1]);
+				};
+				const set3f = (n, v) => {
+					const loc = u[n];
+					if (loc !== null) gl.uniform3f(loc, v[0], v[1], v[2]);
+				};
+				set2f("uRes", [W, H]);
+				setF("uTime", t);
+				set3f("uCamPos", camPos);
+				set3f("uCamRight", right);
+				set3f("uCamUp", up);
+				set3f("uCamFwd", fwd);
+				setF("uFovTan", fovTan);
+				set2f("uJitter", jit);
+				setF("uSpin", params.spin);
+				setF("uCharge", params.charge);
+				{
+					const loc = u.uSteps;
+					if (loc !== null) gl.uniform1i(loc, q.steps);
+				}
+				setF("uStepC", q.stepC);
+				setF("uFar", Math.max(dist * 1.6, 42));
+				setF("uDiskIn", params.diskIn);
+				setF("uDiskOut", params.diskOut);
+				setF("uDiskH", params.diskH);
+				setF("uTemp", params.temp);
+				setF("uTempExp", params.tempExp);
+				setF("uBright", params.bright);
+				setF("uBrightExp", params.brightExp);
+				setF("uDens", params.dens);
+				setF("uDensExp", params.densExp);
+				setF("uTurb", params.turb);
+				setF("uTurbScale", params.turbScale);
+				setF("uDoppler", params.doppler);
+				setF("uOrbit", params.orbit);
+				setF("uExtinct", params.extinct);
+				setF("uStarDens", params.starDens);
+				setF("uStarBright", params.starBright);
+				setF("uNebula", params.nebula);
+				draw(rtScene);
+				const src = accumIdx;
+				const dst = 1 - accumIdx;
+				const cur = accum[dst];
+				const prev = accum[src];
+				if (cur === null || prev === null || rtScene === null) return;
+				gl.useProgram(progBlend.p);
+				gl.activeTexture(gl.TEXTURE0);
+				gl.bindTexture(gl.TEXTURE_2D, prev.tex);
+				{
+					const loc = progBlend.uni.uPrev;
+					if (loc !== null) gl.uniform1i(loc, 0);
+				}
+				gl.activeTexture(gl.TEXTURE1);
+				gl.bindTexture(gl.TEXTURE_2D, rtScene.tex);
+				{
+					const loc = progBlend.uni.uCur;
+					if (loc !== null) gl.uniform1i(loc, 1);
+				}
+				{
+					const loc = progBlend.uni.uMix;
+					if (loc !== null) gl.uniform1f(loc, mixVal);
+				}
+				draw(cur);
+				accumIdx = dst;
+				gl.useProgram(progBright.p);
+				gl.activeTexture(gl.TEXTURE0);
+				gl.bindTexture(gl.TEXTURE_2D, cur.tex);
+				{
+					const loc = progBright.uni.uSrc;
+					if (loc !== null) gl.uniform1i(loc, 0);
+				}
+				{
+					const loc = progBright.uni.uThr;
+					if (loc !== null) gl.uniform1f(loc, params.bloomThr);
+				}
+				draw(bloom[0] ?? null);
+				for (let i = 1; i < bloom.length; i++) {
+					gl.useProgram(progDown.p);
+					gl.activeTexture(gl.TEXTURE0);
+					gl.bindTexture(gl.TEXTURE_2D, bloom[i - 1].tex);
+					{
+						const loc = progDown.uni.uSrc;
+						if (loc !== null) gl.uniform1i(loc, 0);
+					}
+					{
+						const loc = progDown.uni.uTexel;
+						if (loc !== null) gl.uniform2f(loc, 1 / bloom[i - 1].w, 1 / bloom[i - 1].h);
+					}
+					draw(bloom[i]);
+				}
+				for (let i = bloom.length - 2; i >= 0; i--) {
+					gl.useProgram(progUp.p);
+					gl.activeTexture(gl.TEXTURE0);
+					gl.bindTexture(gl.TEXTURE_2D, bloom[i + 1].tex);
+					{
+						const loc = progUp.uni.uSrc;
+						if (loc !== null) gl.uniform1i(loc, 0);
+					}
+					gl.activeTexture(gl.TEXTURE1);
+					gl.bindTexture(gl.TEXTURE_2D, bloom[i].tex);
+					{
+						const loc = progUp.uni.uPrev;
+						if (loc !== null) gl.uniform1i(loc, 1);
+					}
+					{
+						const loc = progUp.uni.uTexel;
+						if (loc !== null) gl.uniform2f(loc, 1 / bloom[i + 1].w, 1 / bloom[i + 1].h);
+					}
+					draw(bloom[i]);
+				}
+				gl.useProgram(progComp.p);
+				gl.activeTexture(gl.TEXTURE0);
+				gl.bindTexture(gl.TEXTURE_2D, cur.tex);
+				{
+					const loc = progComp.uni.uScene;
+					if (loc !== null) gl.uniform1i(loc, 0);
+				}
+				gl.activeTexture(gl.TEXTURE1);
+				gl.bindTexture(gl.TEXTURE_2D, bloom[0]?.tex ?? null);
+				{
+					const loc = progComp.uni.uBloom;
+					if (loc !== null) gl.uniform1i(loc, 1);
+				}
+				{
+					const loc = progComp.uni.uBloomStr;
+					if (loc !== null) gl.uniform1f(loc, params.bloom);
+				}
+				{
+					const loc = progComp.uni.uCA;
+					if (loc !== null) gl.uniform1f(loc, params.ca);
+				}
+				{
+					const loc = progComp.uni.uExposure;
+					if (loc !== null) gl.uniform1f(loc, params.exposure);
+				}
+				{
+					const loc = progComp.uni.uVignette;
+					if (loc !== null) gl.uniform1f(loc, params.vignette);
+				}
+				{
+					const loc = progComp.uni.uTime;
+					if (loc !== null) gl.uniform1f(loc, t);
+				}
+				{
+					const loc = progComp.uni.uRes;
+					if (loc !== null) gl.uniform2f(loc, gl.drawingBufferWidth, gl.drawingBufferHeight);
+				}
+				draw(null);
+				if (mixVal < 1) blendFull = 0;
+				fpsAcc += dt;
+				fpsN++;
+				if (fpsAcc > .5) {
+					const fps = fpsN / fpsAcc;
+					cbs.onStats?.({
+						fps: fps.toFixed(0),
+						res: W + "×" + H,
+						steps: String(q.steps)
+					});
+					if (!qualityLocked && qualityIdx > 0) {
+						if (fps < AUTO_DROP_FPS) {
+							if (lowSince === 0) lowSince = performance.now();
+							else if (performance.now() - lowSince > AUTO_DROP_WINDOW_MS) {
+								qualityIdx -= 1;
+								W = 0;
+								lowSince = 0;
+								cbs.onQuality?.(qualityIdx);
+							}
+						} else lowSince = 0;
+					}
+					fpsAcc = 0;
+					fpsN = 0;
+				}
+			}
+			function pause() {
+				running = false;
+				if (raf !== 0) cancelAnimationFrame(raf);
+				raf = 0;
+			}
+			function resume() {
+				if (disposed || running) return;
+				running = true;
+				lastT = 0;
+				raf = requestAnimationFrame(frame);
+			}
+			resize();
+			resume();
+			return {
+				setParams(next) {
+					Object.assign(params, next);
+					blendFull = 1;
+				},
+				setQuality(i, locked) {
+					qualityIdx = clamp(i, 0, QUALITIES.length - 1);
+					qualityLocked = locked;
+					W = 0;
+				},
+				setAutoRotate(on) {
+					autoRotate = on;
+				},
+				setInteractive(on) {
+					interactive = on;
+				},
+				capture() {
+					canvas.toBlob((blob) => {
+						if (blob === null) return;
+						const url = URL.createObjectURL(blob);
+						const a = document.createElement("a");
+						a.href = url;
+						a.download = "kerr-newman.png";
+						a.click();
+						setTimeout(() => URL.revokeObjectURL(url), 4e3);
+					});
+				},
+				pause,
+				resume,
+				dispose() {
+					disposed = true;
+					pause();
+					canvas.removeEventListener("pointerdown", onPointerDown);
+					canvas.removeEventListener("pointerup", onPointerUp);
+					canvas.removeEventListener("pointermove", onPointerMove);
+					canvas.removeEventListener("wheel", onWheel);
+					delTarget(rtScene);
+					delTarget(accum[0]);
+					delTarget(accum[1]);
+					for (const b of bloom) delTarget(b);
+					gl.deleteProgram(progScene.p);
+					gl.deleteProgram(progBlend.p);
+					gl.deleteProgram(progBright.p);
+					gl.deleteProgram(progDown.p);
+					gl.deleteProgram(progUp.p);
+					gl.deleteProgram(progComp.p);
+				}
+			};
+		}
+		//#endregion
+		//#region \0dsh-css:src/client/KerrNewmanWallpaper.module.css.mjs
+		const css$3 = ".KerrNewmanWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.KerrNewmanWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas{pointer-events:auto;cursor:grab}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas:active{cursor:grabbing}.KerrNewmanWallpaper-module_veil{pointer-events:none;background:#04060c;position:absolute;inset:0}.KerrNewmanWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.2);color:#dfe7f5;text-align:left;box-sizing:border-box;background:#0a0e18ad;border:1px solid #7fb2ff29;border-radius:14px;width:300px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto;box-shadow:0 18px 50px #00000080}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_panel{transform:translate(calc(100% + 22px))}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar{width:6px}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar-thumb{background:#7fb2ff38;border-radius:3px}.KerrNewmanWallpaper-module_toggle{color:#7fb2ff;cursor:pointer;background:#7fb2ff1a;border:1px solid #7fb2ff38;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.KerrNewmanWallpaper-module_toggle:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#7fb2ff;cursor:pointer;background:#0a0e18ad;border:1px solid #7fb2ff38;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_open{display:block}.KerrNewmanWallpaper-module_open:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_head h1{letter-spacing:.26em;background:linear-gradient(100deg,#cfe0ff 0%,#7fb2ff 55%,#b48cff 100%);color:#0000;-webkit-background-clip:text;background-clip:text;margin:0;font-size:18px;font-weight:600}.KerrNewmanWallpaper-module_sub{color:#8b98b4;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.KerrNewmanWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.KerrNewmanWallpaper-module_stat{text-align:center;color:#8b98b4;font-variant-numeric:tabular-nums;background:#7fb2ff0d;border:1px solid #7fb2ff1f;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.KerrNewmanWallpaper-module_stat b{color:#dfe7f5;margin-bottom:2px;font-size:13px;display:block}.KerrNewmanWallpaper-module_presets{flex-wrap:wrap;gap:6px;margin-top:12px;display:flex}.KerrNewmanWallpaper-module_presets button{color:#9fc2ff;cursor:pointer;background:#7fb2ff14;border:1px solid #7fb2ff4d;border-radius:8px;flex:30%;padding:7px 0;font-size:12px;transition:background .15s}.KerrNewmanWallpaper-module_presets button:hover{background:#7fb2ff33}.KerrNewmanWallpaper-module_sec{border-top:1px solid #7fb2ff1a;margin-top:14px;padding-top:11px}.KerrNewmanWallpaper-module_sec h2{letter-spacing:.22em;color:#7fb2ffd9;margin:0 0 9px;font-size:11px;font-weight:600}.KerrNewmanWallpaper-module_row{margin-bottom:10px}.KerrNewmanWallpaper-module_labline{color:#8b98b4;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.KerrNewmanWallpaper-module_val{color:#7fb2ff;font-family:Consolas,monospace;font-size:12px}.KerrNewmanWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#7fb2ff73,#ffffff1f);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.KerrNewmanWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#bcd4ff;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#bcd4ff;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel select{color:#dfe7f5;box-sizing:border-box;background:#10141f;border:1px solid #7fb2ff29;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.KerrNewmanWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.KerrNewmanWallpaper-module_checkline label{color:#8b98b4;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_checkline input[type=checkbox]{accent-color:#7fb2ff}.KerrNewmanWallpaper-module_mini{color:#dfe7f5;cursor:pointer;background:#7fb2ff12;border:1px solid #7fb2ff38;border-radius:8px;padding:5px 12px;font-size:12px}.KerrNewmanWallpaper-module_mini:hover{color:#7fb2ff;border-color:#7fb2ffb3}.KerrNewmanWallpaper-module_foot{color:#8b98b4;opacity:.85;border-top:1px solid #7fb2ff1a;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.KerrNewmanWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.KerrNewmanWallpaper-module_panel{width:min(300px,82vw)}}";
+		const tagId$3 = "dsh-wallpapers/KerrNewmanWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$3) + "]") === null) {
+			const tag = document.createElement("style");
+			tag.dataset.plugin = "dsh-wallpapers";
+			tag.dataset.pluginCss = tagId$3;
+			tag.textContent = css$3;
+			document.head.appendChild(tag);
+		}
+		var KerrNewmanWallpaper_module_css_default = {
+			"canvas": "KerrNewmanWallpaper-module_canvas",
+			"checkline": "KerrNewmanWallpaper-module_checkline",
+			"fatal": "KerrNewmanWallpaper-module_fatal",
+			"foot": "KerrNewmanWallpaper-module_foot",
+			"head": "KerrNewmanWallpaper-module_head",
+			"host": "KerrNewmanWallpaper-module_host",
+			"labline": "KerrNewmanWallpaper-module_labline",
+			"mini": "KerrNewmanWallpaper-module_mini",
+			"open": "KerrNewmanWallpaper-module_open",
+			"panel": "KerrNewmanWallpaper-module_panel",
+			"presets": "KerrNewmanWallpaper-module_presets",
+			"row": "KerrNewmanWallpaper-module_row",
+			"sec": "KerrNewmanWallpaper-module_sec",
+			"stat": "KerrNewmanWallpaper-module_stat",
+			"stats": "KerrNewmanWallpaper-module_stats",
+			"sub": "KerrNewmanWallpaper-module_sub",
+			"toggle": "KerrNewmanWallpaper-module_toggle",
+			"val": "KerrNewmanWallpaper-module_val",
+			"veil": "KerrNewmanWallpaper-module_veil"
+		};
+		//#endregion
+		//#region src/client/KerrNewmanWallpaper.tsx
+		/**
+		* The Kerr-Newman wallpaper component: full-screen WebGL2 canvas plus the
+		* collapsible right-hand control panel (presets, spacetime / accretion disk /
+		* sky / camera / post sliders, quality, FPS stats, screenshot). Panel state
+		* is React state persisted to localStorage; visibility is driven by the
+		* wallpaper registry through a module-level bridge (the registry may hide
+		* the layer before this component ever mounts). Physics: strict Kerr-Newman
+		* metric in ingoing Kerr-Schild Cartesian form, Hamiltonian photon tracing
+		* with RK4 and null-constraint re-projection, adaptive natural affine steps,
+		* horizon detection via redshift divergence, volumetric turbulent accretion
+		* disk with Doppler + gravitational shift, antiverse sky inversion past the
+		* ring singularity.
+		*
+		* @module dsh-wallpapers/src/client/KerrNewmanWallpaper
+		*/
+		const DEFAULTS = {
+			spin: .9,
+			charge: .45,
+			diskIn: 2.4,
+			diskOut: 13,
+			diskH: .28,
+			temp: 8200,
+			tempExp: .14,
+			bright: 1,
+			brightExp: .16,
+			dens: 1.3,
+			densExp: .18,
+			turb: .55,
+			turbScale: 1.1,
+			doppler: 1,
+			orbit: 1,
+			extinct: .85,
+			camDist: 15,
+			camTilt: 7,
+			fov: 55,
+			rotSpeed: .6,
+			starDens: .7,
+			starBright: 1,
+			nebula: .5,
+			bloom: .7,
+			bloomThr: .8,
+			ca: 1.1,
+			exposure: 1.05,
+			vignette: .5,
+			dim: 0,
+			cssOpacity: .9
+		};
+		const PRESETS = {
+			movie: {
+				spin: .8,
+				charge: .2,
+				doppler: .35,
+				temp: 5600,
+				bloom: .9,
+				ca: .7,
+				nebula: .35
+			},
+			extremal: {
+				spin: .995,
+				charge: .1,
+				doppler: 1.1,
+				temp: 9e3
+			},
+			naked: {
+				spin: 1.25,
+				charge: 0,
+				camDist: 11,
+				densExp: .14,
+				diskIn: 2.2
+			},
+			antiverse: {
+				spin: 1.3,
+				charge: .62,
+				camDist: 9,
+				fov: 70,
+				nebula: .8
+			},
+			hot: {
+				temp: 14500,
+				tempExp: .2,
+				doppler: 1.3,
+				bright: 1.4,
+				extinct: 1.2
+			}
+		};
+		const SECTIONS = [
+			{
+				title: "时空",
+				rows: [{
+					label: "自旋",
+					unit: "a/M",
+					key: "spin",
+					min: -1.5,
+					max: 1.5,
+					step: .01,
+					dec: 2
+				}, {
+					label: "电荷",
+					unit: "Q/M",
+					key: "charge",
+					min: 0,
+					max: 1.5,
+					step: .01,
+					dec: 2
+				}]
+			},
+			{
+				title: "吸积盘",
+				rows: [
+					{
+						label: "内半径",
+						unit: "M",
+						key: "diskIn",
+						min: 1.2,
+						max: 8,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "外半径",
+						unit: "M",
+						key: "diskOut",
+						min: 6,
+						max: 26,
+						step: .25,
+						dec: 2
+					},
+					{
+						label: "厚度",
+						unit: "",
+						key: "diskH",
+						min: .05,
+						max: 1.1,
+						step: .01,
+						dec: 2
+					},
+					{
+						label: "温度",
+						unit: "K",
+						key: "temp",
+						min: 2e3,
+						max: 2e4,
+						step: 100,
+						dec: 0
+					},
+					{
+						label: "温度衰减",
+						unit: "",
+						key: "tempExp",
+						min: .02,
+						max: .5,
+						step: .005,
+						dec: 3
+					},
+					{
+						label: "亮度",
+						unit: "",
+						key: "bright",
+						min: .05,
+						max: 4,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "亮度衰减",
+						unit: "",
+						key: "brightExp",
+						min: .02,
+						max: .6,
+						step: .005,
+						dec: 3
+					},
+					{
+						label: "密度",
+						unit: "",
+						key: "dens",
+						min: .1,
+						max: 4,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "密度衰减",
+						unit: "",
+						key: "densExp",
+						min: .02,
+						max: .6,
+						step: .005,
+						dec: 3
+					},
+					{
+						label: "湍流",
+						unit: "",
+						key: "turb",
+						min: 0,
+						max: 1,
+						step: .01,
+						dec: 2
+					},
+					{
+						label: "湍流尺度",
+						unit: "",
+						key: "turbScale",
+						min: .3,
+						max: 3,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "多普勒",
+						unit: "",
+						key: "doppler",
+						min: 0,
+						max: 1.5,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "轨道流速",
+						unit: "",
+						key: "orbit",
+						min: 0,
+						max: 3,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "消光·红化",
+						unit: "",
+						key: "extinct",
+						min: 0,
+						max: 3,
+						step: .05,
+						dec: 2
+					}
+				]
+			},
+			{
+				title: "相机与星空",
+				rows: [
+					{
+						label: "距离",
+						unit: "M",
+						key: "camDist",
+						min: 4,
+						max: 40,
+						step: .25,
+						dec: 2
+					},
+					{
+						label: "倾角",
+						unit: "°",
+						key: "camTilt",
+						min: -85,
+						max: 85,
+						step: 1,
+						dec: 0
+					},
+					{
+						label: "视场",
+						unit: "°",
+						key: "fov",
+						min: 25,
+						max: 90,
+						step: 1,
+						dec: 0
+					},
+					{
+						label: "环绕速度",
+						unit: "",
+						key: "rotSpeed",
+						min: 0,
+						max: 4,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "星星密度",
+						unit: "",
+						key: "starDens",
+						min: 0,
+						max: 1.5,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "星星亮度",
+						unit: "",
+						key: "starBright",
+						min: 0,
+						max: 3,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "星云",
+						unit: "",
+						key: "nebula",
+						min: 0,
+						max: 1.5,
+						step: .05,
+						dec: 2
+					}
+				]
+			},
+			{
+				title: "后处理",
+				rows: [
+					{
+						label: "泛光",
+						unit: "",
+						key: "bloom",
+						min: 0,
+						max: 2,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "泛光阈值",
+						unit: "",
+						key: "bloomThr",
+						min: 0,
+						max: 2,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "色散",
+						unit: "",
+						key: "ca",
+						min: 0,
+						max: 4,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "曝光",
+						unit: "",
+						key: "exposure",
+						min: .2,
+						max: 3,
+						step: .05,
+						dec: 2
+					},
+					{
+						label: "暗角",
+						unit: "",
+						key: "vignette",
+						min: 0,
+						max: 1.5,
+						step: .05,
+						dec: 2
+					}
+				]
+			}
+		];
+		const STORAGE_KEY$1 = "dsh.ui-kerrnewman.params.v1";
+		function loadParams() {
+			try {
+				const raw = localStorage.getItem(STORAGE_KEY$1);
+				if (raw === null) return DEFAULTS;
+				const parsed = JSON.parse(raw);
+				if (typeof parsed !== "object" || parsed === null) return DEFAULTS;
+				return {
+					...DEFAULTS,
+					...parsed
+				};
+			} catch {
+				return DEFAULTS;
+			}
+		}
+		function saveParams(p) {
+			try {
+				localStorage.setItem(STORAGE_KEY$1, JSON.stringify(p));
+			} catch {}
+		}
+		/** Registry → component visibility bridge; set on mount, read at registration time. */
+		const visibility$1 = {
+			apply: null,
+			desired: true
+		};
+		/** One labeled range slider row. */
+		function SliderRow(props) {
+			const { row, p } = props;
+			return /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+				className: KerrNewmanWallpaper_module_css_default.row,
+				children: [/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+					className: KerrNewmanWallpaper_module_css_default.labline,
+					children: [/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("span", { children: [row.label, row.unit !== "" && /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("em", { children: ["\xA0", row.unit] })] }), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", {
+						className: KerrNewmanWallpaper_module_css_default.val,
+						children: p[row.key].toFixed(row.dec)
+					})]
+				}), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("input", {
+					type: "range",
+					min: String(row.min),
+					max: String(row.max),
+					step: String(row.step),
+					value: String(p[row.key]),
+					onChange: (e) => {
+						props.onChange(row.key, Number(e.target.value));
+					}
+				})]
+			});
+		}
+		/** The Kerr-Newman wallpaper entry. */
+		function KerrNewmanWallpaper() {
+			const canvasRef = (0, react.useRef)(null);
+			const hostRef = (0, react.useRef)(null);
+			const engineRef = (0, react.useRef)(null);
+			const [p, setP] = (0, react.useState)(loadParams);
+			const [stats, setStats] = (0, react.useState)({
+				fps: "--",
+				res: "--",
+				steps: "--"
+			});
+			const [quality, setQualityState] = (0, react.useState)(1);
+			const [autoRotate, setAutoRotate] = (0, react.useState)(true);
+			const [interactive, setInteractive] = (0, react.useState)(false);
+			const [collapsed, setCollapsed] = (0, react.useState)(true);
+			const [error, setError] = (0, react.useState)("");
+			(0, react.useEffect)(() => {
+				const api = createKnEngine(canvasRef.current, {
+					onStats: setStats,
+					onQuality: (i) => {
+						setQualityState(i);
+					},
+					onFatal: (m) => {
+						setError(m);
+					}
+				});
+				engineRef.current = api;
+				visibility$1.apply = (on) => {
+					if (hostRef.current !== null) hostRef.current.style.display = on ? "" : "none";
+					if (on) api.resume();
+					else api.pause();
+				};
+				visibility$1.apply(visibility$1.desired);
+				return () => {
+					visibility$1.apply = null;
+					api.dispose();
+					engineRef.current = null;
+				};
+			}, []);
+			(0, react.useEffect)(() => {
+				engineRef.current?.setParams(p);
+				saveParams(p);
+			}, [p]);
+			(0, react.useEffect)(() => {
+				engineRef.current?.setAutoRotate(autoRotate);
+			}, [autoRotate]);
+			(0, react.useEffect)(() => {
+				engineRef.current?.setInteractive(interactive);
+			}, [interactive]);
+			const upd = (key, value) => {
+				setP((prev) => ({
+					...prev,
+					[key]: value
+				}));
+			};
+			const applyPreset = (id) => {
+				const preset = PRESETS[id];
+				/* v8 ignore next -- the preset buttons pass fixed ids that all exist in PRESETS */
+				if (preset !== void 0) setP((prev) => ({
+					...prev,
+					...preset
+				}));
+			};
+			const slider = (row) => /* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow, {
+				row,
+				p,
+				onChange: upd
+			}, row.key);
+			return /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+				ref: hostRef,
+				className: KerrNewmanWallpaper_module_css_default.host,
+				"aria-hidden": "true",
+				"data-collapsed": collapsed ? "" : void 0,
+				"data-interactive": interactive ? "" : void 0,
+				children: [
+					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("canvas", {
+						ref: canvasRef,
+						className: KerrNewmanWallpaper_module_css_default.canvas,
+						style: { opacity: p.cssOpacity }
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+						className: KerrNewmanWallpaper_module_css_default.veil,
+						style: { opacity: p.dim }
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+						className: KerrNewmanWallpaper_module_css_default.open,
+						title: "展开面板",
+						onClick: () => {
+							setCollapsed(false);
+						},
+						children: "⟨"
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("aside", {
+						className: KerrNewmanWallpaper_module_css_default.panel,
+						children: [
+							/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+								className: KerrNewmanWallpaper_module_css_default.toggle,
+								title: "收起面板",
+								onClick: () => {
+									setCollapsed(true);
+								},
+								children: "⟩"
+							}),
+							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("header", {
+								className: KerrNewmanWallpaper_module_css_default.head,
+								children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("h1", { children: "KERR–NEWMAN" }), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("p", {
+									className: KerrNewmanWallpaper_module_css_default.sub,
+									children: "带电旋转黑洞 · 哈密顿光子追踪"
+								})]
+							}),
+							error !== "" ? /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+								className: KerrNewmanWallpaper_module_css_default.fatal,
+								children: error
+							}) : /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+								className: KerrNewmanWallpaper_module_css_default.stats,
+								children: [
+									/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+										className: KerrNewmanWallpaper_module_css_default.stat,
+										children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("b", { children: stats.fps }), "FPS"]
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+										className: KerrNewmanWallpaper_module_css_default.stat,
+										children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("b", { children: stats.res }), "分辨率"]
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+										className: KerrNewmanWallpaper_module_css_default.stat,
+										children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("b", { children: stats.steps }), "积分步"]
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+								className: KerrNewmanWallpaper_module_css_default.presets,
+								children: [
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+										onClick: () => {
+											applyPreset("movie");
+										},
+										children: "电影"
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+										onClick: () => {
+											applyPreset("extremal");
+										},
+										children: "极端"
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+										onClick: () => {
+											applyPreset("naked");
+										},
+										children: "裸奇环"
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+										onClick: () => {
+											applyPreset("antiverse");
+										},
+										children: "反宇宙"
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+										onClick: () => {
+											applyPreset("hot");
+										},
+										children: "炽热"
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+										onClick: () => {
+											setP(DEFAULTS);
+										},
+										children: "默认"
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("section", {
+								className: KerrNewmanWallpaper_module_css_default.sec,
+								children: [
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("h2", { children: "壁纸" }),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow, {
+										p,
+										row: {
+											label: "壁纸浓度",
+											unit: "",
+											key: "cssOpacity",
+											min: 0,
+											max: 1,
+											step: .05,
+											dec: 2
+										},
+										onChange: upd
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)(SliderRow, {
+										p,
+										row: {
+											label: "背景暗化",
+											unit: "",
+											key: "dim",
+											min: 0,
+											max: .8,
+											step: .05,
+											dec: 2
+										},
+										onChange: upd
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+										className: `${KerrNewmanWallpaper_module_css_default.row} ${KerrNewmanWallpaper_module_css_default.checkline}`,
+										children: /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("label", { children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("input", {
+											type: "checkbox",
+											checked: interactive,
+											onChange: (e) => {
+												setInteractive(e.target.checked);
+											}
+										}), "交互模式（拖拽旋转 · 滚轮缩放）"] })
+									})
+								]
+							}),
+							SECTIONS.map((s) => /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("section", {
+								className: KerrNewmanWallpaper_module_css_default.sec,
+								children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("h2", { children: s.title }), s.rows.map(slider)]
+							}, s.title)),
+							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("section", {
+								className: KerrNewmanWallpaper_module_css_default.sec,
+								children: [
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("h2", { children: "渲染" }),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+										className: KerrNewmanWallpaper_module_css_default.row,
+										children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+											className: KerrNewmanWallpaper_module_css_default.labline,
+											children: /* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", { children: "画质" })
+										}), /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("select", {
+											value: String(quality),
+											onChange: (e) => {
+												const i = Number(e.target.value);
+												setQualityState(i);
+												engineRef.current?.setQuality(i, true);
+											},
+											children: [
+												/* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
+													value: "0",
+													children: "低（性能优先）"
+												}),
+												/* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
+													value: "1",
+													children: "中（推荐）"
+												}),
+												/* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
+													value: "2",
+													children: "高"
+												}),
+												/* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
+													value: "3",
+													children: "极致"
+												})
+											]
+										})]
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+										className: `${KerrNewmanWallpaper_module_css_default.row} ${KerrNewmanWallpaper_module_css_default.checkline}`,
+										children: [/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("label", { children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("input", {
+											type: "checkbox",
+											checked: autoRotate,
+											onChange: (e) => {
+												setAutoRotate(e.target.checked);
+											}
+										}), "自动环绕"] }), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+											className: KerrNewmanWallpaper_module_css_default.mini,
+											onClick: () => {
+												engineRef.current?.capture();
+											},
+											children: "保存截图"
+										})]
+									})
+								]
+							}),
+							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("footer", {
+								className: KerrNewmanWallpaper_module_css_default.foot,
+								children: [
+									"ingoing Kerr–Schild 度规 · RK4 哈密顿积分 · 仿射参数自然取值",
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("br", {}),
+									"视界由红移发散间接判定；a²+Q² > 1 为裸奇环，奇环另一侧为反宇宙（天空补色）"
 								]
 							})
 						]
@@ -3100,7 +4942,8 @@ void main(){
 		/**
 		* Browser half of dsh-wallpapers: the wallpaper registry (a page-local
 		* service background layers register into) plus its Settings section, the
-		* thinking-orb canvas, and the GARGANTUA black-hole layer. Selection persists
+		* thinking-orb canvas, the GARGANTUA black-hole layer, and the Kerr-Newman
+		* black-hole layer. Selection persists
 		* in localStorage; wallpapers that register while not selected are hidden
 		* through their own `show`/`hide` callbacks (a hidden layer pauses its
 		* render loop), so no slot shadowing is involved.
@@ -3159,6 +5002,26 @@ void main(){
 				label: "GARGANTUA 黑洞",
 				note: "引力透镜光线追踪 · WebGL2",
 				show: () => {
+					visibility$2.desired = true;
+					visibility$2.apply?.(true);
+				},
+				hide: () => {
+					visibility$2.desired = false;
+					visibility$2.apply?.(false);
+				}
+			});
+			ctx.effect(() => stopBlackhole);
+			ctx.slots.inject("shell.overlay", () => ctx.slots.register({
+				name: "shell.overlay",
+				id: "kerr-newman-wallpaper",
+				order: -1900,
+				label: "Kerr–Newman 黑洞壁纸"
+			}, KerrNewmanWallpaper));
+			const stopKerrNewman = registry.register({
+				id: "kerr-newman",
+				label: "Kerr–Newman 黑洞",
+				note: "KN 度规哈密顿光追 · 体积吸积盘",
+				show: () => {
 					visibility$1.desired = true;
 					visibility$1.apply?.(true);
 				},
@@ -3167,7 +5030,7 @@ void main(){
 					visibility$1.apply?.(false);
 				}
 			});
-			ctx.effect(() => stopBlackhole);
+			ctx.effect(() => stopKerrNewman);
 		}
 		//#endregion
 		exports.apply = apply;
