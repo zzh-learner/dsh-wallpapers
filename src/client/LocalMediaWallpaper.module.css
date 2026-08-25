@@ -1,0 +1,60 @@
+/* 本地媒体 wallpaper host: the same fixed full-viewport contract as the
+   black-hole layers (z-index -1, pointer-events none), with two stacked
+   media slots for the crossfade and a centered status chip. */
+.host {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: transparent;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+  outline: none;
+}
+
+/* The incoming slide fades in over the outgoing one; the outgoing slot is
+   removed once the transition window has passed. */
+.front {
+  animation: dsh-local-media-fade 0.9s ease both;
+}
+
+@keyframes dsh-local-media-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.status {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: min(72vw, 520px);
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: rgba(10, 13, 20, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #aeb7c8;
+  font-size: 12.5px;
+  line-height: 1.6;
+  text-align: center;
+  word-break: break-all;
+}
+
+.error {
+  color: #ff9d9d;
+}

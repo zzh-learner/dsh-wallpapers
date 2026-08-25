@@ -1,0 +1,216 @@
+/* 本地媒体 settings card: lives inside the 壁纸 settings section under the
+   selected row — current source, an embedded one-pane folder browser fed by
+   the host listing route, and the rotation options. Uses the settings shell's
+   alias tokens to match the section's look. */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 2px 0 8px;
+  padding: 12px;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 12px;
+  background: var(--dsw-alias-interactive-bg-hover);
+  font-size: 12.5px;
+  color: var(--dsw-alias-label-primary);
+  text-align: left;
+}
+
+.cap {
+  display: block;
+  font-size: 11px;
+  color: var(--dsw-alias-label-tertiary);
+  margin-bottom: 2px;
+}
+
+.path {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  word-break: break-all;
+  color: var(--dsw-alias-label-secondary, var(--dsw-alias-label-primary));
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.primary,
+.actions button,
+.browser button,
+.manual button,
+.opts select {
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--dsw-alias-label-primary);
+  background: var(--dsw-alias-interactive-bg-active, rgba(127, 127, 127, 0.16));
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.browser button:disabled,
+.manual button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.primary {
+  background: var(--dsw-alias-state-business-primary, rgba(64, 128, 255, 0.7));
+  border-color: transparent;
+  color: #fff;
+}
+
+.opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+}
+
+.opts label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--dsw-alias-label-secondary, var(--dsw-alias-label-primary));
+}
+
+.opts select {
+  padding: 3px 6px;
+}
+
+.tip {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+/* Embedded folder browser. */
+.browser {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cwd {
+  flex: 1;
+  min-width: 0;
+  font-size: 11px;
+  color: var(--dsw-alias-label-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl;
+  text-align: left;
+}
+
+.roots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.roots button {
+  padding: 2px 8px;
+  font-size: 11px;
+}
+
+.list {
+  max-height: 232px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font-family: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.entry:hover {
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.icon {
+  flex: none;
+  width: 18px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.name {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty,
+.errline {
+  padding: 10px 8px;
+  font-size: 11.5px;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.errline {
+  color: #ff8f8f;
+}
+
+.browserFoot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.count {
+  flex: 1;
+  font-size: 11px;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.manual {
+  display: flex;
+  gap: 6px;
+}
+
+.manual input {
+  flex: 1;
+  min-width: 0;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--dsw-alias-label-primary);
+  background: transparent;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 8px;
+  padding: 5px 8px;
+  box-sizing: border-box;
+}
+
+.manual input::placeholder {
+  color: var(--dsw-alias-label-tertiary);
+}

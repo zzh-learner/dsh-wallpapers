@@ -1,12 +1,13 @@
 /**
  * The Settings 「壁纸」 section: one radio row per registered wallpaper plus
  * the terminal rows, selection applied immediately so the page behind the
- * open panel previews it.
+ * open panel previews it. A wallpaper that ships its own settings card
+ * (renderSettings) gets it rendered right under its selected row.
  *
  * @module dsh-wallpapers/src/client/WallpaperSection
  */
 
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import type { WallpaperRegistry } from './registry.ts'
 import css from './WallpaperSection.module.css'
 
@@ -29,21 +30,25 @@ export function WallpaperSection({ registry }: WallpaperSectionProps) {
         选择 Web 界面的背景层。被切走的壁纸会暂停渲染以节省性能；插件壁纸运行时会自动出现在列表中。
       </div>
       {rows.map(row => (
-        <button
-          key={row.id}
-          type="button"
-          className={row.id === current ? `${css.opt} ${css.on}` : css.opt}
-          onClick={() => { registry.select(row.id) }}
-        >
-          <span className={css.dot} aria-hidden="true" />
-          <span className={css.opttxt}>
-            <span className={css.optlabel}>{row.label}</span>
-            {row.note !== undefined && <span className={css.optnote}>{row.note}</span>}
-          </span>
-        </button>
+        <Fragment key={row.id}>
+          <button
+            type="button"
+            className={row.id === current ? `${css.opt} ${css.on}` : css.opt}
+            onClick={() => { registry.select(row.id) }}
+          >
+            <span className={css.dot} aria-hidden="true" />
+            <span className={css.opttxt}>
+              <span className={css.optlabel}>{row.label}</span>
+              {row.note !== undefined && <span className={css.optnote}>{row.note}</span>}
+            </span>
+          </button>
+          {row.id === current && row.renderSettings !== undefined && (
+            <div className={css.sub}>{row.renderSettings()}</div>
+          )}
+        </Fragment>
       ))}
       <div className={css.hint}>
-        黑洞与思考球体各自的参数面板挂在对应壁纸显示时的界面右上角；壁纸被隐藏时其面板一并隐藏。
+        黑洞与思考球体各自的参数面板挂在对应壁纸显示时的界面右上角；本地媒体的路径与轮播设置在选中后于上方展开；壁纸被隐藏时其面板一并隐藏。
       </div>
     </div>
   )

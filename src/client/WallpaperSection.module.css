@@ -82,6 +82,10 @@
   color: var(--dsw-alias-label-tertiary);
 }
 
+.sub {
+  margin: 2px 0 8px;
+}
+
 .hint {
   margin-top: 10px;
   padding: 10px 12px;

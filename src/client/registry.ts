@@ -1,10 +1,13 @@
 /**
  * The wallpaper registry core: registration list, current selection, and
  * localStorage persistence. Framework-free so the Settings section and the
- * service share one implementation.
+ * service share one implementation (the optional settings renderer is a
+ * type-only React dependency; no React value is touched here).
  *
  * @module dsh-wallpapers/src/client/registry
  */
+
+import type { ReactElement } from 'react'
 
 /** One background layer's registration descriptor. */
 export interface WallpaperDescriptor {
@@ -18,6 +21,8 @@ export interface WallpaperDescriptor {
   readonly show: () => void
   /** Hide the layer and pause its render loop. */
   readonly hide: () => void
+  /** Optional per-wallpaper settings card, rendered under the selected row. */
+  readonly renderSettings?: () => ReactElement
 }
 
 /** One row the Settings section renders. */
@@ -25,6 +30,8 @@ export interface WallpaperRow {
   readonly id: string
   readonly label: string
   readonly note?: string
+  /** Present (and rendered) only for the current selection. */
+  readonly renderSettings?: () => ReactElement
 }
 
 /** The registry service face (also the section's data source). */
@@ -112,9 +119,15 @@ export function createWallpaperRegistry(): WallpaperRegistry {
     list() {
       const rows: WallpaperRow[] = []
       for (const layer of layers.values()) {
-        rows.push(layer.desc.note === undefined
-          ? { id: layer.desc.id, label: layer.desc.label }
-          : { id: layer.desc.id, label: layer.desc.label, note: layer.desc.note })
+        const { id, label, note, renderSettings } = layer.desc
+        rows.push(note === undefined && renderSettings === undefined
+          ? { id, label }
+          : {
+              id,
+              label,
+              ...(note !== undefined ? { note } : {}),
+              ...(renderSettings !== undefined ? { renderSettings } : {}),
+            })
       }
       if (![...layers.keys(), ...BUILTIN.map(b => b.id)].includes(selected)) {
         selected = 'none'

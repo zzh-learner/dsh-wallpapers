@@ -1,8 +1,9 @@
 /**
  * Browser half of dsh-wallpapers: the wallpaper registry (a page-local
  * service background layers register into) plus its Settings section, the
- * thinking-orb canvas, the GARGANTUA black-hole layer, and the Kerr-Newman
- * black-hole layer. Selection persists
+ * thinking-orb canvas, the GARGANTUA black-hole layer, the Kerr-Newman
+ * black-hole layer, and the 本地媒体 layer (one local image/video, or a
+ * folder rotation served by the host-half routes). Selection persists
  * in localStorage; wallpapers that register while not selected are hidden
  * through their own `show`/`hide` callbacks (a hidden layer pauses its
  * render loop), so no slot shadowing is involved.
@@ -17,6 +18,8 @@ import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
 import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
 import { BlackholeWallpaper, visibility as blackholeVisibility } from './BlackholeWallpaper.tsx'
 import { KerrNewmanWallpaper, visibility as kerrNewmanVisibility } from './KerrNewmanWallpaper.tsx'
+import { LocalMediaWallpaper, visibility as localMediaVisibility } from './LocalMediaWallpaper.tsx'
+import { LocalMediaSettings } from './LocalMediaSettings.tsx'
 import { OrbBackdrop, visibility as orbsVisibility } from './OrbBackdrop.tsx'
 import { createWallpaperRegistry } from './registry.ts'
 import type { WallpaperRegistry } from './registry.ts'
@@ -108,4 +111,24 @@ export function apply(ctx: ClientContext): void {
     },
   })
   ctx.effect(() => stopKerrNewman)
+
+  ctx.slots.inject('shell.overlay', () => ctx.slots.register(
+    { name: 'shell.overlay', id: 'local-media-wallpaper', order: -1500, label: '本地媒体壁纸' },
+    LocalMediaWallpaper,
+  ))
+  const stopLocalMedia = registry.register({
+    id: 'local-media',
+    label: '本地媒体',
+    note: '本地图片 / 视频 / 文件夹轮播',
+    show: () => {
+      localMediaVisibility.desired = true
+      localMediaVisibility.apply?.(true)
+    },
+    hide: () => {
+      localMediaVisibility.desired = false
+      localMediaVisibility.apply?.(false)
+    },
+    renderSettings: () => createElement(LocalMediaSettings),
+  })
+  ctx.effect(() => stopLocalMedia)
 }

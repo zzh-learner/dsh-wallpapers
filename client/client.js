@@ -831,13 +831,13 @@ void main(){
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/BlackholeWallpaper.module.css.mjs
-		const css$4 = ".BlackholeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.BlackholeWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas{pointer-events:auto;cursor:grab}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas:active{cursor:grabbing}.BlackholeWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_panel{transform:translate(calc(100% + 22px))}.BlackholeWallpaper-module_panel::-webkit-scrollbar{width:6px}.BlackholeWallpaper-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.BlackholeWallpaper-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.BlackholeWallpaper-module_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_open{display:block}.BlackholeWallpaper-module_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.BlackholeWallpaper-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.BlackholeWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.BlackholeWallpaper-module_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.BlackholeWallpaper-module_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.BlackholeWallpaper-module_presets{gap:6px;margin-top:12px;display:flex}.BlackholeWallpaper-module_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.BlackholeWallpaper-module_presets button:hover{background:#ff9a4d33}.BlackholeWallpaper-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.BlackholeWallpaper-module_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.BlackholeWallpaper-module_row{margin-bottom:10px}.BlackholeWallpaper-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.BlackholeWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.BlackholeWallpaper-module_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.BlackholeWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.BlackholeWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.BlackholeWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.BlackholeWallpaper-module_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.BlackholeWallpaper-module_checkline input[type=checkbox]{accent-color:#ff9a4d}.BlackholeWallpaper-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.BlackholeWallpaper-module_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.BlackholeWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.BlackholeWallpaper-module_panel{width:min(300px,82vw)}}";
-		const tagId$4 = "dsh-wallpapers/BlackholeWallpaper.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$4) + "]") === null) {
+		const css$6 = ".BlackholeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.BlackholeWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas{pointer-events:auto;cursor:grab}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas:active{cursor:grabbing}.BlackholeWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_panel{transform:translate(calc(100% + 22px))}.BlackholeWallpaper-module_panel::-webkit-scrollbar{width:6px}.BlackholeWallpaper-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.BlackholeWallpaper-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.BlackholeWallpaper-module_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_open{display:block}.BlackholeWallpaper-module_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.BlackholeWallpaper-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.BlackholeWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.BlackholeWallpaper-module_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.BlackholeWallpaper-module_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.BlackholeWallpaper-module_presets{gap:6px;margin-top:12px;display:flex}.BlackholeWallpaper-module_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.BlackholeWallpaper-module_presets button:hover{background:#ff9a4d33}.BlackholeWallpaper-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.BlackholeWallpaper-module_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.BlackholeWallpaper-module_row{margin-bottom:10px}.BlackholeWallpaper-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.BlackholeWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.BlackholeWallpaper-module_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.BlackholeWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.BlackholeWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.BlackholeWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.BlackholeWallpaper-module_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.BlackholeWallpaper-module_checkline input[type=checkbox]{accent-color:#ff9a4d}.BlackholeWallpaper-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.BlackholeWallpaper-module_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.BlackholeWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.BlackholeWallpaper-module_panel{width:min(300px,82vw)}}";
+		const tagId$6 = "dsh-wallpapers/BlackholeWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$6) + "]") === null) {
 			const tag = document.createElement("style");
 			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$4;
-			tag.textContent = css$4;
+			tag.dataset.pluginCss = tagId$6;
+			tag.textContent = css$6;
 			document.head.appendChild(tag);
 		}
 		var BlackholeWallpaper_module_css_default = {
@@ -1071,7 +1071,7 @@ void main(){
 			} catch {}
 		}
 		/** Registry → component visibility bridge; set on mount, read at registration time. */
-		const visibility$2 = {
+		const visibility$3 = {
 			apply: null,
 			desired: true
 		};
@@ -1125,16 +1125,16 @@ void main(){
 					}
 				});
 				engineRef.current = api;
-				visibility$2.apply = (on) => {
+				visibility$3.apply = (on) => {
 					if (hostRef.current !== null) hostRef.current.style.display = on ? "" : "none";
 					if (engineRef.current !== null) {
 						if (on) engineRef.current.resume();
 						else engineRef.current.pause();
 					}
 				};
-				visibility$2.apply(visibility$2.desired);
+				visibility$3.apply(visibility$3.desired);
 				return () => {
-					visibility$2.apply = null;
+					visibility$3.apply = null;
 					api.dispose();
 					engineRef.current = null;
 				};
@@ -2503,13 +2503,13 @@ void main() {
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/KerrNewmanWallpaper.module.css.mjs
-		const css$3 = ".KerrNewmanWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.KerrNewmanWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas{pointer-events:auto;cursor:grab}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas:active{cursor:grabbing}.KerrNewmanWallpaper-module_veil{pointer-events:none;background:#04060c;position:absolute;inset:0}.KerrNewmanWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.2);color:#dfe7f5;text-align:left;box-sizing:border-box;background:#0a0e18ad;border:1px solid #7fb2ff29;border-radius:14px;width:300px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto;box-shadow:0 18px 50px #00000080}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_panel{transform:translate(calc(100% + 22px))}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar{width:6px}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar-thumb{background:#7fb2ff38;border-radius:3px}.KerrNewmanWallpaper-module_toggle{color:#7fb2ff;cursor:pointer;background:#7fb2ff1a;border:1px solid #7fb2ff38;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.KerrNewmanWallpaper-module_toggle:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#7fb2ff;cursor:pointer;background:#0a0e18ad;border:1px solid #7fb2ff38;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_open{display:block}.KerrNewmanWallpaper-module_open:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_head h1{letter-spacing:.26em;background:linear-gradient(100deg,#cfe0ff 0%,#7fb2ff 55%,#b48cff 100%);color:#0000;-webkit-background-clip:text;background-clip:text;margin:0;font-size:18px;font-weight:600}.KerrNewmanWallpaper-module_sub{color:#8b98b4;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.KerrNewmanWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.KerrNewmanWallpaper-module_stat{text-align:center;color:#8b98b4;font-variant-numeric:tabular-nums;background:#7fb2ff0d;border:1px solid #7fb2ff1f;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.KerrNewmanWallpaper-module_stat b{color:#dfe7f5;margin-bottom:2px;font-size:13px;display:block}.KerrNewmanWallpaper-module_presets{flex-wrap:wrap;gap:6px;margin-top:12px;display:flex}.KerrNewmanWallpaper-module_presets button{color:#9fc2ff;cursor:pointer;background:#7fb2ff14;border:1px solid #7fb2ff4d;border-radius:8px;flex:30%;padding:7px 0;font-size:12px;transition:background .15s}.KerrNewmanWallpaper-module_presets button:hover{background:#7fb2ff33}.KerrNewmanWallpaper-module_sec{border-top:1px solid #7fb2ff1a;margin-top:14px;padding-top:11px}.KerrNewmanWallpaper-module_sec h2{letter-spacing:.22em;color:#7fb2ffd9;margin:0 0 9px;font-size:11px;font-weight:600}.KerrNewmanWallpaper-module_row{margin-bottom:10px}.KerrNewmanWallpaper-module_labline{color:#8b98b4;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.KerrNewmanWallpaper-module_val{color:#7fb2ff;font-family:Consolas,monospace;font-size:12px}.KerrNewmanWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#7fb2ff73,#ffffff1f);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.KerrNewmanWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#bcd4ff;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#bcd4ff;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel select{color:#dfe7f5;box-sizing:border-box;background:#10141f;border:1px solid #7fb2ff29;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.KerrNewmanWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.KerrNewmanWallpaper-module_checkline label{color:#8b98b4;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_checkline input[type=checkbox]{accent-color:#7fb2ff}.KerrNewmanWallpaper-module_mini{color:#dfe7f5;cursor:pointer;background:#7fb2ff12;border:1px solid #7fb2ff38;border-radius:8px;padding:5px 12px;font-size:12px}.KerrNewmanWallpaper-module_mini:hover{color:#7fb2ff;border-color:#7fb2ffb3}.KerrNewmanWallpaper-module_foot{color:#8b98b4;opacity:.85;border-top:1px solid #7fb2ff1a;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.KerrNewmanWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.KerrNewmanWallpaper-module_panel{width:min(300px,82vw)}}";
-		const tagId$3 = "dsh-wallpapers/KerrNewmanWallpaper.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$3) + "]") === null) {
+		const css$5 = ".KerrNewmanWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.KerrNewmanWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas{pointer-events:auto;cursor:grab}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas:active{cursor:grabbing}.KerrNewmanWallpaper-module_veil{pointer-events:none;background:#04060c;position:absolute;inset:0}.KerrNewmanWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.2);color:#dfe7f5;text-align:left;box-sizing:border-box;background:#0a0e18ad;border:1px solid #7fb2ff29;border-radius:14px;width:300px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto;box-shadow:0 18px 50px #00000080}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_panel{transform:translate(calc(100% + 22px))}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar{width:6px}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar-thumb{background:#7fb2ff38;border-radius:3px}.KerrNewmanWallpaper-module_toggle{color:#7fb2ff;cursor:pointer;background:#7fb2ff1a;border:1px solid #7fb2ff38;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.KerrNewmanWallpaper-module_toggle:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#7fb2ff;cursor:pointer;background:#0a0e18ad;border:1px solid #7fb2ff38;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_open{display:block}.KerrNewmanWallpaper-module_open:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_head h1{letter-spacing:.26em;background:linear-gradient(100deg,#cfe0ff 0%,#7fb2ff 55%,#b48cff 100%);color:#0000;-webkit-background-clip:text;background-clip:text;margin:0;font-size:18px;font-weight:600}.KerrNewmanWallpaper-module_sub{color:#8b98b4;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.KerrNewmanWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.KerrNewmanWallpaper-module_stat{text-align:center;color:#8b98b4;font-variant-numeric:tabular-nums;background:#7fb2ff0d;border:1px solid #7fb2ff1f;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.KerrNewmanWallpaper-module_stat b{color:#dfe7f5;margin-bottom:2px;font-size:13px;display:block}.KerrNewmanWallpaper-module_presets{flex-wrap:wrap;gap:6px;margin-top:12px;display:flex}.KerrNewmanWallpaper-module_presets button{color:#9fc2ff;cursor:pointer;background:#7fb2ff14;border:1px solid #7fb2ff4d;border-radius:8px;flex:30%;padding:7px 0;font-size:12px;transition:background .15s}.KerrNewmanWallpaper-module_presets button:hover{background:#7fb2ff33}.KerrNewmanWallpaper-module_sec{border-top:1px solid #7fb2ff1a;margin-top:14px;padding-top:11px}.KerrNewmanWallpaper-module_sec h2{letter-spacing:.22em;color:#7fb2ffd9;margin:0 0 9px;font-size:11px;font-weight:600}.KerrNewmanWallpaper-module_row{margin-bottom:10px}.KerrNewmanWallpaper-module_labline{color:#8b98b4;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.KerrNewmanWallpaper-module_val{color:#7fb2ff;font-family:Consolas,monospace;font-size:12px}.KerrNewmanWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#7fb2ff73,#ffffff1f);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.KerrNewmanWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#bcd4ff;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#bcd4ff;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel select{color:#dfe7f5;box-sizing:border-box;background:#10141f;border:1px solid #7fb2ff29;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.KerrNewmanWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.KerrNewmanWallpaper-module_checkline label{color:#8b98b4;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_checkline input[type=checkbox]{accent-color:#7fb2ff}.KerrNewmanWallpaper-module_mini{color:#dfe7f5;cursor:pointer;background:#7fb2ff12;border:1px solid #7fb2ff38;border-radius:8px;padding:5px 12px;font-size:12px}.KerrNewmanWallpaper-module_mini:hover{color:#7fb2ff;border-color:#7fb2ffb3}.KerrNewmanWallpaper-module_foot{color:#8b98b4;opacity:.85;border-top:1px solid #7fb2ff1a;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.KerrNewmanWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.KerrNewmanWallpaper-module_panel{width:min(300px,82vw)}}";
+		const tagId$5 = "dsh-wallpapers/KerrNewmanWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$5) + "]") === null) {
 			const tag = document.createElement("style");
 			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$3;
-			tag.textContent = css$3;
+			tag.dataset.pluginCss = tagId$5;
+			tag.textContent = css$5;
 			document.head.appendChild(tag);
 		}
 		var KerrNewmanWallpaper_module_css_default = {
@@ -2912,7 +2912,7 @@ void main() {
 			} catch {}
 		}
 		/** Registry → component visibility bridge; set on mount, read at registration time. */
-		const visibility$1 = {
+		const visibility$2 = {
 			apply: null,
 			desired: true
 		};
@@ -2966,14 +2966,14 @@ void main() {
 					}
 				});
 				engineRef.current = api;
-				visibility$1.apply = (on) => {
+				visibility$2.apply = (on) => {
 					if (hostRef.current !== null) hostRef.current.style.display = on ? "" : "none";
 					if (on) api.resume();
 					else api.pause();
 				};
-				visibility$1.apply(visibility$1.desired);
+				visibility$2.apply(visibility$2.desired);
 				return () => {
-					visibility$1.apply = null;
+					visibility$2.apply = null;
 					api.dispose();
 					engineRef.current = null;
 				};
@@ -3219,6 +3219,694 @@ void main() {
 								]
 							})
 						]
+					})
+				]
+			});
+		}
+		//#endregion
+		//#region src/client/localmedia/api.ts
+		/** Route prefix shared with the host half (src/media.ts LOCAL_MEDIA_ROUTE). */
+		const BASE = "/dsh-wallpapers/local";
+		function isRecord$1(value) {
+			return typeof value === "object" && value !== null;
+		}
+		/**
+		* List one absolute path (empty string = the host home directory). Never
+		* throws for missing paths — those come back as `kind: 'missing'` so callers
+		* can render an inline hint; only transport failures reject.
+		* @param target - absolute filesystem path, or '' for the home directory.
+		* @returns the classified listing.
+		*/
+		async function listMedia(target) {
+			let res;
+			try {
+				res = await fetch(`${BASE}/list?path=${encodeURIComponent(target)}`, { headers: { accept: "application/json" } });
+			} catch {
+				throw new Error("无法连接本地文件服务（本模式需要 Web 桌面配置）");
+			}
+			if (!res.ok) throw new Error(`本地文件服务返回 HTTP ${res.status}`);
+			let data;
+			try {
+				data = await res.json();
+			} catch {
+				throw new Error("本地文件服务返回了无法解析的内容");
+			}
+			if (!isRecord$1(data) || typeof data.path !== "string") throw new Error("本地文件服务返回了未知结构");
+			return data;
+		}
+		/**
+		* Build the URL one media element loads from; the size+mtime revision both
+		* cache-busts edited files and lets the route send long-lived cache headers.
+		* @param entry - the listed entry (or any path with its stats).
+		* @returns a same-origin URL serving the file bytes.
+		*/
+		function mediaUrl(entry) {
+			return `${BASE}/file?path=${encodeURIComponent(entry.path)}&rev=${entry.size}-${entry.mtime}`;
+		}
+		//#endregion
+		//#region src/client/localmedia/store.ts
+		/** localStorage key for the persisted configuration. */
+		const LOCAL_MEDIA_STORAGE_KEY = "dsh.wallpaper.local.v1";
+		/** Defaults: nothing picked yet, 30s per slide, name order, crop-to-fill. */
+		const DEFAULT_LOCAL_MEDIA_CONFIG = {
+			path: "",
+			intervalSec: 30,
+			shuffle: false,
+			fit: "cover"
+		};
+		function isRecord(value) {
+			return typeof value === "object" && value !== null;
+		}
+		function load() {
+			try {
+				const raw = localStorage.getItem(LOCAL_MEDIA_STORAGE_KEY);
+				if (raw === null) return DEFAULT_LOCAL_MEDIA_CONFIG;
+				const parsed = JSON.parse(raw);
+				if (!isRecord(parsed)) return DEFAULT_LOCAL_MEDIA_CONFIG;
+				const patch = {};
+				if (typeof parsed.path === "string") patch.path = parsed.path;
+				if (typeof parsed.intervalSec === "number" && Number.isFinite(parsed.intervalSec)) patch.intervalSec = Math.max(1, Math.round(parsed.intervalSec));
+				if (typeof parsed.shuffle === "boolean") patch.shuffle = parsed.shuffle;
+				if (parsed.fit === "cover" || parsed.fit === "contain") patch.fit = parsed.fit;
+				return {
+					...DEFAULT_LOCAL_MEDIA_CONFIG,
+					...patch
+				};
+			} catch {
+				return DEFAULT_LOCAL_MEDIA_CONFIG;
+			}
+		}
+		function save(config) {
+			try {
+				localStorage.setItem(LOCAL_MEDIA_STORAGE_KEY, JSON.stringify(config));
+			} catch {}
+		}
+		let current = load();
+		const listeners = /* @__PURE__ */ new Set();
+		/** Read the current configuration. */
+		function getLocalMediaConfig() {
+			return current;
+		}
+		/**
+		* Merge a patch into the configuration, persist it, and notify readers —
+		* the wallpaper layer re-lists its path immediately.
+		* @param patch - fields to change.
+		*/
+		function setLocalMediaConfig(patch) {
+			current = {
+				...current,
+				...patch
+			};
+			save(current);
+			for (const fn of listeners) fn();
+		}
+		/**
+		* Subscribe to configuration changes.
+		* @param fn - listener invoked after every change.
+		* @returns its disposer.
+		*/
+		function subscribeLocalMediaConfig(fn) {
+			listeners.add(fn);
+			return () => {
+				listeners.delete(fn);
+			};
+		}
+		//#endregion
+		//#region \0dsh-css:src/client/LocalMediaWallpaper.module.css.mjs
+		const css$4 = ".LocalMediaWallpaper-module_host{z-index:-1;pointer-events:none;background:0 0;position:fixed;inset:0;overflow:hidden}.LocalMediaWallpaper-module_layer{border:none;outline:none;width:100%;height:100%;display:block;position:absolute;inset:0}.LocalMediaWallpaper-module_front{animation:.9s both LocalMediaWallpaper-module_dsh-local-media-fade}@keyframes LocalMediaWallpaper-module_dsh-local-media-fade{0%{opacity:0}to{opacity:1}}.LocalMediaWallpaper-module_status{-webkit-backdrop-filter:blur(12px);color:#aeb7c8;text-align:center;word-break:break-all;background:#0a0d14a8;border:1px solid #ffffff17;border-radius:12px;max-width:min(72vw,520px);padding:10px 16px;font-size:12.5px;line-height:1.6;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.LocalMediaWallpaper-module_error{color:#ff9d9d}";
+		const tagId$4 = "dsh-wallpapers/LocalMediaWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$4) + "]") === null) {
+			const tag = document.createElement("style");
+			tag.dataset.plugin = "dsh-wallpapers";
+			tag.dataset.pluginCss = tagId$4;
+			tag.textContent = css$4;
+			document.head.appendChild(tag);
+		}
+		var LocalMediaWallpaper_module_css_default = {
+			"dsh-local-media-fade": "LocalMediaWallpaper-module_dsh-local-media-fade",
+			"error": "LocalMediaWallpaper-module_error",
+			"front": "LocalMediaWallpaper-module_front",
+			"host": "LocalMediaWallpaper-module_host",
+			"layer": "LocalMediaWallpaper-module_layer",
+			"status": "LocalMediaWallpaper-module_status"
+		};
+		//#endregion
+		//#region src/client/LocalMediaWallpaper.tsx
+		/**
+		* The 本地媒体 wallpaper layer: renders one configured local image or video,
+		* or rotates every image/video in a configured folder. The host-side routes
+		* (src/media.ts) provide listings and byte streams, the shared store
+		* (./localmedia/store.ts) holds the configuration, and visibility is driven
+		* by the wallpaper registry through the module-level bridge — while hidden
+		* the layer unmounts its media and stops the slideshow timer entirely.
+		*
+		* @module dsh-wallpapers/src/client/LocalMediaWallpaper
+		*/
+		/** Registry → component visibility bridge; set on mount, read at registration time. */
+		const visibility$1 = {
+			apply: null,
+			desired: false
+		};
+		/** Fisher–Yates over a copy; slideshow-only, so Math.random is fine. */
+		function shuffled(items) {
+			const out = [...items];
+			for (let i = out.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[out[i], out[j]] = [out[j], out[i]];
+			}
+			return out;
+		}
+		/** One stacked media element (the outgoing slide renders without handlers). */
+		function MediaLayer(props) {
+			const { slide, fit } = props;
+			const className = props.front ? `${LocalMediaWallpaper_module_css_default.layer} ${LocalMediaWallpaper_module_css_default.front}` : LocalMediaWallpaper_module_css_default.layer;
+			if (slide.entry.kind === "video") return /* @__PURE__ */ (0, react_jsx_runtime.jsx)("video", {
+				className,
+				src: mediaUrl(slide.entry),
+				style: { objectFit: fit },
+				autoPlay: true,
+				muted: true,
+				playsInline: true,
+				loop: props.single,
+				disablePictureInPicture: true,
+				preload: "auto",
+				onEnded: props.onEnded,
+				onError: props.onError,
+				onLoadedData: props.onLoaded
+			}, slide.key);
+			return /* @__PURE__ */ (0, react_jsx_runtime.jsx)("img", {
+				className,
+				src: mediaUrl(slide.entry),
+				style: { objectFit: fit },
+				alt: "",
+				draggable: false,
+				onError: props.onError,
+				onLoad: props.onLoaded
+			}, slide.key);
+		}
+		/** The 本地媒体 wallpaper entry. */
+		function LocalMediaWallpaper() {
+			const hostRef = (0, react.useRef)(null);
+			const itemsRef = (0, react.useRef)(null);
+			const topRef = (0, react.useRef)(null);
+			const errStreakRef = (0, react.useRef)(0);
+			const [config, setConfigState] = (0, react.useState)(getLocalMediaConfig);
+			const [shown, setShown] = (0, react.useState)(visibility$1.desired);
+			const [items, setItems] = (0, react.useState)(null);
+			const [index, setIndex] = (0, react.useState)(0);
+			const [top, setTop] = (0, react.useState)(null);
+			const [under, setUnder] = (0, react.useState)(null);
+			const [status, setStatus] = (0, react.useState)(null);
+			(0, react.useEffect)(() => {
+				visibility$1.apply = (on) => {
+					if (hostRef.current !== null) hostRef.current.style.display = on ? "" : "none";
+					setShown(on);
+				};
+				visibility$1.apply(visibility$1.desired);
+				return () => {
+					visibility$1.apply = null;
+				};
+			}, []);
+			(0, react.useEffect)(() => subscribeLocalMediaConfig(() => {
+				setConfigState(getLocalMediaConfig());
+			}), []);
+			(0, react.useEffect)(() => {
+				itemsRef.current = items;
+			}, [items]);
+			(0, react.useEffect)(() => {
+				const reset = () => {
+					setItems(null);
+					setIndex(0);
+					setTop(null);
+					setUnder(null);
+					topRef.current = null;
+				};
+				if (!shown) {
+					reset();
+					setStatus(null);
+					return;
+				}
+				if (config.path === "") {
+					reset();
+					setStatus({
+						tone: "load",
+						text: "本地媒体壁纸：请在 设置 → 壁纸 中选择图片、视频或文件夹"
+					});
+					return;
+				}
+				let cancelled = false;
+				reset();
+				setStatus({
+					tone: "load",
+					text: "正在读取本地媒体…"
+				});
+				listMedia(config.path).then((result) => {
+					if (cancelled) return;
+					if (result.kind === "dir") {
+						const slides = result.entries.filter((e) => e.kind === "image" || e.kind === "video");
+						if (slides.length === 0) {
+							setStatus({
+								tone: "error",
+								text: `文件夹中没有图片或视频：${result.path}`
+							});
+							return;
+						}
+						errStreakRef.current = 0;
+						setItems(config.shuffle ? shuffled(slides) : slides);
+						setIndex(0);
+						setStatus(null);
+						return;
+					}
+					if (result.kind === "image" || result.kind === "video") {
+						if (result.entry === void 0) {
+							setStatus({
+								tone: "error",
+								text: "本地文件服务返回了不完整的数据"
+							});
+							return;
+						}
+						errStreakRef.current = 0;
+						setItems([result.entry]);
+						setIndex(0);
+						setStatus(null);
+						return;
+					}
+					if (result.kind === "missing") {
+						setStatus({
+							tone: "error",
+							text: `路径不存在：${result.path}`
+						});
+						return;
+					}
+					setStatus({
+						tone: "error",
+						text: `不是受支持的图片或视频文件：${result.path}`
+					});
+				}).catch((error) => {
+					if (cancelled) return;
+					setStatus({
+						tone: "error",
+						text: error instanceof Error ? error.message : String(error)
+					});
+				});
+				return () => {
+					cancelled = true;
+				};
+			}, [
+				shown,
+				config.path,
+				config.shuffle
+			]);
+			const entry = items !== null && index < items.length ? items[index] : null;
+			const slideKey = entry === null ? "" : `${index}-${entry.path}-${entry.size}-${entry.mtime}`;
+			(0, react.useEffect)(() => {
+				if (entry === null) {
+					topRef.current = null;
+					setTop(null);
+					setUnder(null);
+					return;
+				}
+				const next = {
+					key: slideKey,
+					entry
+				};
+				if (topRef.current !== null && topRef.current.key !== next.key) setUnder(topRef.current);
+				topRef.current = next;
+				setTop(next);
+				const timer = setTimeout(() => {
+					setUnder(null);
+				}, 1100);
+				return () => {
+					clearTimeout(timer);
+				};
+			}, [slideKey]);
+			const advance = (0, react.useCallback)(() => {
+				const len = itemsRef.current?.length ?? 0;
+				if (len > 1) setIndex((i) => (i + 1) % len);
+			}, []);
+			(0, react.useEffect)(() => {
+				if (!shown || items === null || items.length < 2) return;
+				const timer = setTimeout(advance, Math.max(1, config.intervalSec) * 1e3);
+				return () => {
+					clearTimeout(timer);
+				};
+			}, [
+				shown,
+				items,
+				config.intervalSec,
+				slideKey,
+				advance
+			]);
+			const handleMediaLoad = (0, react.useCallback)(() => {
+				errStreakRef.current = 0;
+			}, []);
+			const handleMediaError = (0, react.useCallback)(() => {
+				const len = itemsRef.current?.length ?? 0;
+				errStreakRef.current += 1;
+				if (len > 1 && errStreakRef.current < len) {
+					advance();
+					return;
+				}
+				setStatus({
+					tone: "error",
+					text: `无法加载媒体文件：${topRef.current?.entry.name ?? config.path}`
+				});
+			}, [advance, config.path]);
+			const single = (items?.length ?? 0) === 1;
+			return /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+				ref: hostRef,
+				className: LocalMediaWallpaper_module_css_default.host,
+				"aria-hidden": "true",
+				children: shown && (top !== null || status !== null) && /* @__PURE__ */ (0, react_jsx_runtime.jsxs)(react_jsx_runtime.Fragment, { children: [
+					under !== null && /* @__PURE__ */ (0, react_jsx_runtime.jsx)(MediaLayer, {
+						slide: under,
+						fit: config.fit,
+						front: false,
+						single
+					}),
+					top !== null && /* @__PURE__ */ (0, react_jsx_runtime.jsx)(MediaLayer, {
+						slide: top,
+						fit: config.fit,
+						front: true,
+						single,
+						onEnded: advance,
+						onError: handleMediaError,
+						onLoaded: handleMediaLoad
+					}),
+					status !== null && /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+						className: status.tone === "error" ? `${LocalMediaWallpaper_module_css_default.status} ${LocalMediaWallpaper_module_css_default.error}` : LocalMediaWallpaper_module_css_default.status,
+						children: status.text
+					})
+				] })
+			});
+		}
+		//#endregion
+		//#region \0dsh-css:src/client/LocalMediaSettings.module.css.mjs
+		const css$3 = ".LocalMediaSettings-module_card{border:1px solid var(--dsw-alias-border-l1);background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary);text-align:left;border-radius:12px;flex-direction:column;gap:10px;margin:2px 0 8px;padding:12px;font-size:12.5px;display:flex}.LocalMediaSettings-module_cap{color:var(--dsw-alias-label-tertiary);margin-bottom:2px;font-size:11px;display:block}.LocalMediaSettings-module_path{word-break:break-all;color:var(--dsw-alias-label-secondary,var(--dsw-alias-label-primary));font-size:12px;line-height:1.5;display:block}.LocalMediaSettings-module_actions{gap:8px;display:flex}.LocalMediaSettings-module_primary,.LocalMediaSettings-module_actions button,.LocalMediaSettings-module_browser button,.LocalMediaSettings-module_manual button,.LocalMediaSettings-module_opts select{color:var(--dsw-alias-label-primary);background:var(--dsw-alias-interactive-bg-active,#7f7f7f29);border:1px solid var(--dsw-alias-border-l1);cursor:pointer;border-radius:8px;padding:5px 10px;font-family:inherit;font-size:12px}.LocalMediaSettings-module_browser button:disabled,.LocalMediaSettings-module_manual button:disabled{opacity:.45;cursor:default}.LocalMediaSettings-module_primary{background:var(--dsw-alias-state-business-primary,#4080ffb3);color:#fff;border-color:#0000}.LocalMediaSettings-module_opts{flex-wrap:wrap;align-items:center;gap:8px 12px;display:flex}.LocalMediaSettings-module_opts label{color:var(--dsw-alias-label-secondary,var(--dsw-alias-label-primary));align-items:center;gap:6px;font-size:12px;display:inline-flex}.LocalMediaSettings-module_opts select{padding:3px 6px}.LocalMediaSettings-module_tip{color:var(--dsw-alias-label-tertiary);margin:0;font-size:11px;line-height:1.6}.LocalMediaSettings-module_browser{border:1px solid var(--dsw-alias-border-l1);border-radius:10px;flex-direction:column;gap:6px;padding:8px;display:flex}.LocalMediaSettings-module_toolbar{align-items:center;gap:6px;display:flex}.LocalMediaSettings-module_cwd{min-width:0;color:var(--dsw-alias-label-tertiary);white-space:nowrap;text-overflow:ellipsis;text-align:left;direction:rtl;flex:1;font-size:11px;overflow:hidden}.LocalMediaSettings-module_roots{flex-wrap:wrap;gap:4px;display:flex}.LocalMediaSettings-module_roots button{padding:2px 8px;font-size:11px}.LocalMediaSettings-module_list{flex-direction:column;gap:2px;max-height:232px;display:flex;overflow-y:auto}.LocalMediaSettings-module_entry{width:100%;color:var(--dsw-alias-label-primary);text-align:left;cursor:pointer;background:0 0;border:none;border-radius:7px;align-items:center;gap:8px;padding:5px 8px;font-family:inherit;font-size:12px;display:flex}.LocalMediaSettings-module_entry:hover{background:var(--dsw-alias-interactive-bg-hover)}.LocalMediaSettings-module_icon{text-align:center;flex:none;width:18px;font-size:12px}.LocalMediaSettings-module_name{white-space:nowrap;text-overflow:ellipsis;min-width:0;overflow:hidden}.LocalMediaSettings-module_empty,.LocalMediaSettings-module_errline{color:var(--dsw-alias-label-tertiary);padding:10px 8px;font-size:11.5px}.LocalMediaSettings-module_errline{color:#ff8f8f}.LocalMediaSettings-module_browserFoot{align-items:center;gap:8px;display:flex}.LocalMediaSettings-module_count{color:var(--dsw-alias-label-tertiary);flex:1;font-size:11px}.LocalMediaSettings-module_manual{gap:6px;display:flex}.LocalMediaSettings-module_manual input{min-width:0;color:var(--dsw-alias-label-primary);border:1px solid var(--dsw-alias-border-l1);box-sizing:border-box;background:0 0;border-radius:8px;flex:1;padding:5px 8px;font-family:inherit;font-size:12px}.LocalMediaSettings-module_manual input::placeholder{color:var(--dsw-alias-label-tertiary)}";
+		const tagId$3 = "dsh-wallpapers/LocalMediaSettings.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$3) + "]") === null) {
+			const tag = document.createElement("style");
+			tag.dataset.plugin = "dsh-wallpapers";
+			tag.dataset.pluginCss = tagId$3;
+			tag.textContent = css$3;
+			document.head.appendChild(tag);
+		}
+		var LocalMediaSettings_module_css_default = {
+			"actions": "LocalMediaSettings-module_actions",
+			"browser": "LocalMediaSettings-module_browser",
+			"browserFoot": "LocalMediaSettings-module_browserFoot",
+			"cap": "LocalMediaSettings-module_cap",
+			"card": "LocalMediaSettings-module_card",
+			"count": "LocalMediaSettings-module_count",
+			"cwd": "LocalMediaSettings-module_cwd",
+			"empty": "LocalMediaSettings-module_empty",
+			"entry": "LocalMediaSettings-module_entry",
+			"errline": "LocalMediaSettings-module_errline",
+			"icon": "LocalMediaSettings-module_icon",
+			"list": "LocalMediaSettings-module_list",
+			"manual": "LocalMediaSettings-module_manual",
+			"name": "LocalMediaSettings-module_name",
+			"opts": "LocalMediaSettings-module_opts",
+			"path": "LocalMediaSettings-module_path",
+			"primary": "LocalMediaSettings-module_primary",
+			"roots": "LocalMediaSettings-module_roots",
+			"tip": "LocalMediaSettings-module_tip",
+			"toolbar": "LocalMediaSettings-module_toolbar"
+		};
+		//#endregion
+		//#region src/client/LocalMediaSettings.tsx
+		/**
+		* The 本地媒体 settings card, rendered by the 壁纸 section under the selected
+		* row: the current source path, an embedded one-pane folder browser backed by
+		* the host listing route (navigate, pick one media file, or rotate the
+		* folder), a manual absolute-path input, and the rotation options (interval,
+		* shuffle, fit). Every change goes straight through the shared store, so the
+		* wallpaper layer behind the open panel previews it live.
+		*
+		* @module dsh-wallpapers/src/client/LocalMediaSettings
+		*/
+		/** Offered slideshow intervals, in seconds. */
+		const INTERVALS = [
+			{
+				value: 5,
+				label: "5 秒"
+			},
+			{
+				value: 15,
+				label: "15 秒"
+			},
+			{
+				value: 30,
+				label: "30 秒"
+			},
+			{
+				value: 60,
+				label: "1 分钟"
+			},
+			{
+				value: 300,
+				label: "5 分钟"
+			},
+			{
+				value: 600,
+				label: "10 分钟"
+			}
+		];
+		/** The embedded folder browser: lists one directory, navigates, picks. */
+		function LocalMediaBrowser(props) {
+			const [cwd, setCwd] = (0, react.useState)(() => getLocalMediaConfig().path);
+			const [nonce, setNonce] = (0, react.useState)(0);
+			const [result, setResult] = (0, react.useState)(null);
+			const [error, setError] = (0, react.useState)("");
+			const [busy, setBusy] = (0, react.useState)(false);
+			const [manual, setManual] = (0, react.useState)("");
+			(0, react.useEffect)(() => {
+				let cancelled = false;
+				setBusy(true);
+				setError("");
+				setResult(null);
+				listMedia(cwd).then((r) => {
+					if (cancelled) return;
+					setBusy(false);
+					if (r.kind === "missing") {
+						setError("路径不存在");
+						return;
+					}
+					if (r.kind !== "dir") {
+						if (r.parent !== null) setCwd(r.parent);
+						else setError("无法浏览该路径");
+						return;
+					}
+					setResult(r);
+				}).catch((e) => {
+					if (cancelled) return;
+					setBusy(false);
+					setError(e instanceof Error ? e.message : String(e));
+				});
+				return () => {
+					cancelled = true;
+				};
+			}, [cwd, nonce]);
+			const pick = (entry) => {
+				if (entry.kind === "dir") {
+					setCwd(entry.path);
+					return;
+				}
+				setLocalMediaConfig({ path: entry.path });
+				props.onClose();
+			};
+			const mediaCount = result === null ? 0 : result.entries.filter((e) => e.kind === "image" || e.kind === "video").length;
+			const goManual = () => {
+				const target = manual.trim();
+				if (target !== "") setCwd(target);
+			};
+			return /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+				className: LocalMediaSettings_module_css_default.browser,
+				children: [
+					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+						className: LocalMediaSettings_module_css_default.toolbar,
+						children: [
+							/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+								type: "button",
+								disabled: result === null || result.parent === null,
+								onClick: () => {
+									if (result?.parent != null) setCwd(result.parent);
+								},
+								children: "↑ 上一级"
+							}),
+							/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+								type: "button",
+								onClick: () => {
+									setNonce((n) => n + 1);
+								},
+								children: "刷新"
+							}),
+							/* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", {
+								className: LocalMediaSettings_module_css_default.cwd,
+								title: result?.path ?? cwd,
+								children: result?.path ?? (busy ? "读取中…" : cwd)
+							})
+						]
+					}),
+					result !== null && result.parent === null && result.roots !== void 0 && /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+						className: LocalMediaSettings_module_css_default.roots,
+						children: result.roots.map((root) => /* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+							type: "button",
+							onClick: () => {
+								setCwd(root);
+							},
+							children: root
+						}, root))
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+						className: LocalMediaSettings_module_css_default.list,
+						children: [
+							result?.entries.map((entry) => /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("button", {
+								type: "button",
+								className: LocalMediaSettings_module_css_default.entry,
+								onClick: () => {
+									pick(entry);
+								},
+								children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", {
+									className: LocalMediaSettings_module_css_default.icon,
+									"aria-hidden": "true",
+									children: entry.kind === "dir" ? "📁" : entry.kind === "video" ? "🎬" : "🖼️"
+								}), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", {
+									className: LocalMediaSettings_module_css_default.name,
+									children: entry.name
+								})]
+							}, entry.path)),
+							!busy && error === "" && result !== null && result.entries.length === 0 && /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+								className: LocalMediaSettings_module_css_default.empty,
+								children: "此文件夹中没有可用的子文件夹或媒体文件"
+							}),
+							busy && /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+								className: LocalMediaSettings_module_css_default.empty,
+								children: "读取中…"
+							}),
+							error !== "" && /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+								className: LocalMediaSettings_module_css_default.errline,
+								children: error
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+						className: LocalMediaSettings_module_css_default.browserFoot,
+						children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", {
+							className: LocalMediaSettings_module_css_default.count,
+							children: result === null ? "" : `${mediaCount} 个媒体文件`
+						}), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+							type: "button",
+							className: LocalMediaSettings_module_css_default.primary,
+							disabled: result === null || mediaCount === 0,
+							onClick: () => {
+								if (result === null) return;
+								setLocalMediaConfig({ path: result.path });
+								props.onClose();
+							},
+							children: "轮播此文件夹"
+						})]
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+						className: LocalMediaSettings_module_css_default.manual,
+						children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("input", {
+							value: manual,
+							placeholder: "或输入绝对路径，如 D:\\Wallpapers",
+							onChange: (e) => {
+								setManual(e.target.value);
+							},
+							onKeyDown: (e) => {
+								if (e.key === "Enter") goManual();
+							}
+						}), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+							type: "button",
+							disabled: manual.trim() === "",
+							onClick: goManual,
+							children: "转到"
+						})]
+					})
+				]
+			});
+		}
+		/** The settings card for the 本地媒体 wallpaper. */
+		function LocalMediaSettings() {
+			const [config, setConfigState] = (0, react.useState)(getLocalMediaConfig);
+			(0, react.useEffect)(() => subscribeLocalMediaConfig(() => {
+				setConfigState(getLocalMediaConfig());
+			}), []);
+			const [browsing, setBrowsing] = (0, react.useState)(false);
+			return /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+				className: LocalMediaSettings_module_css_default.card,
+				children: [
+					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", {
+						className: LocalMediaSettings_module_css_default.cap,
+						children: "壁纸来源（图片 · 视频 · 文件夹）"
+					}), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", {
+						className: LocalMediaSettings_module_css_default.path,
+						title: config.path,
+						children: config.path === "" ? "未选择 — 点击「浏览」挑选一个文件或文件夹" : config.path
+					})] }),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+						className: LocalMediaSettings_module_css_default.actions,
+						children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+							type: "button",
+							className: LocalMediaSettings_module_css_default.primary,
+							onClick: () => {
+								setBrowsing((v) => !v);
+							},
+							children: browsing ? "收起浏览" : "浏览…"
+						}), config.path !== "" && /* @__PURE__ */ (0, react_jsx_runtime.jsx)("button", {
+							type: "button",
+							onClick: () => {
+								setLocalMediaConfig({ path: "" });
+							},
+							children: "清除"
+						})]
+					}),
+					browsing && /* @__PURE__ */ (0, react_jsx_runtime.jsx)(LocalMediaBrowser, { onClose: () => {
+						setBrowsing(false);
+					} }),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+						className: LocalMediaSettings_module_css_default.opts,
+						children: [
+							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("label", { children: ["轮播间隔", /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("select", {
+								value: String(config.intervalSec),
+								onChange: (e) => {
+									setLocalMediaConfig({ intervalSec: Number(e.target.value) });
+								},
+								children: [INTERVALS.some((opt) => opt.value === config.intervalSec) ? null : /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("option", {
+									value: String(config.intervalSec),
+									children: [config.intervalSec, " 秒"]
+								}), INTERVALS.map((opt) => /* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
+									value: String(opt.value),
+									children: opt.label
+								}, opt.value))]
+							})] }),
+							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("label", { children: ["适配方式", /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("select", {
+								value: config.fit,
+								onChange: (e) => {
+									setLocalMediaConfig({ fit: e.target.value === "contain" ? "contain" : "cover" });
+								},
+								children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
+									value: "cover",
+									children: "填满裁切"
+								}), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("option", {
+									value: "contain",
+									children: "完整显示"
+								})]
+							})] }),
+							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("label", { children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("input", {
+								type: "checkbox",
+								checked: config.shuffle,
+								onChange: (e) => {
+									setLocalMediaConfig({ shuffle: e.target.checked });
+								}
+							}), "随机顺序"] })
+						]
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("p", {
+						className: LocalMediaSettings_module_css_default.tip,
+						children: "图片：jpg / png / gif / webp / avif / bmp / svg；视频：mp4 / webm / mov / mkv 等（静音播放，个别编码浏览器可能不支持）。 文件夹取其顶层文件按名称顺序轮播；设置保存在本机浏览器。"
 					})
 				]
 			});
@@ -4834,14 +5522,18 @@ void main() {
 				},
 				list() {
 					const rows = [];
-					for (const layer of layers.values()) rows.push(layer.desc.note === void 0 ? {
-						id: layer.desc.id,
-						label: layer.desc.label
-					} : {
-						id: layer.desc.id,
-						label: layer.desc.label,
-						note: layer.desc.note
-					});
+					for (const layer of layers.values()) {
+						const { id, label, note, renderSettings } = layer.desc;
+						rows.push(note === void 0 && renderSettings === void 0 ? {
+							id,
+							label
+						} : {
+							id,
+							label,
+							...note !== void 0 ? { note } : {},
+							...renderSettings !== void 0 ? { renderSettings } : {}
+						});
+					}
 					if (![...layers.keys(), ...BUILTIN.map((b) => b.id)].includes(selected)) selected = "none";
 					return [...rows, ...BUILTIN];
 				},
@@ -4866,7 +5558,7 @@ void main() {
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/WallpaperSection.module.css.mjs
-		const css = ".WallpaperSection-module_page{color:var(--dsw-alias-label-primary);text-align:left;flex-direction:column;gap:6px;padding:4px 0 12px;font-size:13px;display:flex}.WallpaperSection-module_intro{color:var(--dsw-alias-label-tertiary);margin:2px 0 8px;font-size:12px;line-height:1.6}.WallpaperSection-module_opt{width:100%;color:var(--dsw-alias-label-primary);cursor:pointer;text-align:left;box-sizing:border-box;background:0 0;border:none;border-radius:10px;align-items:center;gap:12px;padding:11px 12px;font-family:inherit;font-size:13px;transition:background .12s;display:flex}.WallpaperSection-module_opt:hover{background:var(--dsw-alias-interactive-bg-hover)}.WallpaperSection-module_on{background:var(--dsw-alias-interactive-bg-hover-accent)}.WallpaperSection-module_dot{border:1.5px solid var(--dsw-alias-label-tertiary);box-sizing:border-box;border-radius:50%;flex:none;width:16px;height:16px;position:relative}.WallpaperSection-module_on .WallpaperSection-module_dot{border-color:var(--dsw-alias-state-business-primary)}.WallpaperSection-module_on .WallpaperSection-module_dot:after{content:\"\";background:var(--dsw-alias-state-business-primary);border-radius:50%;position:absolute;inset:3px}.WallpaperSection-module_opttxt{flex-direction:column;gap:2px;min-width:0;display:flex}.WallpaperSection-module_optlabel{font-size:13px;font-weight:500;line-height:19px}.WallpaperSection-module_optnote{color:var(--dsw-alias-label-tertiary);font-size:11.5px;line-height:16px}.WallpaperSection-module_hint{border:1px solid var(--dsw-alias-border-l1);color:var(--dsw-alias-label-tertiary);border-radius:10px;margin-top:10px;padding:10px 12px;font-size:11.5px;line-height:1.6}";
+		const css = ".WallpaperSection-module_page{color:var(--dsw-alias-label-primary);text-align:left;flex-direction:column;gap:6px;padding:4px 0 12px;font-size:13px;display:flex}.WallpaperSection-module_intro{color:var(--dsw-alias-label-tertiary);margin:2px 0 8px;font-size:12px;line-height:1.6}.WallpaperSection-module_opt{width:100%;color:var(--dsw-alias-label-primary);cursor:pointer;text-align:left;box-sizing:border-box;background:0 0;border:none;border-radius:10px;align-items:center;gap:12px;padding:11px 12px;font-family:inherit;font-size:13px;transition:background .12s;display:flex}.WallpaperSection-module_opt:hover{background:var(--dsw-alias-interactive-bg-hover)}.WallpaperSection-module_on{background:var(--dsw-alias-interactive-bg-hover-accent)}.WallpaperSection-module_dot{border:1.5px solid var(--dsw-alias-label-tertiary);box-sizing:border-box;border-radius:50%;flex:none;width:16px;height:16px;position:relative}.WallpaperSection-module_on .WallpaperSection-module_dot{border-color:var(--dsw-alias-state-business-primary)}.WallpaperSection-module_on .WallpaperSection-module_dot:after{content:\"\";background:var(--dsw-alias-state-business-primary);border-radius:50%;position:absolute;inset:3px}.WallpaperSection-module_opttxt{flex-direction:column;gap:2px;min-width:0;display:flex}.WallpaperSection-module_optlabel{font-size:13px;font-weight:500;line-height:19px}.WallpaperSection-module_optnote{color:var(--dsw-alias-label-tertiary);font-size:11.5px;line-height:16px}.WallpaperSection-module_sub{margin:2px 0 8px}.WallpaperSection-module_hint{border:1px solid var(--dsw-alias-border-l1);color:var(--dsw-alias-label-tertiary);border-radius:10px;margin-top:10px;padding:10px 12px;font-size:11.5px;line-height:1.6}";
 		const tagId = "dsh-wallpapers/WallpaperSection.module.css";
 		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId) + "]") === null) {
 			const tag = document.createElement("style");
@@ -4884,14 +5576,16 @@ void main() {
 			"optlabel": "WallpaperSection-module_optlabel",
 			"optnote": "WallpaperSection-module_optnote",
 			"opttxt": "WallpaperSection-module_opttxt",
-			"page": "WallpaperSection-module_page"
+			"page": "WallpaperSection-module_page",
+			"sub": "WallpaperSection-module_sub"
 		};
 		//#endregion
 		//#region src/client/WallpaperSection.tsx
 		/**
 		* The Settings 「壁纸」 section: one radio row per registered wallpaper plus
 		* the terminal rows, selection applied immediately so the page behind the
-		* open panel previews it.
+		* open panel previews it. A wallpaper that ships its own settings card
+		* (renderSettings) gets it rendered right under its selected row.
 		*
 		* @module dsh-wallpapers/src/client/WallpaperSection
 		*/
@@ -4910,7 +5604,7 @@ void main() {
 						className: WallpaperSection_module_css_default.intro,
 						children: "选择 Web 界面的背景层。被切走的壁纸会暂停渲染以节省性能；插件壁纸运行时会自动出现在列表中。"
 					}),
-					rows.map((row) => /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("button", {
+					rows.map((row) => /* @__PURE__ */ (0, react_jsx_runtime.jsxs)(react.Fragment, { children: [/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("button", {
 						type: "button",
 						className: row.id === current ? `${WallpaperSection_module_css_default.opt} ${WallpaperSection_module_css_default.on}` : WallpaperSection_module_css_default.opt,
 						onClick: () => {
@@ -4929,10 +5623,13 @@ void main() {
 								children: row.note
 							})]
 						})]
-					}, row.id)),
+					}), row.id === current && row.renderSettings !== void 0 && /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+						className: WallpaperSection_module_css_default.sub,
+						children: row.renderSettings()
+					})] }, row.id)),
 					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
 						className: WallpaperSection_module_css_default.hint,
-						children: "黑洞与思考球体各自的参数面板挂在对应壁纸显示时的界面右上角；壁纸被隐藏时其面板一并隐藏。"
+						children: "黑洞与思考球体各自的参数面板挂在对应壁纸显示时的界面右上角；本地媒体的路径与轮播设置在选中后于上方展开；壁纸被隐藏时其面板一并隐藏。"
 					})
 				]
 			});
@@ -4942,8 +5639,9 @@ void main() {
 		/**
 		* Browser half of dsh-wallpapers: the wallpaper registry (a page-local
 		* service background layers register into) plus its Settings section, the
-		* thinking-orb canvas, the GARGANTUA black-hole layer, and the Kerr-Newman
-		* black-hole layer. Selection persists
+		* thinking-orb canvas, the GARGANTUA black-hole layer, the Kerr-Newman
+		* black-hole layer, and the 本地媒体 layer (one local image/video, or a
+		* folder rotation served by the host-half routes). Selection persists
 		* in localStorage; wallpapers that register while not selected are hidden
 		* through their own `show`/`hide` callbacks (a hidden layer pauses its
 		* render loop), so no slot shadowing is involved.
@@ -5002,12 +5700,12 @@ void main() {
 				label: "GARGANTUA 黑洞",
 				note: "引力透镜光线追踪 · WebGL2",
 				show: () => {
-					visibility$2.desired = true;
-					visibility$2.apply?.(true);
+					visibility$3.desired = true;
+					visibility$3.apply?.(true);
 				},
 				hide: () => {
-					visibility$2.desired = false;
-					visibility$2.apply?.(false);
+					visibility$3.desired = false;
+					visibility$3.apply?.(false);
 				}
 			});
 			ctx.effect(() => stopBlackhole);
@@ -5022,15 +5720,36 @@ void main() {
 				label: "Kerr–Newman 黑洞",
 				note: "KN 度规哈密顿光追 · 体积吸积盘",
 				show: () => {
+					visibility$2.desired = true;
+					visibility$2.apply?.(true);
+				},
+				hide: () => {
+					visibility$2.desired = false;
+					visibility$2.apply?.(false);
+				}
+			});
+			ctx.effect(() => stopKerrNewman);
+			ctx.slots.inject("shell.overlay", () => ctx.slots.register({
+				name: "shell.overlay",
+				id: "local-media-wallpaper",
+				order: -1500,
+				label: "本地媒体壁纸"
+			}, LocalMediaWallpaper));
+			const stopLocalMedia = registry.register({
+				id: "local-media",
+				label: "本地媒体",
+				note: "本地图片 / 视频 / 文件夹轮播",
+				show: () => {
 					visibility$1.desired = true;
 					visibility$1.apply?.(true);
 				},
 				hide: () => {
 					visibility$1.desired = false;
 					visibility$1.apply?.(false);
-				}
+				},
+				renderSettings: () => (0, react.createElement)(LocalMediaSettings)
 			});
-			ctx.effect(() => stopKerrNewman);
+			ctx.effect(() => stopLocalMedia);
 		}
 		//#endregion
 		exports.apply = apply;

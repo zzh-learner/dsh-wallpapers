@@ -1,13 +1,14 @@
 # dsh-wallpapers
 
-Wallpaper plugins for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh): one bundle package that mounts the wallpaper registry, the thinking-orb canvas, the GARGANTUA black-hole WebGL2 layer, and the Kerr-Newman black-hole WebGL2 layer.
+Wallpaper plugins for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh): one bundle package that mounts the wallpaper registry, the thinking-orb canvas, the GARGANTUA black-hole WebGL2 layer, the Kerr-Newman black-hole WebGL2 layer, and the local-media layer.
 
 - **Wallpaper registry** — a page-local `wallpaper.registry` service background layers register into, plus the Settings → 壁纸 section that lists them and selects the active one. Selection persists in localStorage.
 - **Thinking orb** — one centered hero canvas rendering the playground mode that matches the live session phase (in-flight tool names, streaming bit, turn outcomes), driven by the `orbActivity` session projection. Collapsible panel with per-phase mode mapping, idle mode, density / speed / size.
 - **GARGANTUA black hole** — a zero-dependency WebGL2 black-hole ray tracer (gravitational lensing, accretion disk, bloom) as a translucent background layer with its own control panel.
 - **Kerr-Newman black hole** — strict Kerr-Newman metric in ingoing Kerr-Schild Cartesian coordinates with Hamiltonian photon tracing: RK4 plus null-constraint re-projection, adaptive natural affine steps, horizon detection via redshift divergence, a turbulent volumetric accretion disk with Doppler/gravitational shift and reddening extinction, an antiverse (inverted sky) behind the ring singularity, and spin/charge adjustable past 1 for naked singularities; post FX include bloom, chromatic aberration, ACES. The single-file prototype lives at `playground/kerr-newman.html`.
+- **Local media** — use one local image or video, or rotate every image/video in a local folder, as the wallpaper. The host half serves listings and byte streams (single Range, extension whitelist) under `/dsh-wallpapers/local` when the composition provides a web server; the browser half adds the layer plus an embedded folder picker (interval / shuffle / fit) in the Settings section, with the configuration persisted in localStorage.
 
-The host half registers the `orbActivity` projection through the session-projection seam; the browser half is the UI. Hiding a wallpaper through the registry pauses its render loop.
+The host half registers the `orbActivity` projection through the session-projection seam (and the local-media routes on web compositions); the browser half is the UI. Hiding a wallpaper through the registry pauses its render loop.
 
 ## Install
 
