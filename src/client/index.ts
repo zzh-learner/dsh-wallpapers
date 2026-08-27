@@ -2,11 +2,12 @@
  * Browser half of dsh-wallpapers: the wallpaper registry (a page-local
  * service background layers register into) plus its Settings section, the
  * thinking-orb canvas, the GARGANTUA black-hole layer, the Kerr-Newman
- * black-hole layer, and the 本地媒体 layer (one local image/video, or a
- * folder rotation served by the host-half routes). Selection persists
- * in localStorage; wallpapers that register while not selected are hidden
- * through their own `show`/`hide` callbacks (a hidden layer pauses its
- * render loop), so no slot shadowing is involved.
+ * black-hole layer, the generated pure-CSS 鹈鹕骑行 layer (IK-pedal SVG
+ * artwork), and the 本地媒体 layer (one local image/video, or a folder
+ * rotation served by the host-half routes). Selection persists in localStorage;
+ * wallpapers that register while not selected are hidden through their own
+ * `show`/`hide` callbacks (a hidden layer pauses its render loop), so no
+ * slot shadowing is involved.
  *
  * @module dsh-wallpapers/client
  */
@@ -18,6 +19,7 @@ import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
 import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
 import { BlackholeWallpaper, visibility as blackholeVisibility } from './BlackholeWallpaper.tsx'
 import { KerrNewmanWallpaper, visibility as kerrNewmanVisibility } from './KerrNewmanWallpaper.tsx'
+import { PelicanBikeWallpaper, visibility as pelicanBikeVisibility } from './pelican/PelicanBikeWallpaper.tsx'
 import { LocalMediaWallpaper, visibility as localMediaVisibility } from './LocalMediaWallpaper.tsx'
 import { LocalMediaSettings } from './LocalMediaSettings.tsx'
 import { OrbBackdrop, visibility as orbsVisibility } from './OrbBackdrop.tsx'
@@ -111,6 +113,25 @@ export function apply(ctx: ClientContext): void {
     },
   })
   ctx.effect(() => stopKerrNewman)
+
+  ctx.slots.inject('shell.overlay', () => ctx.slots.register(
+    { name: 'shell.overlay', id: 'pelican-bike-wallpaper', order: -1800, label: '鹈鹕骑行壁纸' },
+    PelicanBikeWallpaper,
+  ))
+  const stopPelicanBike = registry.register({
+    id: 'pelican-bike',
+    label: '鹈鹕骑行',
+    note: 'SVG 两连杆逆解踩踏 · 纯 CSS 动画',
+    show: () => {
+      pelicanBikeVisibility.desired = true
+      pelicanBikeVisibility.apply?.(true)
+    },
+    hide: () => {
+      pelicanBikeVisibility.desired = false
+      pelicanBikeVisibility.apply?.(false)
+    },
+  })
+  ctx.effect(() => stopPelicanBike)
 
   ctx.slots.inject('shell.overlay', () => ctx.slots.register(
     { name: 'shell.overlay', id: 'local-media-wallpaper', order: -1500, label: '本地媒体壁纸' },
