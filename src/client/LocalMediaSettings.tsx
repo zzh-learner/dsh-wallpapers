@@ -170,6 +170,18 @@ export function LocalMediaSettings() {
       </div>
       {browsing && <LocalMediaBrowser onClose={() => { setBrowsing(false) }} />}
       <div className={css.opts}>
+        <label className={css.opline}>
+          壁纸浓度
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.05"
+            value={String(config.opacity)}
+            onChange={(e) => { setLocalMediaConfig({ opacity: Number(e.target.value) }) }}
+          />
+          <span className={css.val}>{Math.round(config.opacity * 100)}%</span>
+        </label>
         <label>
           轮播间隔
           <select

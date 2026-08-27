@@ -104,7 +104,12 @@ export function LocalMediaWallpaper() {
   // mounting on `shown`, so a hidden layer holds no decoded media.
   useEffect(() => {
     visibility.apply = (on: boolean): void => {
-      if (hostRef.current !== null) hostRef.current.style.display = on ? '' : 'none'
+      if (hostRef.current !== null) {
+        hostRef.current.style.display = on ? '' : 'none'
+        // Inline beats the shell's ".overlayLayer > * {pointer-events:auto}":
+        // photos must never swallow clicks meant for the UI.
+        hostRef.current.style.pointerEvents = 'none'
+      }
       setShown(on)
     }
     visibility.apply(visibility.desired)
@@ -231,15 +236,17 @@ export function LocalMediaWallpaper() {
         <>
           {under !== null && <MediaLayer slide={under} fit={config.fit} front={false} single={single} />}
           {top !== null && (
-            <MediaLayer
-              slide={top}
-              fit={config.fit}
-              front
-              single={single}
-              onEnded={advance}
-              onError={handleMediaError}
-              onLoaded={handleMediaLoad}
-            />
+            <div style={{ opacity: config.opacity }} className={css.mediaWrap}>
+              <MediaLayer
+                slide={top}
+                fit={config.fit}
+                front
+                single={single}
+                onEnded={advance}
+                onError={handleMediaError}
+                onLoaded={handleMediaLoad}
+              />
+            </div>
           )}
           {status !== null && (
             <div className={status.tone === 'error' ? `${css.status} ${css.error}` : css.status}>

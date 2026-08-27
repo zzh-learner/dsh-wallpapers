@@ -82,6 +82,21 @@
   padding: 3px 6px;
 }
 
+/* 壁纸浓度 slider row stretches across the card; the % readout is fixed. */
+.opline {
+  flex: 1 1 100%;
+}
+
+.opline input[type='range'] {
+  flex: 1;
+  accent-color: var(--dsw-alias-state-business-primary, #4080ff);
+}
+
+.val {
+  min-width: 42px;
+  font-variant-numeric: tabular-nums;
+}
+
 .tip {
   margin: 0;
   font-size: 11px;

@@ -17,21 +17,31 @@ export interface LocalMediaConfig {
   readonly shuffle: boolean
   /** How media fills the viewport: crop-to-fill or letterbox. */
   readonly fit: 'cover' | 'contain'
+  /** Layer opacity, 0 (invisible) through 1 (opaque photos). */
+  readonly opacity: number
 }
 
 /** localStorage key for the persisted configuration. */
 export const LOCAL_MEDIA_STORAGE_KEY = 'dsh.wallpaper.local.v1'
 
-/** Defaults: nothing picked yet, 30s per slide, name order, crop-to-fill. */
+/** Defaults: nothing picked yet, 30s per slide, name order, crop-to-fill,
+    translucent enough to read the UI above the media. */
 export const DEFAULT_LOCAL_MEDIA_CONFIG: LocalMediaConfig = {
   path: '',
   intervalSec: 30,
   shuffle: false,
   fit: 'cover',
+  opacity: 0.35,
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null
+}
+
+/** Clamp an incoming opacity into the valid range; non-finite falls back. */
+function clampOpacity(value: unknown): number | undefined {
+  if (typeof value !== 'number' || !Number.isFinite(value)) return undefined
+  return Math.min(1, Math.max(0, value))
 }
 
 /** A mutable patch shape (Partial keeps the readonly modifiers). */
@@ -40,6 +50,7 @@ type ConfigPatch = {
   intervalSec?: number
   shuffle?: boolean
   fit?: 'cover' | 'contain'
+  opacity?: number
 }
 
 function load(): LocalMediaConfig {
@@ -55,6 +66,8 @@ function load(): LocalMediaConfig {
     }
     if (typeof parsed.shuffle === 'boolean') patch.shuffle = parsed.shuffle
     if (parsed.fit === 'cover' || parsed.fit === 'contain') patch.fit = parsed.fit
+    const opacity = clampOpacity(parsed.opacity)
+    if (opacity !== undefined) patch.opacity = opacity
     return { ...DEFAULT_LOCAL_MEDIA_CONFIG, ...patch }
   } catch {
     return DEFAULT_LOCAL_MEDIA_CONFIG

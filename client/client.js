@@ -831,13 +831,13 @@ void main(){
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/BlackholeWallpaper.module.css.mjs
-		const css$7 = ".BlackholeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.BlackholeWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas{pointer-events:auto;cursor:grab}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas:active{cursor:grabbing}.BlackholeWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_panel{transform:translate(calc(100% + 22px))}.BlackholeWallpaper-module_panel::-webkit-scrollbar{width:6px}.BlackholeWallpaper-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.BlackholeWallpaper-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.BlackholeWallpaper-module_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_open{display:block}.BlackholeWallpaper-module_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.BlackholeWallpaper-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.BlackholeWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.BlackholeWallpaper-module_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.BlackholeWallpaper-module_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.BlackholeWallpaper-module_presets{gap:6px;margin-top:12px;display:flex}.BlackholeWallpaper-module_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.BlackholeWallpaper-module_presets button:hover{background:#ff9a4d33}.BlackholeWallpaper-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.BlackholeWallpaper-module_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.BlackholeWallpaper-module_row{margin-bottom:10px}.BlackholeWallpaper-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.BlackholeWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.BlackholeWallpaper-module_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.BlackholeWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.BlackholeWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.BlackholeWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.BlackholeWallpaper-module_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.BlackholeWallpaper-module_checkline input[type=checkbox]{accent-color:#ff9a4d}.BlackholeWallpaper-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.BlackholeWallpaper-module_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.BlackholeWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.BlackholeWallpaper-module_panel{width:min(300px,82vw)}}";
-		const tagId$7 = "dsh-wallpapers/BlackholeWallpaper.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$7) + "]") === null) {
+		const css$8 = ".BlackholeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.BlackholeWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas{pointer-events:auto;cursor:grab}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas:active{cursor:grabbing}.BlackholeWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_panel{transform:translate(calc(100% + 22px))}.BlackholeWallpaper-module_panel::-webkit-scrollbar{width:6px}.BlackholeWallpaper-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.BlackholeWallpaper-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.BlackholeWallpaper-module_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_open{display:block}.BlackholeWallpaper-module_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.BlackholeWallpaper-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.BlackholeWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.BlackholeWallpaper-module_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.BlackholeWallpaper-module_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.BlackholeWallpaper-module_presets{gap:6px;margin-top:12px;display:flex}.BlackholeWallpaper-module_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.BlackholeWallpaper-module_presets button:hover{background:#ff9a4d33}.BlackholeWallpaper-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.BlackholeWallpaper-module_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.BlackholeWallpaper-module_row{margin-bottom:10px}.BlackholeWallpaper-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.BlackholeWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.BlackholeWallpaper-module_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.BlackholeWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.BlackholeWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.BlackholeWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.BlackholeWallpaper-module_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.BlackholeWallpaper-module_checkline input[type=checkbox]{accent-color:#ff9a4d}.BlackholeWallpaper-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.BlackholeWallpaper-module_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.BlackholeWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.BlackholeWallpaper-module_panel{width:min(300px,82vw)}}";
+		const tagId$8 = "dsh-wallpapers/BlackholeWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$8) + "]") === null) {
 			const tag = document.createElement("style");
 			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$7;
-			tag.textContent = css$7;
+			tag.dataset.pluginCss = tagId$8;
+			tag.textContent = css$8;
 			document.head.appendChild(tag);
 		}
 		var BlackholeWallpaper_module_css_default = {
@@ -2503,13 +2503,13 @@ void main() {
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/KerrNewmanWallpaper.module.css.mjs
-		const css$6 = ".KerrNewmanWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.KerrNewmanWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas{pointer-events:auto;cursor:grab}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas:active{cursor:grabbing}.KerrNewmanWallpaper-module_veil{pointer-events:none;background:#04060c;position:absolute;inset:0}.KerrNewmanWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.2);color:#dfe7f5;text-align:left;box-sizing:border-box;background:#0a0e18ad;border:1px solid #7fb2ff29;border-radius:14px;width:300px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto;box-shadow:0 18px 50px #00000080}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_panel{transform:translate(calc(100% + 22px))}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar{width:6px}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar-thumb{background:#7fb2ff38;border-radius:3px}.KerrNewmanWallpaper-module_toggle{color:#7fb2ff;cursor:pointer;background:#7fb2ff1a;border:1px solid #7fb2ff38;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.KerrNewmanWallpaper-module_toggle:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#7fb2ff;cursor:pointer;background:#0a0e18ad;border:1px solid #7fb2ff38;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_open{display:block}.KerrNewmanWallpaper-module_open:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_head h1{letter-spacing:.26em;background:linear-gradient(100deg,#cfe0ff 0%,#7fb2ff 55%,#b48cff 100%);color:#0000;-webkit-background-clip:text;background-clip:text;margin:0;font-size:18px;font-weight:600}.KerrNewmanWallpaper-module_sub{color:#8b98b4;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.KerrNewmanWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.KerrNewmanWallpaper-module_stat{text-align:center;color:#8b98b4;font-variant-numeric:tabular-nums;background:#7fb2ff0d;border:1px solid #7fb2ff1f;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.KerrNewmanWallpaper-module_stat b{color:#dfe7f5;margin-bottom:2px;font-size:13px;display:block}.KerrNewmanWallpaper-module_presets{flex-wrap:wrap;gap:6px;margin-top:12px;display:flex}.KerrNewmanWallpaper-module_presets button{color:#9fc2ff;cursor:pointer;background:#7fb2ff14;border:1px solid #7fb2ff4d;border-radius:8px;flex:30%;padding:7px 0;font-size:12px;transition:background .15s}.KerrNewmanWallpaper-module_presets button:hover{background:#7fb2ff33}.KerrNewmanWallpaper-module_sec{border-top:1px solid #7fb2ff1a;margin-top:14px;padding-top:11px}.KerrNewmanWallpaper-module_sec h2{letter-spacing:.22em;color:#7fb2ffd9;margin:0 0 9px;font-size:11px;font-weight:600}.KerrNewmanWallpaper-module_row{margin-bottom:10px}.KerrNewmanWallpaper-module_labline{color:#8b98b4;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.KerrNewmanWallpaper-module_val{color:#7fb2ff;font-family:Consolas,monospace;font-size:12px}.KerrNewmanWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#7fb2ff73,#ffffff1f);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.KerrNewmanWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#bcd4ff;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#bcd4ff;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel select{color:#dfe7f5;box-sizing:border-box;background:#10141f;border:1px solid #7fb2ff29;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.KerrNewmanWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.KerrNewmanWallpaper-module_checkline label{color:#8b98b4;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_checkline input[type=checkbox]{accent-color:#7fb2ff}.KerrNewmanWallpaper-module_mini{color:#dfe7f5;cursor:pointer;background:#7fb2ff12;border:1px solid #7fb2ff38;border-radius:8px;padding:5px 12px;font-size:12px}.KerrNewmanWallpaper-module_mini:hover{color:#7fb2ff;border-color:#7fb2ffb3}.KerrNewmanWallpaper-module_foot{color:#8b98b4;opacity:.85;border-top:1px solid #7fb2ff1a;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.KerrNewmanWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.KerrNewmanWallpaper-module_panel{width:min(300px,82vw)}}";
-		const tagId$6 = "dsh-wallpapers/KerrNewmanWallpaper.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$6) + "]") === null) {
+		const css$7 = ".KerrNewmanWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.KerrNewmanWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas{pointer-events:auto;cursor:grab}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas:active{cursor:grabbing}.KerrNewmanWallpaper-module_veil{pointer-events:none;background:#04060c;position:absolute;inset:0}.KerrNewmanWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.2);color:#dfe7f5;text-align:left;box-sizing:border-box;background:#0a0e18ad;border:1px solid #7fb2ff29;border-radius:14px;width:300px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto;box-shadow:0 18px 50px #00000080}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_panel{transform:translate(calc(100% + 22px))}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar{width:6px}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar-thumb{background:#7fb2ff38;border-radius:3px}.KerrNewmanWallpaper-module_toggle{color:#7fb2ff;cursor:pointer;background:#7fb2ff1a;border:1px solid #7fb2ff38;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.KerrNewmanWallpaper-module_toggle:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#7fb2ff;cursor:pointer;background:#0a0e18ad;border:1px solid #7fb2ff38;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_open{display:block}.KerrNewmanWallpaper-module_open:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_head h1{letter-spacing:.26em;background:linear-gradient(100deg,#cfe0ff 0%,#7fb2ff 55%,#b48cff 100%);color:#0000;-webkit-background-clip:text;background-clip:text;margin:0;font-size:18px;font-weight:600}.KerrNewmanWallpaper-module_sub{color:#8b98b4;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.KerrNewmanWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.KerrNewmanWallpaper-module_stat{text-align:center;color:#8b98b4;font-variant-numeric:tabular-nums;background:#7fb2ff0d;border:1px solid #7fb2ff1f;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.KerrNewmanWallpaper-module_stat b{color:#dfe7f5;margin-bottom:2px;font-size:13px;display:block}.KerrNewmanWallpaper-module_presets{flex-wrap:wrap;gap:6px;margin-top:12px;display:flex}.KerrNewmanWallpaper-module_presets button{color:#9fc2ff;cursor:pointer;background:#7fb2ff14;border:1px solid #7fb2ff4d;border-radius:8px;flex:30%;padding:7px 0;font-size:12px;transition:background .15s}.KerrNewmanWallpaper-module_presets button:hover{background:#7fb2ff33}.KerrNewmanWallpaper-module_sec{border-top:1px solid #7fb2ff1a;margin-top:14px;padding-top:11px}.KerrNewmanWallpaper-module_sec h2{letter-spacing:.22em;color:#7fb2ffd9;margin:0 0 9px;font-size:11px;font-weight:600}.KerrNewmanWallpaper-module_row{margin-bottom:10px}.KerrNewmanWallpaper-module_labline{color:#8b98b4;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.KerrNewmanWallpaper-module_val{color:#7fb2ff;font-family:Consolas,monospace;font-size:12px}.KerrNewmanWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#7fb2ff73,#ffffff1f);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.KerrNewmanWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#bcd4ff;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#bcd4ff;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel select{color:#dfe7f5;box-sizing:border-box;background:#10141f;border:1px solid #7fb2ff29;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.KerrNewmanWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.KerrNewmanWallpaper-module_checkline label{color:#8b98b4;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_checkline input[type=checkbox]{accent-color:#7fb2ff}.KerrNewmanWallpaper-module_mini{color:#dfe7f5;cursor:pointer;background:#7fb2ff12;border:1px solid #7fb2ff38;border-radius:8px;padding:5px 12px;font-size:12px}.KerrNewmanWallpaper-module_mini:hover{color:#7fb2ff;border-color:#7fb2ffb3}.KerrNewmanWallpaper-module_foot{color:#8b98b4;opacity:.85;border-top:1px solid #7fb2ff1a;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.KerrNewmanWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.KerrNewmanWallpaper-module_panel{width:min(300px,82vw)}}";
+		const tagId$7 = "dsh-wallpapers/KerrNewmanWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$7) + "]") === null) {
 			const tag = document.createElement("style");
 			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$6;
-			tag.textContent = css$6;
+			tag.dataset.pluginCss = tagId$7;
+			tag.textContent = css$7;
 			document.head.appendChild(tag);
 		}
 		var KerrNewmanWallpaper_module_css_default = {
@@ -3239,31 +3239,93 @@ void main() {
 		/** Scoped stylesheet: IK pedaling keyframes plus scene loops. */
 		const PELICAN_CSS = ".dshPelicanBike svg *{transform-box:view-box}\n@keyframes pb_thighPedal{0%{transform:rotate(0deg)}2.78%{transform:rotate(4.97deg)}5.56%{transform:rotate(10.13deg)}8.33%{transform:rotate(15.35deg)}11.11%{transform:rotate(20.46deg)}13.89%{transform:rotate(25.2deg)}16.67%{transform:rotate(29.17deg)}19.44%{transform:rotate(31.89deg)}22.22%{transform:rotate(33.18deg)}25%{transform:rotate(33.37deg)}27.78%{transform:rotate(32.85deg)}30.56%{transform:rotate(31.9deg)}33.33%{transform:rotate(30.65deg)}36.11%{transform:rotate(29.16deg)}38.89%{transform:rotate(27.46deg)}41.67%{transform:rotate(25.53deg)}44.44%{transform:rotate(23.37deg)}47.22%{transform:rotate(20.93deg)}50%{transform:rotate(18.19deg)}52.78%{transform:rotate(15.09deg)}55.56%{transform:rotate(11.6deg)}58.33%{transform:rotate(7.7deg)}61.11%{transform:rotate(3.41deg)}63.89%{transform:rotate(-1.16deg)}66.67%{transform:rotate(-5.82deg)}69.44%{transform:rotate(-10.27deg)}72.22%{transform:rotate(-14.18deg)}75%{transform:rotate(-17.22deg)}77.78%{transform:rotate(-19.18deg)}80.56%{transform:rotate(-19.96deg)}83.33%{transform:rotate(-19.6deg)}86.11%{transform:rotate(-18.18deg)}88.89%{transform:rotate(-15.84deg)}91.67%{transform:rotate(-12.72deg)}94.44%{transform:rotate(-8.96deg)}97.22%{transform:rotate(-4.68deg)}100%{transform:rotate(0deg)}}\n@keyframes pb_shinPedal{0%{transform:rotate(0deg)}2.78%{transform:rotate(-7.39deg)}5.56%{transform:rotate(-14.69deg)}8.33%{transform:rotate(-21.72deg)}11.11%{transform:rotate(-28.22deg)}13.89%{transform:rotate(-33.71deg)}16.67%{transform:rotate(-37.37deg)}19.44%{transform:rotate(-38.23deg)}22.22%{transform:rotate(-35.99deg)}25%{transform:rotate(-31.37deg)}27.78%{transform:rotate(-25.34deg)}30.56%{transform:rotate(-18.55deg)}33.33%{transform:rotate(-11.37deg)}36.11%{transform:rotate(-4.02deg)}38.89%{transform:rotate(3.38deg)}41.67%{transform:rotate(10.72deg)}44.44%{transform:rotate(17.91deg)}47.22%{transform:rotate(24.86deg)}50%{transform:rotate(31.48deg)}52.78%{transform:rotate(37.67deg)}55.56%{transform:rotate(43.28deg)}58.33%{transform:rotate(48.17deg)}61.11%{transform:rotate(52.17deg)}63.89%{transform:rotate(55.09deg)}66.67%{transform:rotate(56.79deg)}69.44%{transform:rotate(57.16deg)}72.22%{transform:rotate(56.17deg)}75%{transform:rotate(53.9deg)}77.78%{transform:rotate(50.46deg)}80.56%{transform:rotate(46.04deg)}83.33%{transform:rotate(40.8deg)}86.11%{transform:rotate(34.9deg)}88.89%{transform:rotate(28.5deg)}91.67%{transform:rotate(21.72deg)}94.44%{transform:rotate(14.64deg)}97.22%{transform:rotate(7.38deg)}100%{transform:rotate(0deg)}}\n@keyframes pb_wheelSpin{to{transform:rotate(360deg)}}\n@keyframes pb_crankSpin{to{transform:rotate(360deg)}}\n@keyframes pb_pedalCtr{to{transform:rotate(-360deg)}}\n@keyframes pb_bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}\n@keyframes pb_shadowPulse{0%,100%{transform:scaleX(1);opacity:.17}50%{transform:scaleX(.93);opacity:.24}}\n@keyframes pb_raysTurn{to{transform:rotate(360deg)}}\n@keyframes pb_cloudDrift{to{transform:translateX(-1750px)}}\n@keyframes pb_hillScroll{to{transform:translateX(-1680px)}}\n@keyframes pb_hillScroll2{to{transform:translateX(-1680px)}}\n@keyframes pb_treeScroll{to{transform:translateX(-300px)}}\n@keyframes pb_dashScroll{to{transform:translateX(-130px)}}\n@keyframes pb_grassScroll{to{transform:translateX(-240px)}}\n@keyframes pb_chainRun{to{stroke-dashoffset:-52}}\n@keyframes pb_nod{0%,100%{transform:rotate(0deg)}25%{transform:rotate(1.6deg)}75%{transform:rotate(-1.2deg)}}\n@keyframes pb_flap{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-3.5deg)}}\n@keyframes pb_tailWag{0%,100%{transform:rotate(0deg)}50%{transform:rotate(3.5deg)}}\n@keyframes pb_squawk{\n    0%,76%{transform:rotate(0deg)}\n    81%{transform:rotate(13deg)}\n    85%{transform:rotate(9deg)}\n    89%{transform:rotate(16deg)}\n    94%,100%{transform:rotate(0deg)}\n  }\n@keyframes pb_bubbleShow{\n    0%,73%{opacity:0;transform:translateY(10px)}\n    79%,90%{opacity:1;transform:translateY(0)}\n    97%,100%{opacity:0;transform:translateY(-6px)}\n  }\n@keyframes pb_whoosh{\n    0%{opacity:0;transform:translateX(20px)}\n    35%{opacity:.75}\n    70%,100%{opacity:0;transform:translateX(-42px)}\n  }\n.dshPelicanBike .riderBob{animation:pb_bob .8s ease-in-out infinite}\n.dshPelicanBike .shadow{transform-box:fill-box;transform-origin:center;animation:pb_shadowPulse .8s ease-in-out infinite}\n.dshPelicanBike .rays{animation:pb_raysTurn 26s linear infinite}\n.dshPelicanBike .cl1{animation:pb_cloudDrift 22s linear infinite;animation-delay:-7s}\n.dshPelicanBike .cl2{animation:pb_cloudDrift 32s linear infinite;animation-delay:-19s}\n.dshPelicanBike .cl3{animation:pb_cloudDrift 15s linear infinite;animation-delay:-3s}\n.dshPelicanBike .hillsFar{animation:pb_hillScroll 24s linear infinite}\n.dshPelicanBike .hillsNear{animation:pb_hillScroll2 12s linear infinite}\n.dshPelicanBike .trees{animation:pb_treeScroll 1.9s linear infinite}\n.dshPelicanBike .roadDash{animation:pb_dashScroll .42s linear infinite}\n.dshPelicanBike .grassFG{animation:pb_grassScroll .75s linear infinite}\n.dshPelicanBike .chainLink{stroke-dasharray:7 6;animation:pb_chainRun .55s linear infinite}\n.dshPelicanBike .wheelSpin{animation:pb_wheelSpin 1.6s linear infinite}\n.dshPelicanBike .crank{animation:pb_crankSpin 1.6s linear infinite}\n.dshPelicanBike .crankFar{animation:pb_crankSpin 1.6s linear infinite;animation-delay:-.8s}\n.dshPelicanBike .pedalC{animation:pb_pedalCtr 1.6s linear infinite}\n.dshPelicanBike .pedalCFar{animation:pb_pedalCtr 1.6s linear infinite;animation-delay:-.8s}\n.dshPelicanBike .thighR,.dshPelicanBike .thighF{transform-origin:402px 288px;animation:pb_thighPedal 1.6s linear infinite}\n.dshPelicanBike .thighF{animation-delay:-.8s}\n.dshPelicanBike .shinR,.dshPelicanBike .shinF{transform-origin:487.14px 330.15px;animation:pb_shinPedal 1.6s linear infinite}\n.dshPelicanBike .shinF{animation-delay:-.8s}\n.dshPelicanBike .headNod{transform-origin:506px 152px;animation:pb_nod .8s ease-in-out infinite}\n.dshPelicanBike .wingFlap{transform-origin:432px 212px;animation:pb_flap .8s ease-in-out infinite}\n.dshPelicanBike .tailWag{transform-origin:332px 214px;animation:pb_tailWag 1.6s ease-in-out infinite}\n.dshPelicanBike .pouchSq{transform-origin:524px 148px;animation:pb_squawk 7s ease-in-out infinite}\n.dshPelicanBike .bubble{transform-origin:700px 80px;animation:pb_bubbleShow 7s ease-out infinite}\n.dshPelicanBike .sl1{animation:pb_whoosh 1.7s linear infinite}\n.dshPelicanBike .sl2{animation:pb_whoosh 1.7s linear infinite;animation-delay:.28s}\n.dshPelicanBike .sl3{animation:pb_whoosh 1.7s linear infinite;animation-delay:.56s}\n@media (prefers-reduced-motion:reduce){.dshPelicanBike svg *{animation-play-state:paused!important}}";
 		//#endregion
+		//#region src/client/pelican/prefs.ts
+		/** localStorage key for the persisted preferences. */
+		const PELICAN_PREFS_STORAGE_KEY = "dsh.wallpaper.pelican.v1";
+		/** Defaults: translucent enough to read the UI above the artwork. */
+		const DEFAULT_PELICAN_PREFS = { opacity: .35 };
+		/** Clamp an incoming opacity into the valid range; non-finite falls back. */
+		function clampOpacity$1(value) {
+			if (typeof value !== "number" || !Number.isFinite(value)) return DEFAULT_PELICAN_PREFS.opacity;
+			return Math.min(1, Math.max(0, value));
+		}
+		function load$1() {
+			try {
+				const raw = localStorage.getItem(PELICAN_PREFS_STORAGE_KEY);
+				if (raw === null) return DEFAULT_PELICAN_PREFS;
+				const parsed = JSON.parse(raw);
+				if (typeof parsed !== "object" || parsed === null) return DEFAULT_PELICAN_PREFS;
+				return { opacity: clampOpacity$1(parsed.opacity) };
+			} catch {
+				return DEFAULT_PELICAN_PREFS;
+			}
+		}
+		function save$1(prefs) {
+			try {
+				localStorage.setItem(PELICAN_PREFS_STORAGE_KEY, JSON.stringify(prefs));
+			} catch {}
+		}
+		let current$1 = load$1();
+		const listeners$1 = /* @__PURE__ */ new Set();
+		/** Read the current preferences. */
+		function getPelicanPrefs() {
+			return current$1;
+		}
+		/**
+		* Merge a patch into the preferences, persist it, and notify readers.
+		* @param patch - fields to change.
+		*/
+		function setPelicanPrefs(patch) {
+			current$1 = {
+				...current$1,
+				...patch.opacity !== void 0 ? { opacity: clampOpacity$1(patch.opacity) } : {}
+			};
+			save$1(current$1);
+			for (const fn of listeners$1) fn();
+		}
+		/**
+		* Subscribe to preference changes.
+		* @param fn - listener invoked after every change.
+		* @returns its disposer.
+		*/
+		function subscribePelicanPrefs(fn) {
+			listeners$1.add(fn);
+			return () => {
+				listeners$1.delete(fn);
+			};
+		}
+		//#endregion
 		//#region \0dsh-css:src/client/pelican/PelicanBikeWallpaper.module.css.mjs
-		const css$5 = ".PelicanBikeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.PelicanBikeWallpaper-module_artRoot,.PelicanBikeWallpaper-module_artRoot svg{width:100%;height:100%;display:block}";
-		const tagId$5 = "dsh-wallpapers/PelicanBikeWallpaper.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$5) + "]") === null) {
+		const css$6 = ".PelicanBikeWallpaper-module_host{z-index:-1;position:fixed;inset:0;overflow:hidden}.PelicanBikeWallpaper-module_artRoot,.PelicanBikeWallpaper-module_artRoot svg{width:100%;height:100%;display:block}.PelicanBikeWallpaper-module_fade{pointer-events:none;background:linear-gradient(#10182200,#1018229e);height:96px;position:absolute;bottom:0;left:0;right:0}";
+		const tagId$6 = "dsh-wallpapers/PelicanBikeWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$6) + "]") === null) {
 			const tag = document.createElement("style");
 			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$5;
-			tag.textContent = css$5;
+			tag.dataset.pluginCss = tagId$6;
+			tag.textContent = css$6;
 			document.head.appendChild(tag);
 		}
 		var PelicanBikeWallpaper_module_css_default = {
 			"artRoot": "PelicanBikeWallpaper-module_artRoot",
+			"fade": "PelicanBikeWallpaper-module_fade",
 			"host": "PelicanBikeWallpaper-module_host"
 		};
 		//#endregion
 		//#region src/client/pelican/PelicanBikeWallpaper.tsx
 		/**
-		* The pelican-bike wallpaper component: the generated pure-CSS SVG animation
-		* (a pelican pedaling a bicycle, IK-solved legs baked into keyframes) mounted
-		* as a static background layer. Artwork markup and the scoped stylesheet come
-		* from the generator output `art.ts`; regenerate with
-		* `python pelican-bike/build_pelican.py`. Visibility follows the wallpaper
-		* registry through the same module-level bridge as the other layers (the
-		* registry may hide this layer before the component ever mounts); hiding sets
-		* display:none, which also stops all CSS animations.
+		* The 鹈鹕骑行 wallpaper component: the generated pure-CSS SVG animation (a
+		* pelican pedaling a bicycle, IK-solved legs baked into keyframes) mounted as
+		* a background layer. Artwork markup and the scoped stylesheet come from the
+		* generator output `art.ts`; regenerate with
+		* `python pelican-bike/build_pelican.py`.
+		*
+		* Visibility follows the wallpaper registry through the same module-level
+		* bridge as the other layers (the registry may hide this layer before the
+		* component ever mounts); hiding sets display:none, which also stops every
+		* CSS animation inside at zero cost. Layer opacity ("壁纸浓度") persists
+		* through prefs.ts and defaults translucent so the conversation stays
+		* readable whether this layer paints above the UI (stock harness) or beneath
+		* it (underlay mode).
 		*
 		* @module dsh-wallpapers/src/client/pelican/PelicanBikeWallpaper
 		*/
@@ -3272,26 +3334,101 @@ void main() {
 			apply: null,
 			desired: true
 		};
-		/** The pelican-bike wallpaper entry. */
+		/** The 鹈鹕骑行 wallpaper entry. */
 		function PelicanBikeWallpaper() {
 			const hostRef = (0, react.useRef)(null);
+			const [opacity, setOpacity] = (0, react.useState)(() => getPelicanPrefs().opacity);
 			(0, react.useEffect)(() => {
 				visibility$2.apply = (on) => {
-					if (hostRef.current !== null) hostRef.current.style.display = on ? "" : "none";
+					if (hostRef.current !== null) {
+						hostRef.current.style.display = on ? "" : "none";
+						hostRef.current.style.pointerEvents = "none";
+					}
 				};
 				visibility$2.apply(visibility$2.desired);
 				return () => {
 					visibility$2.apply = null;
 				};
 			}, []);
+			(0, react.useEffect)(() => subscribePelicanPrefs(() => {
+				setOpacity(getPelicanPrefs().opacity);
+			}), []);
 			return /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
 				ref: hostRef,
 				className: PelicanBikeWallpaper_module_css_default.host,
 				"aria-hidden": "true",
-				children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("style", { children: PELICAN_CSS }), /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
-					className: `${PelicanBikeWallpaper_module_css_default.artRoot} ${PELICAN_SCOPE}`,
-					dangerouslySetInnerHTML: { __html: PELICAN_SVG }
-				})]
+				children: [
+					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("style", { children: PELICAN_CSS }),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+						className: `${PelicanBikeWallpaper_module_css_default.artRoot} ${PELICAN_SCOPE}`,
+						dangerouslySetInnerHTML: { __html: PELICAN_SVG },
+						style: { opacity }
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", { className: PelicanBikeWallpaper_module_css_default.fade })
+				]
+			});
+		}
+		//#endregion
+		//#region \0dsh-css:src/client/pelican/PelicanBikeSettings.module.css.mjs
+		const css$5 = ".PelicanBikeSettings-module_card{border:1px solid var(--dsw-alias-border-l1);background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary);text-align:left;border-radius:12px;flex-direction:column;gap:10px;margin:2px 0 8px;padding:12px;font-size:12.5px;display:flex}.PelicanBikeSettings-module_cap{color:var(--dsw-alias-label-tertiary);margin-bottom:4px;font-size:11px;display:block}.PelicanBikeSettings-module_opline{align-items:center;gap:10px;display:flex}.PelicanBikeSettings-module_opline input[type=range]{accent-color:var(--dsw-alias-state-business-primary,#4080ff);flex:1}.PelicanBikeSettings-module_val{font-variant-numeric:tabular-nums;min-width:42px;color:var(--dsw-alias-label-secondary,var(--dsw-alias-label-primary));font-size:12px}.PelicanBikeSettings-module_tip{color:var(--dsw-alias-label-tertiary);margin:0;font-size:11px;line-height:1.6}";
+		const tagId$5 = "dsh-wallpapers/PelicanBikeSettings.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$5) + "]") === null) {
+			const tag = document.createElement("style");
+			tag.dataset.plugin = "dsh-wallpapers";
+			tag.dataset.pluginCss = tagId$5;
+			tag.textContent = css$5;
+			document.head.appendChild(tag);
+		}
+		var PelicanBikeSettings_module_css_default = {
+			"cap": "PelicanBikeSettings-module_cap",
+			"card": "PelicanBikeSettings-module_card",
+			"opline": "PelicanBikeSettings-module_opline",
+			"tip": "PelicanBikeSettings-module_tip",
+			"val": "PelicanBikeSettings-module_val"
+		};
+		//#endregion
+		//#region src/client/pelican/PelicanBikeSettings.tsx
+		/**
+		* The 鹈鹕骑行 settings card, rendered by the 壁纸 section under the selected
+		* row: one persisted opacity slider ("壁纸浓度") feeding prefs.ts live — the
+		* artwork behind (or above) the open panel updates as the slider moves.
+		*
+		* @module dsh-wallpapers/src/client/pelican/PelicanBikeSettings
+		*/
+		/** The settings card for the 鹈鹕骑行 wallpaper. */
+		function PelicanBikeSettings() {
+			const [opacity, setOpacityState] = (0, react.useState)(() => getPelicanPrefs().opacity);
+			(0, react.useEffect)(() => subscribePelicanPrefs(() => {
+				setOpacityState(getPelicanPrefs().opacity);
+			}), []);
+			return /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+				className: PelicanBikeSettings_module_css_default.card,
+				children: [
+					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", {
+						className: PelicanBikeSettings_module_css_default.cap,
+						children: "壁纸浓度"
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
+						className: PelicanBikeSettings_module_css_default.opline,
+						children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("input", {
+							type: "range",
+							min: "0",
+							max: "1",
+							step: "0.05",
+							value: String(opacity),
+							onChange: (e) => {
+								setPelicanPrefs({ opacity: Number(e.target.value) });
+							}
+						}), /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("span", {
+							className: PelicanBikeSettings_module_css_default.val,
+							children: [Math.round(opacity * 100), "%"]
+						})]
+					}),
+					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("p", {
+						className: PelicanBikeSettings_module_css_default.tip,
+						children: "浓度越低界面文字越清晰；「壁纸衬底」开启时壁纸整体垫在栏目后面，可适当调高。"
+					})
+				]
 			});
 		}
 		//#endregion
@@ -3338,15 +3475,22 @@ void main() {
 		//#region src/client/localmedia/store.ts
 		/** localStorage key for the persisted configuration. */
 		const LOCAL_MEDIA_STORAGE_KEY = "dsh.wallpaper.local.v1";
-		/** Defaults: nothing picked yet, 30s per slide, name order, crop-to-fill. */
+		/** Defaults: nothing picked yet, 30s per slide, name order, crop-to-fill,
+		translucent enough to read the UI above the media. */
 		const DEFAULT_LOCAL_MEDIA_CONFIG = {
 			path: "",
 			intervalSec: 30,
 			shuffle: false,
-			fit: "cover"
+			fit: "cover",
+			opacity: .35
 		};
 		function isRecord(value) {
 			return typeof value === "object" && value !== null;
+		}
+		/** Clamp an incoming opacity into the valid range; non-finite falls back. */
+		function clampOpacity(value) {
+			if (typeof value !== "number" || !Number.isFinite(value)) return void 0;
+			return Math.min(1, Math.max(0, value));
 		}
 		function load() {
 			try {
@@ -3359,6 +3503,8 @@ void main() {
 				if (typeof parsed.intervalSec === "number" && Number.isFinite(parsed.intervalSec)) patch.intervalSec = Math.max(1, Math.round(parsed.intervalSec));
 				if (typeof parsed.shuffle === "boolean") patch.shuffle = parsed.shuffle;
 				if (parsed.fit === "cover" || parsed.fit === "contain") patch.fit = parsed.fit;
+				const opacity = clampOpacity(parsed.opacity);
+				if (opacity !== void 0) patch.opacity = opacity;
 				return {
 					...DEFAULT_LOCAL_MEDIA_CONFIG,
 					...patch
@@ -3404,7 +3550,7 @@ void main() {
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/LocalMediaWallpaper.module.css.mjs
-		const css$4 = ".LocalMediaWallpaper-module_host{z-index:-1;pointer-events:none;background:0 0;position:fixed;inset:0;overflow:hidden}.LocalMediaWallpaper-module_layer{border:none;outline:none;width:100%;height:100%;display:block;position:absolute;inset:0}.LocalMediaWallpaper-module_front{animation:.9s both LocalMediaWallpaper-module_dsh-local-media-fade}@keyframes LocalMediaWallpaper-module_dsh-local-media-fade{0%{opacity:0}to{opacity:1}}.LocalMediaWallpaper-module_status{-webkit-backdrop-filter:blur(12px);color:#aeb7c8;text-align:center;word-break:break-all;background:#0a0d14a8;border:1px solid #ffffff17;border-radius:12px;max-width:min(72vw,520px);padding:10px 16px;font-size:12.5px;line-height:1.6;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.LocalMediaWallpaper-module_error{color:#ff9d9d}";
+		const css$4 = ".LocalMediaWallpaper-module_host{z-index:-1;pointer-events:none;background:0 0;position:fixed;inset:0;overflow:hidden}.LocalMediaWallpaper-module_layer{border:none;outline:none;width:100%;height:100%;display:block;position:absolute;inset:0}.LocalMediaWallpaper-module_mediaWrap{position:absolute;inset:0}.LocalMediaWallpaper-module_front{animation:.9s both LocalMediaWallpaper-module_dsh-local-media-fade}@keyframes LocalMediaWallpaper-module_dsh-local-media-fade{0%{opacity:0}to{opacity:1}}.LocalMediaWallpaper-module_status{-webkit-backdrop-filter:blur(12px);color:#aeb7c8;text-align:center;word-break:break-all;background:#0a0d14a8;border:1px solid #ffffff17;border-radius:12px;max-width:min(72vw,520px);padding:10px 16px;font-size:12.5px;line-height:1.6;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.LocalMediaWallpaper-module_error{color:#ff9d9d}";
 		const tagId$4 = "dsh-wallpapers/LocalMediaWallpaper.module.css";
 		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$4) + "]") === null) {
 			const tag = document.createElement("style");
@@ -3419,6 +3565,7 @@ void main() {
 			"front": "LocalMediaWallpaper-module_front",
 			"host": "LocalMediaWallpaper-module_host",
 			"layer": "LocalMediaWallpaper-module_layer",
+			"mediaWrap": "LocalMediaWallpaper-module_mediaWrap",
 			"status": "LocalMediaWallpaper-module_status"
 		};
 		//#endregion
@@ -3490,7 +3637,10 @@ void main() {
 			const [status, setStatus] = (0, react.useState)(null);
 			(0, react.useEffect)(() => {
 				visibility$1.apply = (on) => {
-					if (hostRef.current !== null) hostRef.current.style.display = on ? "" : "none";
+					if (hostRef.current !== null) {
+						hostRef.current.style.display = on ? "" : "none";
+						hostRef.current.style.pointerEvents = "none";
+					}
 					setShown(on);
 				};
 				visibility$1.apply(visibility$1.desired);
@@ -3655,14 +3805,18 @@ void main() {
 						front: false,
 						single
 					}),
-					top !== null && /* @__PURE__ */ (0, react_jsx_runtime.jsx)(MediaLayer, {
-						slide: top,
-						fit: config.fit,
-						front: true,
-						single,
-						onEnded: advance,
-						onError: handleMediaError,
-						onLoaded: handleMediaLoad
+					top !== null && /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
+						style: { opacity: config.opacity },
+						className: LocalMediaWallpaper_module_css_default.mediaWrap,
+						children: /* @__PURE__ */ (0, react_jsx_runtime.jsx)(MediaLayer, {
+							slide: top,
+							fit: config.fit,
+							front: true,
+							single,
+							onEnded: advance,
+							onError: handleMediaError,
+							onLoaded: handleMediaLoad
+						})
 					}),
 					status !== null && /* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
 						className: status.tone === "error" ? `${LocalMediaWallpaper_module_css_default.status} ${LocalMediaWallpaper_module_css_default.error}` : LocalMediaWallpaper_module_css_default.status,
@@ -3673,7 +3827,7 @@ void main() {
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/LocalMediaSettings.module.css.mjs
-		const css$3 = ".LocalMediaSettings-module_card{border:1px solid var(--dsw-alias-border-l1);background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary);text-align:left;border-radius:12px;flex-direction:column;gap:10px;margin:2px 0 8px;padding:12px;font-size:12.5px;display:flex}.LocalMediaSettings-module_cap{color:var(--dsw-alias-label-tertiary);margin-bottom:2px;font-size:11px;display:block}.LocalMediaSettings-module_path{word-break:break-all;color:var(--dsw-alias-label-secondary,var(--dsw-alias-label-primary));font-size:12px;line-height:1.5;display:block}.LocalMediaSettings-module_actions{gap:8px;display:flex}.LocalMediaSettings-module_primary,.LocalMediaSettings-module_actions button,.LocalMediaSettings-module_browser button,.LocalMediaSettings-module_manual button,.LocalMediaSettings-module_opts select{color:var(--dsw-alias-label-primary);background:var(--dsw-alias-interactive-bg-active,#7f7f7f29);border:1px solid var(--dsw-alias-border-l1);cursor:pointer;border-radius:8px;padding:5px 10px;font-family:inherit;font-size:12px}.LocalMediaSettings-module_browser button:disabled,.LocalMediaSettings-module_manual button:disabled{opacity:.45;cursor:default}.LocalMediaSettings-module_primary{background:var(--dsw-alias-state-business-primary,#4080ffb3);color:#fff;border-color:#0000}.LocalMediaSettings-module_opts{flex-wrap:wrap;align-items:center;gap:8px 12px;display:flex}.LocalMediaSettings-module_opts label{color:var(--dsw-alias-label-secondary,var(--dsw-alias-label-primary));align-items:center;gap:6px;font-size:12px;display:inline-flex}.LocalMediaSettings-module_opts select{padding:3px 6px}.LocalMediaSettings-module_tip{color:var(--dsw-alias-label-tertiary);margin:0;font-size:11px;line-height:1.6}.LocalMediaSettings-module_browser{border:1px solid var(--dsw-alias-border-l1);border-radius:10px;flex-direction:column;gap:6px;padding:8px;display:flex}.LocalMediaSettings-module_toolbar{align-items:center;gap:6px;display:flex}.LocalMediaSettings-module_cwd{min-width:0;color:var(--dsw-alias-label-tertiary);white-space:nowrap;text-overflow:ellipsis;text-align:left;direction:rtl;flex:1;font-size:11px;overflow:hidden}.LocalMediaSettings-module_roots{flex-wrap:wrap;gap:4px;display:flex}.LocalMediaSettings-module_roots button{padding:2px 8px;font-size:11px}.LocalMediaSettings-module_list{flex-direction:column;gap:2px;max-height:232px;display:flex;overflow-y:auto}.LocalMediaSettings-module_entry{width:100%;color:var(--dsw-alias-label-primary);text-align:left;cursor:pointer;background:0 0;border:none;border-radius:7px;align-items:center;gap:8px;padding:5px 8px;font-family:inherit;font-size:12px;display:flex}.LocalMediaSettings-module_entry:hover{background:var(--dsw-alias-interactive-bg-hover)}.LocalMediaSettings-module_icon{text-align:center;flex:none;width:18px;font-size:12px}.LocalMediaSettings-module_name{white-space:nowrap;text-overflow:ellipsis;min-width:0;overflow:hidden}.LocalMediaSettings-module_empty,.LocalMediaSettings-module_errline{color:var(--dsw-alias-label-tertiary);padding:10px 8px;font-size:11.5px}.LocalMediaSettings-module_errline{color:#ff8f8f}.LocalMediaSettings-module_browserFoot{align-items:center;gap:8px;display:flex}.LocalMediaSettings-module_count{color:var(--dsw-alias-label-tertiary);flex:1;font-size:11px}.LocalMediaSettings-module_manual{gap:6px;display:flex}.LocalMediaSettings-module_manual input{min-width:0;color:var(--dsw-alias-label-primary);border:1px solid var(--dsw-alias-border-l1);box-sizing:border-box;background:0 0;border-radius:8px;flex:1;padding:5px 8px;font-family:inherit;font-size:12px}.LocalMediaSettings-module_manual input::placeholder{color:var(--dsw-alias-label-tertiary)}";
+		const css$3 = ".LocalMediaSettings-module_card{border:1px solid var(--dsw-alias-border-l1);background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary);text-align:left;border-radius:12px;flex-direction:column;gap:10px;margin:2px 0 8px;padding:12px;font-size:12.5px;display:flex}.LocalMediaSettings-module_cap{color:var(--dsw-alias-label-tertiary);margin-bottom:2px;font-size:11px;display:block}.LocalMediaSettings-module_path{word-break:break-all;color:var(--dsw-alias-label-secondary,var(--dsw-alias-label-primary));font-size:12px;line-height:1.5;display:block}.LocalMediaSettings-module_actions{gap:8px;display:flex}.LocalMediaSettings-module_primary,.LocalMediaSettings-module_actions button,.LocalMediaSettings-module_browser button,.LocalMediaSettings-module_manual button,.LocalMediaSettings-module_opts select{color:var(--dsw-alias-label-primary);background:var(--dsw-alias-interactive-bg-active,#7f7f7f29);border:1px solid var(--dsw-alias-border-l1);cursor:pointer;border-radius:8px;padding:5px 10px;font-family:inherit;font-size:12px}.LocalMediaSettings-module_browser button:disabled,.LocalMediaSettings-module_manual button:disabled{opacity:.45;cursor:default}.LocalMediaSettings-module_primary{background:var(--dsw-alias-state-business-primary,#4080ffb3);color:#fff;border-color:#0000}.LocalMediaSettings-module_opts{flex-wrap:wrap;align-items:center;gap:8px 12px;display:flex}.LocalMediaSettings-module_opts label{color:var(--dsw-alias-label-secondary,var(--dsw-alias-label-primary));align-items:center;gap:6px;font-size:12px;display:inline-flex}.LocalMediaSettings-module_opts select{padding:3px 6px}.LocalMediaSettings-module_opline{flex:100%}.LocalMediaSettings-module_opline input[type=range]{accent-color:var(--dsw-alias-state-business-primary,#4080ff);flex:1}.LocalMediaSettings-module_val{font-variant-numeric:tabular-nums;min-width:42px}.LocalMediaSettings-module_tip{color:var(--dsw-alias-label-tertiary);margin:0;font-size:11px;line-height:1.6}.LocalMediaSettings-module_browser{border:1px solid var(--dsw-alias-border-l1);border-radius:10px;flex-direction:column;gap:6px;padding:8px;display:flex}.LocalMediaSettings-module_toolbar{align-items:center;gap:6px;display:flex}.LocalMediaSettings-module_cwd{min-width:0;color:var(--dsw-alias-label-tertiary);white-space:nowrap;text-overflow:ellipsis;text-align:left;direction:rtl;flex:1;font-size:11px;overflow:hidden}.LocalMediaSettings-module_roots{flex-wrap:wrap;gap:4px;display:flex}.LocalMediaSettings-module_roots button{padding:2px 8px;font-size:11px}.LocalMediaSettings-module_list{flex-direction:column;gap:2px;max-height:232px;display:flex;overflow-y:auto}.LocalMediaSettings-module_entry{width:100%;color:var(--dsw-alias-label-primary);text-align:left;cursor:pointer;background:0 0;border:none;border-radius:7px;align-items:center;gap:8px;padding:5px 8px;font-family:inherit;font-size:12px;display:flex}.LocalMediaSettings-module_entry:hover{background:var(--dsw-alias-interactive-bg-hover)}.LocalMediaSettings-module_icon{text-align:center;flex:none;width:18px;font-size:12px}.LocalMediaSettings-module_name{white-space:nowrap;text-overflow:ellipsis;min-width:0;overflow:hidden}.LocalMediaSettings-module_empty,.LocalMediaSettings-module_errline{color:var(--dsw-alias-label-tertiary);padding:10px 8px;font-size:11.5px}.LocalMediaSettings-module_errline{color:#ff8f8f}.LocalMediaSettings-module_browserFoot{align-items:center;gap:8px;display:flex}.LocalMediaSettings-module_count{color:var(--dsw-alias-label-tertiary);flex:1;font-size:11px}.LocalMediaSettings-module_manual{gap:6px;display:flex}.LocalMediaSettings-module_manual input{min-width:0;color:var(--dsw-alias-label-primary);border:1px solid var(--dsw-alias-border-l1);box-sizing:border-box;background:0 0;border-radius:8px;flex:1;padding:5px 8px;font-family:inherit;font-size:12px}.LocalMediaSettings-module_manual input::placeholder{color:var(--dsw-alias-label-tertiary)}";
 		const tagId$3 = "dsh-wallpapers/LocalMediaSettings.module.css";
 		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$3) + "]") === null) {
 			const tag = document.createElement("style");
@@ -3697,12 +3851,14 @@ void main() {
 			"list": "LocalMediaSettings-module_list",
 			"manual": "LocalMediaSettings-module_manual",
 			"name": "LocalMediaSettings-module_name",
+			"opline": "LocalMediaSettings-module_opline",
 			"opts": "LocalMediaSettings-module_opts",
 			"path": "LocalMediaSettings-module_path",
 			"primary": "LocalMediaSettings-module_primary",
 			"roots": "LocalMediaSettings-module_roots",
 			"tip": "LocalMediaSettings-module_tip",
-			"toolbar": "LocalMediaSettings-module_toolbar"
+			"toolbar": "LocalMediaSettings-module_toolbar",
+			"val": "LocalMediaSettings-module_val"
 		};
 		//#endregion
 		//#region src/client/LocalMediaSettings.tsx
@@ -3940,6 +4096,26 @@ void main() {
 					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
 						className: LocalMediaSettings_module_css_default.opts,
 						children: [
+							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("label", {
+								className: LocalMediaSettings_module_css_default.opline,
+								children: [
+									"壁纸浓度",
+									/* @__PURE__ */ (0, react_jsx_runtime.jsx)("input", {
+										type: "range",
+										min: "0",
+										max: "1",
+										step: "0.05",
+										value: String(config.opacity),
+										onChange: (e) => {
+											setLocalMediaConfig({ opacity: Number(e.target.value) });
+										}
+									}),
+									/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("span", {
+										className: LocalMediaSettings_module_css_default.val,
+										children: [Math.round(config.opacity * 100), "%"]
+									})
+								]
+							}),
 							/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("label", { children: ["轮播间隔", /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("select", {
 								value: String(config.intervalSec),
 								onChange: (e) => {
@@ -5628,6 +5804,117 @@ void main() {
 			};
 		}
 		//#endregion
+		//#region src/client/underlay.ts
+		/**
+		* Underlay mode: lift the harness app columns above the shell-overlay layer
+		* so registered wallpapers can act as the TRUE page backdrop instead of a
+		* translucent sheet printed over the UI.
+		*
+		* Why JS lives here: the harness marks its overlay container with
+		* `data-shell-overlay`, but the surrounding frame/columns are hashed CSS
+		* classes (stable across a version, opaque across versions). We inject one
+		* stylesheet keyed off stable attributes, then have a MutationObserver stamp
+		* generated attributes onto the frame and its column children once mounted;
+		* every rule below hangs off those attributes. If the structure ever stops
+		* matching, the scan self-disables and the page falls back to the stock
+		* layout — decoration, never correctness, depends on this module.
+		*
+		* @module dsh-wallpapers/src/client/underlay
+		*/
+		/** Id of the injected underlay stylesheet. */
+		const STYLE_ID = "dsh-wallpapers-underlay";
+		/** Attribute stamped on the frame (the opaque ancestor). */
+		const FRAME_ATTR = "data-dsh-underlay-frame";
+		/** Attribute stamped on frame children that should rise above the overlay. */
+		const COL_ATTR = "data-dsh-underlay-col";
+		const UNDERLAY_CSS = [
+			`#${STYLE_ID}[data-off]{display:none}`,
+			`[data-shell-overlay]{z-index:0 !important}`,
+			`[${FRAME_ATTR}]{background:transparent !important}`,
+			`[${COL_ATTR}]{position:relative;z-index:5}`
+		].join("\n");
+		let observer = null;
+		let rafHandle = 0;
+		/** Consecutive scans that found nothing; two in a row means the DOM drifted. */
+		let misses = 0;
+		/** Walk up from the overlay to the nearest positioned ancestor (the frame). */
+		function findFrame(overlay) {
+			let node = overlay instanceof HTMLElement ? overlay : overlay.parentElement;
+			for (let hop = 0; node !== null && hop < 6; hop += 1) {
+				if (getComputedStyle(node).position !== "static") return node;
+				node = node.parentElement;
+			}
+			return null;
+		}
+		/** Stamp the frame + column attributes; idempotent, cheap to re-run. */
+		function scan() {
+			rafHandle = 0;
+			const overlay = document.querySelector("[data-shell-overlay]");
+			if (overlay === null) return;
+			const frame = findFrame(overlay);
+			if (frame === null) {
+				misses += 1;
+				if (misses >= 2) disableUnderlay();
+				return;
+			}
+			misses = 0;
+			if (!frame.hasAttribute(FRAME_ATTR)) frame.setAttribute(FRAME_ATTR, "");
+			for (const child of Array.from(frame.children)) {
+				if (child === overlay) continue;
+				const el = child;
+				if (el.tagName === "STYLE" || el.tagName === "SCRIPT") continue;
+				if (!el.hasAttribute(COL_ATTR)) el.setAttribute(COL_ATTR, "");
+			}
+		}
+		/** Coalesced scan: mutation bursts collapse into one frame of work. */
+		function scheduleScan() {
+			if (rafHandle !== 0 || typeof requestAnimationFrame !== "function") {
+				if (rafHandle === 0) scan();
+				return;
+			}
+			rafHandle = requestAnimationFrame(scan);
+		}
+		/**
+		* Turn underlay mode on: inject the stylesheet (with `data-off` cleared),
+		* start observing for the frame, and run the first scan immediately.
+		*/
+		function enableUnderlay() {
+			try {
+				let tag = document.getElementById(STYLE_ID);
+				if (tag === null) {
+					tag = document.createElement("style");
+					tag.id = STYLE_ID;
+					tag.dataset.plugin = "dsh-wallpapers";
+					tag.textContent = UNDERLAY_CSS;
+					document.head.appendChild(tag);
+				} else delete tag.dataset.off;
+				misses = 0;
+				scheduleScan();
+				if (observer === null && typeof MutationObserver === "function") {
+					observer = new MutationObserver(scheduleScan);
+					observer.observe(document.body, {
+						childList: true,
+						subtree: true
+					});
+				}
+			} catch {}
+		}
+		/** Turn underlay mode off: hide (not drop) the stylesheet and undo stamps. */
+		function disableUnderlay() {
+			try {
+				const tag = document.getElementById(STYLE_ID);
+				if (tag !== null) tag.dataset.off = "";
+				for (const el of document.querySelectorAll(`[${FRAME_ATTR}],[${COL_ATTR}]`)) {
+					el.removeAttribute(FRAME_ATTR);
+					el.removeAttribute(COL_ATTR);
+				}
+				if (observer !== null) {
+					observer.disconnect();
+					observer = null;
+				}
+			} catch {}
+		}
+		//#endregion
 		//#region \0dsh-css:src/client/WallpaperSection.module.css.mjs
 		const css = ".WallpaperSection-module_page{color:var(--dsw-alias-label-primary);text-align:left;flex-direction:column;gap:6px;padding:4px 0 12px;font-size:13px;display:flex}.WallpaperSection-module_intro{color:var(--dsw-alias-label-tertiary);margin:2px 0 8px;font-size:12px;line-height:1.6}.WallpaperSection-module_opt{width:100%;color:var(--dsw-alias-label-primary);cursor:pointer;text-align:left;box-sizing:border-box;background:0 0;border:none;border-radius:10px;align-items:center;gap:12px;padding:11px 12px;font-family:inherit;font-size:13px;transition:background .12s;display:flex}.WallpaperSection-module_opt:hover{background:var(--dsw-alias-interactive-bg-hover)}.WallpaperSection-module_on{background:var(--dsw-alias-interactive-bg-hover-accent)}.WallpaperSection-module_dot{border:1.5px solid var(--dsw-alias-label-tertiary);box-sizing:border-box;border-radius:50%;flex:none;width:16px;height:16px;position:relative}.WallpaperSection-module_on .WallpaperSection-module_dot{border-color:var(--dsw-alias-state-business-primary)}.WallpaperSection-module_on .WallpaperSection-module_dot:after{content:\"\";background:var(--dsw-alias-state-business-primary);border-radius:50%;position:absolute;inset:3px}.WallpaperSection-module_opttxt{flex-direction:column;gap:2px;min-width:0;display:flex}.WallpaperSection-module_optlabel{font-size:13px;font-weight:500;line-height:19px}.WallpaperSection-module_optnote{color:var(--dsw-alias-label-tertiary);font-size:11.5px;line-height:16px}.WallpaperSection-module_sub{margin:2px 0 8px}.WallpaperSection-module_hint{border:1px solid var(--dsw-alias-border-l1);color:var(--dsw-alias-label-tertiary);border-radius:10px;margin-top:10px;padding:10px 12px;font-size:11.5px;line-height:1.6}";
 		const tagId = "dsh-wallpapers/WallpaperSection.module.css";
@@ -5801,6 +6088,15 @@ void main() {
 				}
 			});
 			ctx.effect(() => stopKerrNewman);
+			{
+				const applyUnderlay = () => {
+					const id = registry.current();
+					if (id === "pelican-bike" || id === "local-media") enableUnderlay();
+					else disableUnderlay();
+				};
+				applyUnderlay();
+				ctx.effect(() => registry.subscribe(applyUnderlay));
+			}
 			ctx.slots.inject("shell.overlay", () => ctx.slots.register({
 				name: "shell.overlay",
 				id: "pelican-bike-wallpaper",
@@ -5818,7 +6114,8 @@ void main() {
 				hide: () => {
 					visibility$2.desired = false;
 					visibility$2.apply?.(false);
-				}
+				},
+				renderSettings: () => (0, react.createElement)(PelicanBikeSettings)
 			});
 			ctx.effect(() => stopPelicanBike);
 			ctx.slots.inject("shell.overlay", () => ctx.slots.register({

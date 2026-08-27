@@ -20,11 +20,13 @@ import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
 import { BlackholeWallpaper, visibility as blackholeVisibility } from './BlackholeWallpaper.tsx'
 import { KerrNewmanWallpaper, visibility as kerrNewmanVisibility } from './KerrNewmanWallpaper.tsx'
 import { PelicanBikeWallpaper, visibility as pelicanBikeVisibility } from './pelican/PelicanBikeWallpaper.tsx'
+import { PelicanBikeSettings } from './pelican/PelicanBikeSettings.tsx'
 import { LocalMediaWallpaper, visibility as localMediaVisibility } from './LocalMediaWallpaper.tsx'
 import { LocalMediaSettings } from './LocalMediaSettings.tsx'
 import { OrbBackdrop, visibility as orbsVisibility } from './OrbBackdrop.tsx'
 import { createWallpaperRegistry } from './registry.ts'
 import type { WallpaperRegistry } from './registry.ts'
+import { disableUnderlay, enableUnderlay } from './underlay.ts'
 import { WallpaperSection } from './WallpaperSection.tsx'
 
 declare module '@deepseek-ai/cordis' {
@@ -114,6 +116,19 @@ export function apply(ctx: ClientContext): void {
   })
   ctx.effect(() => stopKerrNewman)
 
+  // Underlay mode: full-bleed wallpapers (鹈鹕骑行 / 本地媒体) want to sit
+  // BEHIND the app columns; enable the DOM lift while one of them is selected.
+  // The subscription effect re-runs the check on every registry change.
+  {
+    const applyUnderlay = (): void => {
+      const id = registry.current()
+      if (id === 'pelican-bike' || id === 'local-media') enableUnderlay()
+      else disableUnderlay()
+    }
+    applyUnderlay() // honor the persisted selection at plugin start
+    ctx.effect(() => registry.subscribe(applyUnderlay))
+  }
+
   ctx.slots.inject('shell.overlay', () => ctx.slots.register(
     { name: 'shell.overlay', id: 'pelican-bike-wallpaper', order: -1800, label: '鹈鹕骑行壁纸' },
     PelicanBikeWallpaper,
@@ -130,6 +145,7 @@ export function apply(ctx: ClientContext): void {
       pelicanBikeVisibility.desired = false
       pelicanBikeVisibility.apply?.(false)
     },
+    renderSettings: () => createElement(PelicanBikeSettings),
   })
   ctx.effect(() => stopPelicanBike)
 

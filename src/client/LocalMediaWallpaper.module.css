@@ -20,6 +20,13 @@
   outline: none;
 }
 
+/* Opacity wrapper around the incoming slide: the crossfade animation lives on
+   the media element itself, the wallpaper-concentration fade on this one. */
+.mediaWrap {
+  position: absolute;
+  inset: 0;
+}
+
 /* The incoming slide fades in over the outgoing one; the outgoing slot is
    removed once the transition window has passed. */
 .front {
