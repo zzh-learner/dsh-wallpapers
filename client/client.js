@@ -5619,17 +5619,22 @@ void main() {
 		const FRAME_ATTR = "data-dsh-underlay-frame";
 		/** Attribute stamped on frame children that should rise above the overlay. */
 		const COL_ATTR = "data-dsh-underlay-col";
+		/** Attribute stamped on sticky-bottom seats (the composer fade) to slim them. */
+		const SEAT_ATTR = "data-dsh-underlay-seat";
 		const UNDERLAY_CSS = [
 			`#${STYLE_ID}[data-off]{display:none}`,
 			`[data-shell-overlay]{z-index:0 !important}`,
 			`[${FRAME_ATTR}]{background:transparent !important}`,
-			`[${COL_ATTR}]{position:relative;z-index:5}`,
+			`[${COL_ATTR}]{position:relative;z-index:5;background:transparent !important}`,
+			`[${SEAT_ATTR}]{background:linear-gradient(180deg, transparent 0px, rgba(21, 21, 23, 0.45) 36px) !important}`,
 			`body[data-ds-dark-theme]{--dsw-specific-menu:#30313666;--dsw-menu-backdrop-filter:blur(28px) saturate(150%)}`
 		].join("\n");
 		let observer = null;
 		let rafHandle = 0;
 		/** Consecutive scans that found nothing; two in a row means the DOM drifted. */
 		let misses = 0;
+		/** Timestamp of the last sticky-seat sweep; sweeps are throttled (DOM-wide). */
+		let lastSeatSweep = 0;
 		/** Walk up from the overlay to the nearest positioned ancestor (the frame). */
 		function findFrame(overlay) {
 			let node = overlay instanceof HTMLElement ? overlay : overlay.parentElement;
@@ -5638,6 +5643,19 @@ void main() {
 				node = node.parentElement;
 			}
 			return null;
+		}
+		/**
+		* Stamp sticky-bottom seats (the composer fade container). The sweep reads a
+		* computed style per element under the columns, so it is time-throttled —
+		* the seat survives view switches and rarely moves.
+		*/
+		function sweepSeats() {
+			lastSeatSweep = Date.now();
+			for (const el of Array.from(document.querySelectorAll(`[${COL_ATTR}] *`))) {
+				if (el.hasAttribute(SEAT_ATTR)) continue;
+				const style = getComputedStyle(el);
+				if (style.position === "sticky" && style.bottom !== "auto") el.setAttribute(SEAT_ATTR, "");
+			}
 		}
 		/** Stamp the frame + column attributes; idempotent, cheap to re-run. */
 		function scan() {
@@ -5658,6 +5676,7 @@ void main() {
 				if (el.tagName === "STYLE" || el.tagName === "SCRIPT") continue;
 				if (!el.hasAttribute(COL_ATTR)) el.setAttribute(COL_ATTR, "");
 			}
+			if (Date.now() - lastSeatSweep > 2e3) sweepSeats();
 		}
 		/** Coalesced scan: mutation bursts collapse into one frame of work. */
 		function scheduleScan() {
@@ -5682,6 +5701,7 @@ void main() {
 					document.head.appendChild(tag);
 				} else delete tag.dataset.off;
 				misses = 0;
+				lastSeatSweep = 0;
 				scheduleScan();
 				if (observer === null && typeof MutationObserver === "function") {
 					observer = new MutationObserver(scheduleScan);
@@ -5697,9 +5717,10 @@ void main() {
 			try {
 				const tag = document.getElementById(STYLE_ID);
 				if (tag !== null) tag.dataset.off = "";
-				for (const el of document.querySelectorAll(`[${FRAME_ATTR}],[${COL_ATTR}]`)) {
+				for (const el of document.querySelectorAll(`[${FRAME_ATTR}],[${COL_ATTR}],[${SEAT_ATTR}]`)) {
 					el.removeAttribute(FRAME_ATTR);
 					el.removeAttribute(COL_ATTR);
+					el.removeAttribute(SEAT_ATTR);
 				}
 				if (observer !== null) {
 					observer.disconnect();
