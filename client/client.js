@@ -831,13 +831,13 @@ void main(){
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/BlackholeWallpaper.module.css.mjs
-		const css$8 = ".BlackholeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.BlackholeWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas{pointer-events:auto;cursor:grab}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas:active{cursor:grabbing}.BlackholeWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_panel{transform:translate(calc(100% + 22px))}.BlackholeWallpaper-module_panel::-webkit-scrollbar{width:6px}.BlackholeWallpaper-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.BlackholeWallpaper-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.BlackholeWallpaper-module_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_open{display:block}.BlackholeWallpaper-module_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.BlackholeWallpaper-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.BlackholeWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.BlackholeWallpaper-module_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.BlackholeWallpaper-module_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.BlackholeWallpaper-module_presets{gap:6px;margin-top:12px;display:flex}.BlackholeWallpaper-module_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.BlackholeWallpaper-module_presets button:hover{background:#ff9a4d33}.BlackholeWallpaper-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.BlackholeWallpaper-module_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.BlackholeWallpaper-module_row{margin-bottom:10px}.BlackholeWallpaper-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.BlackholeWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.BlackholeWallpaper-module_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.BlackholeWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.BlackholeWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.BlackholeWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.BlackholeWallpaper-module_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.BlackholeWallpaper-module_checkline input[type=checkbox]{accent-color:#ff9a4d}.BlackholeWallpaper-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.BlackholeWallpaper-module_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.BlackholeWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.BlackholeWallpaper-module_panel{width:min(300px,82vw)}}";
-		const tagId$8 = "dsh-wallpapers/BlackholeWallpaper.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$8) + "]") === null) {
+		const css$6 = ".BlackholeWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.BlackholeWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas{pointer-events:auto;cursor:grab}.BlackholeWallpaper-module_host[data-interactive] .BlackholeWallpaper-module_canvas:active{cursor:grabbing}.BlackholeWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.25);color:#e8ecf4;text-align:left;box-sizing:border-box;background:#0a0d149e;border:1px solid #ffffff14;border-radius:14px;width:296px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_panel{transform:translate(calc(100% + 22px))}.BlackholeWallpaper-module_panel::-webkit-scrollbar{width:6px}.BlackholeWallpaper-module_panel::-webkit-scrollbar-thumb{background:#ffffff24;border-radius:3px}.BlackholeWallpaper-module_toggle{color:#9aa3b5;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.BlackholeWallpaper-module_toggle:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#9aa3b5;cursor:pointer;background:#0a0d149e;border:1px solid #ffffff14;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.BlackholeWallpaper-module_host[data-collapsed] .BlackholeWallpaper-module_open{display:block}.BlackholeWallpaper-module_open:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_head h1{letter-spacing:.32em;color:#e8ecf4;margin:0;font-size:19px;font-weight:600}.BlackholeWallpaper-module_sub{color:#9aa3b5;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.BlackholeWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.BlackholeWallpaper-module_stat{text-align:center;color:#9aa3b5;font-variant-numeric:tabular-nums;background:#ffffff0b;border:1px solid #ffffff14;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.BlackholeWallpaper-module_stat b{color:#e8ecf4;margin-bottom:2px;font-size:13px;display:block}.BlackholeWallpaper-module_presets{gap:6px;margin-top:12px;display:flex}.BlackholeWallpaper-module_presets button{color:#ff9a4d;cursor:pointer;background:#ff9a4d14;border:1px solid #ff9a4d59;border-radius:8px;flex:1;padding:7px 0;font-size:12px;transition:background .15s}.BlackholeWallpaper-module_presets button:hover{background:#ff9a4d33}.BlackholeWallpaper-module_sec{border-top:1px solid #ffffff14;margin-top:14px;padding-top:11px}.BlackholeWallpaper-module_sec h2{letter-spacing:.22em;color:#ff9a4dcc;margin:0 0 9px;font-size:11px;font-weight:600}.BlackholeWallpaper-module_row{margin-bottom:10px}.BlackholeWallpaper-module_labline{color:#9aa3b5;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.BlackholeWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.BlackholeWallpaper-module_val{color:#ff9a4d;font-family:Consolas,monospace;font-size:12px}.BlackholeWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#ff9a4d66,#ffffff24);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.BlackholeWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#ffb066;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#ffb066;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #ff9a4da6}.BlackholeWallpaper-module_panel select{color:#e8ecf4;box-sizing:border-box;background:#141926;border:1px solid #ffffff14;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.BlackholeWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.BlackholeWallpaper-module_checkline label{color:#9aa3b5;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.BlackholeWallpaper-module_checkline input[type=checkbox]{accent-color:#ff9a4d}.BlackholeWallpaper-module_mini{color:#e8ecf4;cursor:pointer;background:#ffffff0f;border:1px solid #ffffff14;border-radius:8px;padding:5px 12px;font-size:12px}.BlackholeWallpaper-module_mini:hover{color:#ff9a4d;border-color:#ff9a4dcc}.BlackholeWallpaper-module_foot{color:#9aa3b5;opacity:.8;border-top:1px solid #ffffff14;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.BlackholeWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.BlackholeWallpaper-module_panel{width:min(300px,82vw)}}";
+		const tagId$6 = "dsh-wallpapers/BlackholeWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$6) + "]") === null) {
 			const tag = document.createElement("style");
 			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$8;
-			tag.textContent = css$8;
+			tag.dataset.pluginCss = tagId$6;
+			tag.textContent = css$6;
 			document.head.appendChild(tag);
 		}
 		var BlackholeWallpaper_module_css_default = {
@@ -1071,7 +1071,7 @@ void main(){
 			} catch {}
 		}
 		/** Registry → component visibility bridge; set on mount, read at registration time. */
-		const visibility$4 = {
+		const visibility$3 = {
 			apply: null,
 			desired: true
 		};
@@ -1125,16 +1125,16 @@ void main(){
 					}
 				});
 				engineRef.current = api;
-				visibility$4.apply = (on) => {
+				visibility$3.apply = (on) => {
 					if (hostRef.current !== null) hostRef.current.style.display = on ? "" : "none";
 					if (engineRef.current !== null) {
 						if (on) engineRef.current.resume();
 						else engineRef.current.pause();
 					}
 				};
-				visibility$4.apply(visibility$4.desired);
+				visibility$3.apply(visibility$3.desired);
 				return () => {
-					visibility$4.apply = null;
+					visibility$3.apply = null;
 					api.dispose();
 					engineRef.current = null;
 				};
@@ -2503,13 +2503,13 @@ void main() {
 		}
 		//#endregion
 		//#region \0dsh-css:src/client/KerrNewmanWallpaper.module.css.mjs
-		const css$7 = ".KerrNewmanWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.KerrNewmanWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas{pointer-events:auto;cursor:grab}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas:active{cursor:grabbing}.KerrNewmanWallpaper-module_veil{pointer-events:none;background:#04060c;position:absolute;inset:0}.KerrNewmanWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.2);color:#dfe7f5;text-align:left;box-sizing:border-box;background:#0a0e18ad;border:1px solid #7fb2ff29;border-radius:14px;width:300px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto;box-shadow:0 18px 50px #00000080}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_panel{transform:translate(calc(100% + 22px))}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar{width:6px}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar-thumb{background:#7fb2ff38;border-radius:3px}.KerrNewmanWallpaper-module_toggle{color:#7fb2ff;cursor:pointer;background:#7fb2ff1a;border:1px solid #7fb2ff38;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.KerrNewmanWallpaper-module_toggle:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#7fb2ff;cursor:pointer;background:#0a0e18ad;border:1px solid #7fb2ff38;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_open{display:block}.KerrNewmanWallpaper-module_open:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_head h1{letter-spacing:.26em;background:linear-gradient(100deg,#cfe0ff 0%,#7fb2ff 55%,#b48cff 100%);color:#0000;-webkit-background-clip:text;background-clip:text;margin:0;font-size:18px;font-weight:600}.KerrNewmanWallpaper-module_sub{color:#8b98b4;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.KerrNewmanWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.KerrNewmanWallpaper-module_stat{text-align:center;color:#8b98b4;font-variant-numeric:tabular-nums;background:#7fb2ff0d;border:1px solid #7fb2ff1f;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.KerrNewmanWallpaper-module_stat b{color:#dfe7f5;margin-bottom:2px;font-size:13px;display:block}.KerrNewmanWallpaper-module_presets{flex-wrap:wrap;gap:6px;margin-top:12px;display:flex}.KerrNewmanWallpaper-module_presets button{color:#9fc2ff;cursor:pointer;background:#7fb2ff14;border:1px solid #7fb2ff4d;border-radius:8px;flex:30%;padding:7px 0;font-size:12px;transition:background .15s}.KerrNewmanWallpaper-module_presets button:hover{background:#7fb2ff33}.KerrNewmanWallpaper-module_sec{border-top:1px solid #7fb2ff1a;margin-top:14px;padding-top:11px}.KerrNewmanWallpaper-module_sec h2{letter-spacing:.22em;color:#7fb2ffd9;margin:0 0 9px;font-size:11px;font-weight:600}.KerrNewmanWallpaper-module_row{margin-bottom:10px}.KerrNewmanWallpaper-module_labline{color:#8b98b4;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.KerrNewmanWallpaper-module_val{color:#7fb2ff;font-family:Consolas,monospace;font-size:12px}.KerrNewmanWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#7fb2ff73,#ffffff1f);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.KerrNewmanWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#bcd4ff;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#bcd4ff;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel select{color:#dfe7f5;box-sizing:border-box;background:#10141f;border:1px solid #7fb2ff29;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.KerrNewmanWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.KerrNewmanWallpaper-module_checkline label{color:#8b98b4;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_checkline input[type=checkbox]{accent-color:#7fb2ff}.KerrNewmanWallpaper-module_mini{color:#dfe7f5;cursor:pointer;background:#7fb2ff12;border:1px solid #7fb2ff38;border-radius:8px;padding:5px 12px;font-size:12px}.KerrNewmanWallpaper-module_mini:hover{color:#7fb2ff;border-color:#7fb2ffb3}.KerrNewmanWallpaper-module_foot{color:#8b98b4;opacity:.85;border-top:1px solid #7fb2ff1a;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.KerrNewmanWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.KerrNewmanWallpaper-module_panel{width:min(300px,82vw)}}";
-		const tagId$7 = "dsh-wallpapers/KerrNewmanWallpaper.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$7) + "]") === null) {
+		const css$5 = ".KerrNewmanWallpaper-module_host{z-index:-1;pointer-events:none;position:fixed;inset:0;overflow:hidden}.KerrNewmanWallpaper-module_canvas{touch-action:none;width:100%;height:100%;display:block;position:absolute;inset:0}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas{pointer-events:auto;cursor:grab}.KerrNewmanWallpaper-module_host[data-interactive] .KerrNewmanWallpaper-module_canvas:active{cursor:grabbing}.KerrNewmanWallpaper-module_veil{pointer-events:none;background:#04060c;position:absolute;inset:0}.KerrNewmanWallpaper-module_panel{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(16px)saturate(1.2);color:#dfe7f5;text-align:left;box-sizing:border-box;background:#0a0e18ad;border:1px solid #7fb2ff29;border-radius:14px;width:300px;padding:18px 16px 12px;font-family:Segoe UI,Microsoft YaHei,system-ui,-apple-system,sans-serif;transition:transform .35s cubic-bezier(.4,0,.2,1);position:fixed;top:14px;bottom:14px;right:14px;overflow:hidden auto;box-shadow:0 18px 50px #00000080}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_panel{transform:translate(calc(100% + 22px))}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar{width:6px}.KerrNewmanWallpaper-module_panel::-webkit-scrollbar-thumb{background:#7fb2ff38;border-radius:3px}.KerrNewmanWallpaper-module_toggle{color:#7fb2ff;cursor:pointer;background:#7fb2ff1a;border:1px solid #7fb2ff38;border-radius:8px;width:26px;height:26px;padding:0;font-size:14px;line-height:1;position:absolute;top:12px;right:12px}.KerrNewmanWallpaper-module_toggle:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_open{z-index:2;pointer-events:auto;-webkit-backdrop-filter:blur(12px);color:#7fb2ff;cursor:pointer;background:#0a0e18ad;border:1px solid #7fb2ff38;border-radius:10px;width:34px;height:34px;padding:0;font-size:15px;display:none;position:fixed;top:60px;right:14px}.KerrNewmanWallpaper-module_host[data-collapsed] .KerrNewmanWallpaper-module_open{display:block}.KerrNewmanWallpaper-module_open:hover{border-color:#7fb2ff99}.KerrNewmanWallpaper-module_head h1{letter-spacing:.26em;background:linear-gradient(100deg,#cfe0ff 0%,#7fb2ff 55%,#b48cff 100%);color:#0000;-webkit-background-clip:text;background-clip:text;margin:0;font-size:18px;font-weight:600}.KerrNewmanWallpaper-module_sub{color:#8b98b4;letter-spacing:.14em;margin:4px 0 0;font-size:11px}.KerrNewmanWallpaper-module_stats{gap:6px;margin-top:14px;display:flex}.KerrNewmanWallpaper-module_stat{text-align:center;color:#8b98b4;font-variant-numeric:tabular-nums;background:#7fb2ff0d;border:1px solid #7fb2ff1f;border-radius:8px;flex:1;padding:7px 2px;font-size:10px}.KerrNewmanWallpaper-module_stat b{color:#dfe7f5;margin-bottom:2px;font-size:13px;display:block}.KerrNewmanWallpaper-module_presets{flex-wrap:wrap;gap:6px;margin-top:12px;display:flex}.KerrNewmanWallpaper-module_presets button{color:#9fc2ff;cursor:pointer;background:#7fb2ff14;border:1px solid #7fb2ff4d;border-radius:8px;flex:30%;padding:7px 0;font-size:12px;transition:background .15s}.KerrNewmanWallpaper-module_presets button:hover{background:#7fb2ff33}.KerrNewmanWallpaper-module_sec{border-top:1px solid #7fb2ff1a;margin-top:14px;padding-top:11px}.KerrNewmanWallpaper-module_sec h2{letter-spacing:.22em;color:#7fb2ffd9;margin:0 0 9px;font-size:11px;font-weight:600}.KerrNewmanWallpaper-module_row{margin-bottom:10px}.KerrNewmanWallpaper-module_labline{color:#8b98b4;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_labline em{opacity:.7;font-size:10px;font-style:normal}.KerrNewmanWallpaper-module_val{color:#7fb2ff;font-family:Consolas,monospace;font-size:12px}.KerrNewmanWallpaper-module_panel input[type=range]{-webkit-appearance:none;appearance:none;box-sizing:border-box;background:linear-gradient(90deg,#7fb2ff73,#ffffff1f);border-radius:2px;outline:none;width:100%;height:4px;margin:0}.KerrNewmanWallpaper-module_panel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;cursor:pointer;background:#bcd4ff;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel input[type=range]::-moz-range-thumb{cursor:pointer;background:#bcd4ff;border:none;border-radius:50%;width:14px;height:14px;box-shadow:0 0 8px #7fb2ffa6}.KerrNewmanWallpaper-module_panel select{color:#dfe7f5;box-sizing:border-box;background:#10141f;border:1px solid #7fb2ff29;border-radius:8px;outline:none;width:100%;padding:6px 8px;font-size:12px}.KerrNewmanWallpaper-module_checkline{justify-content:space-between;align-items:center;display:flex}.KerrNewmanWallpaper-module_checkline label{color:#8b98b4;cursor:pointer;align-items:center;gap:6px;font-size:12px;display:flex}.KerrNewmanWallpaper-module_checkline input[type=checkbox]{accent-color:#7fb2ff}.KerrNewmanWallpaper-module_mini{color:#dfe7f5;cursor:pointer;background:#7fb2ff12;border:1px solid #7fb2ff38;border-radius:8px;padding:5px 12px;font-size:12px}.KerrNewmanWallpaper-module_mini:hover{color:#7fb2ff;border-color:#7fb2ffb3}.KerrNewmanWallpaper-module_foot{color:#8b98b4;opacity:.85;border-top:1px solid #7fb2ff1a;margin-top:12px;padding-top:10px;font-size:11px;line-height:1.7}.KerrNewmanWallpaper-module_fatal{color:#ffb0b0;white-space:pre-wrap;background:#78141440;border:1px solid #ff5a5a66;border-radius:8px;margin-top:12px;padding:10px;font-size:12px}@media (width<=640px){.KerrNewmanWallpaper-module_panel{width:min(300px,82vw)}}";
+		const tagId$5 = "dsh-wallpapers/KerrNewmanWallpaper.module.css";
+		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$5) + "]") === null) {
 			const tag = document.createElement("style");
 			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$7;
-			tag.textContent = css$7;
+			tag.dataset.pluginCss = tagId$5;
+			tag.textContent = css$5;
 			document.head.appendChild(tag);
 		}
 		var KerrNewmanWallpaper_module_css_default = {
@@ -2912,7 +2912,7 @@ void main() {
 			} catch {}
 		}
 		/** Registry → component visibility bridge; set on mount, read at registration time. */
-		const visibility$3 = {
+		const visibility$2 = {
 			apply: null,
 			desired: true
 		};
@@ -2966,14 +2966,14 @@ void main() {
 					}
 				});
 				engineRef.current = api;
-				visibility$3.apply = (on) => {
+				visibility$2.apply = (on) => {
 					if (hostRef.current !== null) hostRef.current.style.display = on ? "" : "none";
 					if (on) api.resume();
 					else api.pause();
 				};
-				visibility$3.apply(visibility$3.desired);
+				visibility$2.apply(visibility$2.desired);
 				return () => {
-					visibility$3.apply = null;
+					visibility$2.apply = null;
 					api.dispose();
 					engineRef.current = null;
 				};
@@ -3219,214 +3219,6 @@ void main() {
 								]
 							})
 						]
-					})
-				]
-			});
-		}
-		//#endregion
-		//#region src/client/pelican/art.ts
-		/**
-		* GENERATED FILE — regenerate with: python pelican-bike/build_pelican.py
-		* Do not edit by hand. The standalone preview is pelican-bike/index.html;
-		* this module packages the same artwork for the wallpaper layer.
-		*
-		* @module dsh-wallpapers/src/client/pelican/art
-		*/
-		/** Class wrapping the mounted artwork; every scoped rule hangs off it. */
-		const PELICAN_SCOPE = "dshPelicanBike";
-		/** Complete <svg> markup (static, script-free), cover-fit for the layer. */
-		const PELICAN_SVG = "<svg viewBox=\"0 0 960 560\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"\n     aria-label=\"一只鹈鹕骑着自行车，在乡间公路上前行，车筐里还放着一条鱼\" preserveAspectRatio=\"xMidYMid slice\">\n  <defs>\n    <linearGradient id=\"sky\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#bfe7fb\"/>\n      <stop offset=\"62%\" stop-color=\"#dff3fa\"/>\n      <stop offset=\"100%\" stop-color=\"#eefbf4\"/>\n    </linearGradient>\n    <linearGradient id=\"roadGrad\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#80909f\"/>\n      <stop offset=\"100%\" stop-color=\"#5d6d7e\"/>\n    </linearGradient>\n    <radialGradient id=\"bodyG\" cx=\"42%\" cy=\"34%\" r=\"75%\">\n      <stop offset=\"0%\" stop-color=\"#ffffff\"/>\n      <stop offset=\"72%\" stop-color=\"#f6fafc\"/>\n      <stop offset=\"100%\" stop-color=\"#e4edf4\"/>\n    </radialGradient>\n    <radialGradient id=\"sunGlow\" cx=\"50%\" cy=\"50%\" r=\"50%\">\n      <stop offset=\"0%\" stop-color=\"#ffe9a8\" stop-opacity=\".9\"/>\n      <stop offset=\"100%\" stop-color=\"#ffe9a8\" stop-opacity=\"0\"/>\n    </radialGradient>\n  </defs>\n\n  <!-- ======== 背景 ======== -->\n  <rect width=\"960\" height=\"560\" fill=\"url(#sky)\"/>\n\n  <!-- 太阳 -->\n  <g>\n    <circle cx=\"840\" cy=\"104\" r=\"86\" fill=\"url(#sunGlow)\"/>\n    <g class=\"rays\" style=\"transform-origin:840px 104px\">\n      <g stroke=\"#ffd66b\" stroke-width=\"5\" stroke-linecap=\"round\" opacity=\".8\">\n        <line x1=\"840\" y1=\"52\"  x2=\"840\" y2=\"64\"/>\n        <line x1=\"840\" y1=\"144\" x2=\"840\" y2=\"156\"/>\n        <line x1=\"788\" y1=\"104\" x2=\"800\" y2=\"104\"/>\n        <line x1=\"880\" y1=\"104\" x2=\"892\" y2=\"104\"/>\n        <line x1=\"804\" y1=\"68\"  x2=\"812\" y2=\"76\"/>\n        <line x1=\"868\" y1=\"132\" x2=\"876\" y2=\"140\"/>\n        <line x1=\"876\" y1=\"68\"  x2=\"868\" y2=\"76\"/>\n        <line x1=\"812\" y1=\"132\" x2=\"804\" y2=\"140\"/>\n        <line x1=\"819\" y1=\"57\"  x2=\"823\" y2=\"67\"/>\n        <line x1=\"857\" y1=\"141\" x2=\"861\" y2=\"151\"/>\n        <line x1=\"797\" y1=\"83\"  x2=\"807\" y2=\"87\"/>\n        <line x1=\"873\" y1=\"121\" x2=\"883\" y2=\"125\"/>\n      </g>\n    </g>\n    <circle cx=\"840\" cy=\"104\" r=\"33\" fill=\"#ffd66b\"/>\n    <circle cx=\"831\" cy=\"96\" r=\"10\" fill=\"#ffe7a1\" opacity=\".8\"/>\n  </g>\n\n  <!-- 云 -->\n  <g fill=\"#ffffff\" opacity=\".92\">\n    <g class=\"cl1\"><g transform=\"translate(1120,92)\">\n      <ellipse cx=\"0\" cy=\"0\" rx=\"56\" ry=\"21\"/><ellipse cx=\"-38\" cy=\"7\" rx=\"30\" ry=\"15\"/>\n      <ellipse cx=\"40\" cy=\"6\" rx=\"34\" ry=\"17\"/><ellipse cx=\"6\" cy=\"-15\" rx=\"29\" ry=\"17\"/>\n    </g></g>\n    <g class=\"cl2\"><g transform=\"translate(1150,58) scale(.78)\">\n      <ellipse cx=\"0\" cy=\"0\" rx=\"56\" ry=\"21\"/><ellipse cx=\"-38\" cy=\"7\" rx=\"30\" ry=\"15\"/>\n      <ellipse cx=\"40\" cy=\"6\" rx=\"34\" ry=\"17\"/><ellipse cx=\"6\" cy=\"-15\" rx=\"29\" ry=\"17\"/>\n    </g></g>\n    <g class=\"cl3\"><g transform=\"translate(1140,132) scale(1.25)\">\n      <ellipse cx=\"0\" cy=\"0\" rx=\"56\" ry=\"21\"/><ellipse cx=\"-38\" cy=\"7\" rx=\"30\" ry=\"15\"/>\n      <ellipse cx=\"40\" cy=\"6\" rx=\"34\" ry=\"17\"/><ellipse cx=\"6\" cy=\"-15\" rx=\"29\" ry=\"17\"/>\n    </g></g>\n  </g>\n\n  <!-- 远山 -->\n  <g class=\"hillsFar\" fill=\"#cfe8da\">\n    <path d=\"M-840,482C-787.5,437.2 -682.5,437.2 -630,482C-577.5,456.4 -472.5,456.4 -420,482C-367.5,427.6 -262.5,427.6 -210,482C-157.5,446.8 -52.5,446.8 0,482C52.5,440.4 157.5,440.4 210,482C262.5,453.2 367.5,453.2 420,482C472.5,430.8 577.5,430.8 630,482C682.5,450.0 787.5,450.0 840,482C892.5,437.2 997.5,437.2 1050,482C1102.5,456.4 1207.5,456.4 1260,482C1312.5,427.6 1417.5,427.6 1470,482C1522.5,446.8 1627.5,446.8 1680,482C1732.5,440.4 1837.5,440.4 1890,482C1942.5,453.2 2047.5,453.2 2100,482C2152.5,430.8 2257.5,430.8 2310,482C2362.5,450.0 2467.5,450.0 2520,482C2572.5,437.2 2677.5,437.2 2730,482C2782.5,456.4 2887.5,456.4 2940,482C2992.5,427.6 3097.5,427.6 3150,482C3202.5,446.8 3307.5,446.8 3360,482C3412.5,440.4 3517.5,440.4 3570,482C3622.5,453.2 3727.5,453.2 3780,482C3832.5,430.8 3937.5,430.8 3990,482C4042.5,450.0 4147.5,450.0 4200,482L4200,482 Z\"/>\n  </g>\n  <!-- 近山丘 -->\n  <g class=\"hillsNear\" fill=\"#abdcb8\">\n    <path d=\"M-840,484C-787.5,413.6 -682.5,413.6 -630,484C-577.5,445.6 -472.5,445.6 -420,484C-367.5,400.8 -262.5,400.8 -210,484C-157.5,436.0 -52.5,436.0 0,484C52.5,420.0 157.5,420.0 210,484C262.5,442.4 367.5,442.4 420,484C472.5,407.2 577.5,407.2 630,484C682.5,439.2 787.5,439.2 840,484C892.5,413.6 997.5,413.6 1050,484C1102.5,445.6 1207.5,445.6 1260,484C1312.5,400.8 1417.5,400.8 1470,484C1522.5,436.0 1627.5,436.0 1680,484C1732.5,420.0 1837.5,420.0 1890,484C1942.5,442.4 2047.5,442.4 2100,484C2152.5,407.2 2257.5,407.2 2310,484C2362.5,439.2 2467.5,439.2 2520,484C2572.5,413.6 2677.5,413.6 2730,484C2782.5,445.6 2887.5,445.6 2940,484C2992.5,400.8 3097.5,400.8 3150,484C3202.5,436.0 3307.5,436.0 3360,484C3412.5,420.0 3517.5,420.0 3570,484C3622.5,442.4 3727.5,442.4 3780,484C3832.5,407.2 3937.5,407.2 3990,484C4042.5,439.2 4147.5,439.2 4200,484L4200,484 Z\"/>\n  </g>\n\n  <!-- 路边树 -->\n  <g class=\"trees\">\n    <g><rect x=\"-285\" y=\"441.0\" width=\"6\" height=\"35.0\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"-282\" cy=\"444.0\" r=\"20\" fill=\"#4fae7e\"/></g><g><rect x=\"-183\" y=\"450.3\" width=\"6\" height=\"28.700000000000003\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"-180\" cy=\"454.8\" r=\"14\" fill=\"#67c290\"/></g><g><rect x=\"-88\" y=\"434.8\" width=\"6\" height=\"39.2\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"-85\" cy=\"436.8\" r=\"24\" fill=\"#3f9e6f\"/></g><g><rect x=\"15\" y=\"441.0\" width=\"6\" height=\"35.0\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"18\" cy=\"444.0\" r=\"20\" fill=\"#4fae7e\"/></g><g><rect x=\"117\" y=\"450.3\" width=\"6\" height=\"28.700000000000003\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"120\" cy=\"454.8\" r=\"14\" fill=\"#67c290\"/></g><g><rect x=\"212\" y=\"434.8\" width=\"6\" height=\"39.2\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"215\" cy=\"436.8\" r=\"24\" fill=\"#3f9e6f\"/></g><g><rect x=\"315\" y=\"441.0\" width=\"6\" height=\"35.0\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"318\" cy=\"444.0\" r=\"20\" fill=\"#4fae7e\"/></g><g><rect x=\"417\" y=\"450.3\" width=\"6\" height=\"28.700000000000003\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"420\" cy=\"454.8\" r=\"14\" fill=\"#67c290\"/></g><g><rect x=\"512\" y=\"434.8\" width=\"6\" height=\"39.2\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"515\" cy=\"436.8\" r=\"24\" fill=\"#3f9e6f\"/></g><g><rect x=\"615\" y=\"441.0\" width=\"6\" height=\"35.0\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"618\" cy=\"444.0\" r=\"20\" fill=\"#4fae7e\"/></g><g><rect x=\"717\" y=\"450.3\" width=\"6\" height=\"28.700000000000003\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"720\" cy=\"454.8\" r=\"14\" fill=\"#67c290\"/></g><g><rect x=\"812\" y=\"434.8\" width=\"6\" height=\"39.2\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"815\" cy=\"436.8\" r=\"24\" fill=\"#3f9e6f\"/></g><g><rect x=\"915\" y=\"441.0\" width=\"6\" height=\"35.0\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"918\" cy=\"444.0\" r=\"20\" fill=\"#4fae7e\"/></g><g><rect x=\"1017\" y=\"450.3\" width=\"6\" height=\"28.700000000000003\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"1020\" cy=\"454.8\" r=\"14\" fill=\"#67c290\"/></g><g><rect x=\"1112\" y=\"434.8\" width=\"6\" height=\"39.2\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"1115\" cy=\"436.8\" r=\"24\" fill=\"#3f9e6f\"/></g><g><rect x=\"1215\" y=\"441.0\" width=\"6\" height=\"35.0\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"1218\" cy=\"444.0\" r=\"20\" fill=\"#4fae7e\"/></g><g><rect x=\"1317\" y=\"450.3\" width=\"6\" height=\"28.700000000000003\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"1320\" cy=\"454.8\" r=\"14\" fill=\"#67c290\"/></g><g><rect x=\"1412\" y=\"434.8\" width=\"6\" height=\"39.2\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"1415\" cy=\"436.8\" r=\"24\" fill=\"#3f9e6f\"/></g><g><rect x=\"1515\" y=\"441.0\" width=\"6\" height=\"35.0\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"1518\" cy=\"444.0\" r=\"20\" fill=\"#4fae7e\"/></g><g><rect x=\"1617\" y=\"450.3\" width=\"6\" height=\"28.700000000000003\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"1620\" cy=\"454.8\" r=\"14\" fill=\"#67c290\"/></g><g><rect x=\"1712\" y=\"434.8\" width=\"6\" height=\"39.2\" rx=\"3\" fill=\"#8a5a35\"/><circle cx=\"1715\" cy=\"436.8\" r=\"24\" fill=\"#3f9e6f\"/></g>\n  </g>\n\n  <!-- 公路 -->\n  <rect x=\"0\" y=\"480\" width=\"960\" height=\"80\" fill=\"url(#roadGrad)\"/>\n  <rect x=\"0\" y=\"480\" width=\"960\" height=\"5\" fill=\"#93a3b2\"/>\n  <g class=\"roadDash\" fill=\"#ffe98a\" opacity=\".95\"><rect x=\"-130\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"0\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"130\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"260\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"390\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"520\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"650\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"780\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"910\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"1040\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/><rect x=\"1170\" y=\"516\" width=\"72\" height=\"8\" rx=\"4\"/></g>\n\n  <!-- 风线 -->\n  <g stroke=\"#dff3fb\" stroke-linecap=\"round\" stroke-width=\"6\">\n    <line class=\"sl1\" x1=\"108\" y1=\"368\" x2=\"172\" y2=\"368\"/>\n    <line class=\"sl2\" x1=\"122\" y1=\"406\" x2=\"198\" y2=\"406\"/>\n    <line class=\"sl3\" x1=\"96\"  y1=\"444\" x2=\"154\" y2=\"444\"/>\n  </g>\n\n  <!-- 影子 -->\n  <ellipse class=\"shadow\" cx=\"462\" cy=\"500\" rx=\"205\" ry=\"13\" fill=\"#2b3a47\"/>\n\n  <!-- ======== 骑行者与自行车（整体轻微上下起伏） ======== -->\n  <g class=\"riderBob\">\n\n    <!-- 远侧腿（深色，半拍相位差） -->\n    <g>\n      <g class=\"thighF\">\n        <line x1=\"402\" y1=\"288\" x2=\"487.14\" y2=\"330.15\" stroke=\"#e08c2a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n        <g class=\"shinF\">\n          <line x1=\"487.14\" y1=\"330.15\" x2=\"492\" y2=\"410\" stroke=\"#e08c2a\" stroke-width=\"11\" stroke-linecap=\"round\"/>\n        </g>\n      </g>\n    </g>\n\n    <!-- 后轮 -->\n    <g>\n      <circle cx=\"320\" cy=\"400\" r=\"88\" fill=\"none\" stroke=\"#33424e\" stroke-width=\"11\"/>\n      <circle cx=\"320\" cy=\"400\" r=\"74\" fill=\"none\" stroke=\"#dbe7ee\" stroke-width=\"5\"/>\n      <g class=\"wheelSpin\" style=\"transform-origin:320px 400px\">\n        <g stroke=\"#dbe7ee\" stroke-width=\"3.5\">\n          <line x1=\"320\" y1=\"330\" x2=\"320\" y2=\"470\"/>\n          <line x1=\"250\" y1=\"400\" x2=\"390\" y2=\"400\"/>\n          <line x1=\"270\" y1=\"350\" x2=\"370\" y2=\"450\"/>\n          <line x1=\"370\" y1=\"350\" x2=\"270\" y2=\"450\"/>\n          <line x1=\"298\" y1=\"333\" x2=\"342\" y2=\"467\"/>\n          <line x1=\"342\" y1=\"333\" x2=\"298\" y2=\"467\"/>\n        </g>\n        <circle cx=\"320\" cy=\"340\" r=\"4\" fill=\"#ff8fab\"/>\n      </g>\n      <circle cx=\"320\" cy=\"400\" r=\"11\" fill=\"#33424e\"/>\n      <circle cx=\"320\" cy=\"400\" r=\"4.5\" fill=\"#ffd166\"/>\n      <!-- 飞轮 -->\n      <circle cx=\"320\" cy=\"400\" r=\"18\" fill=\"none\" stroke=\"#9fb0bd\" stroke-width=\"5\"/>\n    </g>\n\n    <!-- 前轮 -->\n    <g>\n      <circle cx=\"600\" cy=\"400\" r=\"88\" fill=\"none\" stroke=\"#33424e\" stroke-width=\"11\"/>\n      <circle cx=\"600\" cy=\"400\" r=\"74\" fill=\"none\" stroke=\"#dbe7ee\" stroke-width=\"5\"/>\n      <g class=\"wheelSpin\" style=\"transform-origin:600px 400px\">\n        <g stroke=\"#dbe7ee\" stroke-width=\"3.5\">\n          <line x1=\"600\" y1=\"330\" x2=\"600\" y2=\"470\"/>\n          <line x1=\"530\" y1=\"400\" x2=\"670\" y2=\"400\"/>\n          <line x1=\"550\" y1=\"350\" x2=\"650\" y2=\"450\"/>\n          <line x1=\"650\" y1=\"350\" x2=\"550\" y2=\"450\"/>\n          <line x1=\"578\" y1=\"333\" x2=\"622\" y2=\"467\"/>\n          <line x1=\"622\" y1=\"333\" x2=\"578\" y2=\"467\"/>\n        </g>\n        <circle cx=\"600\" cy=\"340\" r=\"4\" fill=\"#ff8fab\"/>\n      </g>\n      <circle cx=\"600\" cy=\"400\" r=\"11\" fill=\"#33424e\"/>\n      <circle cx=\"600\" cy=\"400\" r=\"4.5\" fill=\"#ffd166\"/>\n    </g>\n\n    <!-- 远侧曲柄 + 脚踏（画在车架后面） -->\n    <g>\n      <g class=\"crankFar\" style=\"transform-origin:452px 410px\">\n        <line x1=\"452\" y1=\"410\" x2=\"492\" y2=\"410\" stroke=\"#8d99a3\" stroke-width=\"9\" stroke-linecap=\"round\"/>\n        <g class=\"pedalCFar\" style=\"transform-origin:492px 410px\">\n          <rect x=\"479\" y=\"406\" width=\"27\" height=\"9\" rx=\"4\" fill=\"#2c3944\"/>\n          <path d=\"M474,403 Q489,395 510,401 Q496,412 478,410 Z\" fill=\"#e07f22\"/>\n        </g>\n      </g>\n    </g>\n\n    <!-- 车架 -->\n    <g stroke=\"#ff6b57\" stroke-width=\"10\" stroke-linecap=\"round\" fill=\"none\">\n      <path d=\"M452,410 L566,310\"/>              <!-- 下管 -->\n      <path d=\"M452,410 L394,268\"/>              <!-- 座管 -->\n      <path d=\"M402,286 L560,300\"/>              <!-- 上管 -->\n      <path d=\"M452,410 L320,400\"/>              <!-- 后下叉 -->\n      <path d=\"M322,398 L396,272\"/>              <!-- 后上叉 -->\n    </g>\n    <g fill=\"none\" stroke=\"#ff6b57\">\n      <path d=\"M562,286 L578,308\" stroke-width=\"13\"/>          <!-- 头管 -->\n      <path d=\"M576,304 Q586,352 600,396\" stroke-width=\"8\"/>   <!-- 前叉 -->\n      <path d=\"M566,290 L550,271\" stroke-width=\"8\"/>           <!-- 立管 -->\n    </g>\n    <path d=\"M550,271 Q536,258 527,267\" fill=\"none\" stroke=\"#4a5560\" stroke-width=\"7\" stroke-linecap=\"round\"/>\n    <circle cx=\"529\" cy=\"268\" r=\"8\" fill=\"#33424e\"/>\n\n    <!-- 车座 -->\n    <rect x=\"371\" y=\"256\" width=\"50\" height=\"13\" rx=\"6.5\" fill=\"#7c4a2d\"/>\n    <rect x=\"389\" y=\"266\" width=\"10\" height=\"14\" rx=\"4\" fill=\"#8d5a3b\"/>\n\n    <!-- 牙盘 + 链条 -->\n    <g class=\"crank\" style=\"transform-origin:452px 410px\">\n      <circle cx=\"452\" cy=\"410\" r=\"16\" fill=\"none\" stroke=\"#cfd8e0\" stroke-width=\"5\"/>\n    </g>\n    <line class=\"chainLink\" x1=\"322\" y1=\"388\" x2=\"450\" y2=\"396\" stroke=\"#9fb0bd\" stroke-width=\"4\"/>\n    <line class=\"chainLink\" x1=\"322\" y1=\"412\" x2=\"450\" y2=\"424\" stroke=\"#9fb0bd\" stroke-width=\"4\"/>\n\n    <!-- 车筐和小鱼 -->\n    <g>\n      <line x1=\"594\" y1=\"298\" x2=\"571\" y2=\"288\" stroke=\"#a9743f\" stroke-width=\"4\"/>\n      <line x1=\"650\" y1=\"298\" x2=\"577\" y2=\"301\" stroke=\"#a9743f\" stroke-width=\"4\"/>\n      <g transform=\"translate(618,288) rotate(-18)\">\n        <ellipse cx=\"0\" cy=\"0\" rx=\"17\" ry=\"8\" fill=\"#63b3ed\"/>\n        <polygon points=\"-14,-2 -26,-9 -26,9\" fill=\"#63b3ed\"/>\n        <circle cx=\"9\" cy=\"-2.5\" r=\"1.8\" fill=\"#1a365d\"/>\n      </g>\n      <path d=\"M592,300 L652,300 L643,342 L601,342 Z\" fill=\"#c98d4e\" stroke=\"#a3703a\" stroke-width=\"2.5\"/>\n      <line x1=\"596\" y1=\"312\" x2=\"649\" y2=\"312\" stroke=\"#a3703a\" stroke-width=\"2\"/>\n      <line x1=\"598\" y1=\"324\" x2=\"647\" y2=\"324\" stroke=\"#a3703a\" stroke-width=\"2\"/>\n      <line x1=\"598\" y1=\"336\" x2=\"645\" y2=\"336\" stroke=\"#a3703a\" stroke-width=\"2\"/>\n      <line x1=\"610\" y1=\"301\" x2=\"612\" y2=\"341\" stroke=\"#a3703a\" stroke-width=\"2\"/>\n      <line x1=\"625\" y1=\"301\" x2=\"626\" y2=\"341\" stroke=\"#a3703a\" stroke-width=\"2\"/>\n      <line x1=\"640\" y1=\"301\" x2=\"638\" y2=\"341\" stroke=\"#a3703a\" stroke-width=\"2\"/>\n    </g>\n\n    <!-- ======== 鹈鹕 ======== -->\n    <!-- 尾羽 -->\n    <g class=\"tailWag\" style=\"transform-origin:332px 214px\">\n      <path d=\"M330,196 L296,178 L306,204 L272,200 L300,222 L280,238 L318,236 Z\"\n            fill=\"#eef4f9\" stroke=\"#dbe5ee\" stroke-width=\"3\" stroke-linejoin=\"round\"/>\n    </g>\n\n    <!-- 身体 -->\n    <g>\n      <ellipse cx=\"392\" cy=\"232\" rx=\"82\" ry=\"57\" transform=\"rotate(-9 392 232)\" fill=\"url(#bodyG)\"/>\n      <path d=\"M320,252 Q392,304 462,246 Q430,282 380,282 Q336,276 320,252 Z\" fill=\"#e4edf4\" opacity=\".8\"/>\n      <path d=\"M352,268 q10,14 26,12 M382,278 q10,12 26,8\" stroke=\"#dbe5ee\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/>\n    </g>\n\n    <!-- 颈 -->\n    <path d=\"M430,226 Q466,176 506,152\" fill=\"none\" stroke=\"#fdfefe\" stroke-width=\"30\" stroke-linecap=\"round\"/>\n    <path d=\"M446,232 Q480,190 512,164\" fill=\"none\" stroke=\"#e6eef5\" stroke-width=\"7\" stroke-linecap=\"round\" opacity=\".85\"/>\n\n    <!-- 头部 -->\n    <g class=\"headNod\" style=\"transform-origin:506px 152px\">\n      <circle cx=\"512\" cy=\"146\" r=\"25\" fill=\"#fdfefe\"/>\n      <path d=\"M505,123 q4,-10 12,-8 M516,121 q6,-8 13,-5\" fill=\"none\" stroke=\"#e6eef5\" stroke-width=\"4\" stroke-linecap=\"round\"/>\n      <!-- 喉囊（会张合） -->\n      <g class=\"pouchSq\" style=\"transform-origin:524px 148px\">\n        <path d=\"M524,142 q10,4 4,10 l-2,4 Z\" fill=\"#7a4a1f\"/>\n        <path d=\"M523,151 Q562,212 625,199 Q585,168 526,153 Z\"\n              fill=\"#ffa94d\" stroke=\"#f08c1f\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/>\n      </g>\n      <!-- 上喙 -->\n      <path d=\"M520,137 Q590,146 641,192 Q600,160 519,151 Z\"\n            fill=\"#ffb347\" stroke=\"#e8912e\" stroke-width=\"2.5\" stroke-linejoin=\"round\"/>\n      <path d=\"M540,144 L556,147\" stroke=\"#e8912e\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n      <!-- 眼睛和眉毛 -->\n      <circle cx=\"521\" cy=\"133\" r=\"7\" fill=\"#ffffff\" stroke=\"#dbe5ee\" stroke-width=\"1.5\"/>\n      <circle cx=\"522.5\" cy=\"134\" r=\"3.6\" fill=\"#2f3542\"/>\n      <circle cx=\"524\" cy=\"132.4\" r=\"1.2\" fill=\"#ffffff\"/>\n      <path d=\"M512,122 q9,-5 17,-1\" fill=\"none\" stroke=\"#c9d6e2\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n    </g>\n\n    <!-- 近侧翅膀（搭在车把上） -->\n    <g class=\"wingFlap\" style=\"transform-origin:432px 212px\">\n      <path d=\"M428,213 Q521,194 541,262 Q492,240 436,249 Q418,233 428,213 Z\"\n            fill=\"#eaf1f7\" stroke=\"#d5e1ea\" stroke-width=\"3\" stroke-linejoin=\"round\"/>\n      <path d=\"M447,225 Q497,220 528,248 M444,238 Q486,236 514,255\"\n            fill=\"none\" stroke=\"#d5e1ea\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n    </g>\n\n    <!-- 近侧腿 -->\n    <g class=\"thighR\">\n      <line x1=\"402\" y1=\"288\" x2=\"487.14\" y2=\"330.15\" stroke=\"#ffab3d\" stroke-width=\"13\" stroke-linecap=\"round\"/>\n      <g class=\"shinR\">\n        <line x1=\"487.14\" y1=\"330.15\" x2=\"492\" y2=\"410\" stroke=\"#ffab3d\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n      </g>\n    </g>\n\n    <!-- 近侧曲柄 + 脚踏 + 蹼足 -->\n    <g class=\"crank\" style=\"transform-origin:452px 410px\">\n      <line x1=\"452\" y1=\"410\" x2=\"492\" y2=\"410\" stroke=\"#c3cdd4\" stroke-width=\"9\" stroke-linecap=\"round\"/>\n      <g class=\"pedalC\" style=\"transform-origin:492px 410px\">\n        <rect x=\"478\" y=\"405\" width=\"29\" height=\"10\" rx=\"4.5\" fill=\"#33424e\"/>\n        <path d=\"M472,402 Q489,392 512,400 Q498,413 477,410 Z\" fill=\"#ff9432\"/>\n        <path d=\"M480,405 q10,-4 20,0\" fill=\"none\" stroke=\"#e07f22\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n      </g>\n    </g>\n\n    <!-- 对话气泡 -->\n    <g class=\"bubble\" style=\"transform-origin:600px 90px\">\n      <g transform=\"translate(585,42)\">\n        <polygon points=\"14,42 34,42 2,88\" fill=\"#ffffff\" stroke=\"#cfdeeb\" stroke-width=\"2\"/>\n        <rect x=\"0\" y=\"0\" width=\"206\" height=\"46\" rx=\"15\" fill=\"#ffffff\" stroke=\"#cfdeeb\" stroke-width=\"2.5\"/>\n        <text x=\"103\" y=\"30\" text-anchor=\"middle\" font-size=\"19\" font-weight=\"600\" fill=\"#3f5f7d\">鱼店还有多远呀？</text>\n      </g>\n    </g>\n  </g>\n\n  <!-- 前景草丛 -->\n  <g class=\"grassFG\" fill=\"#3f7d54\"><g transform=\"translate(-240,562) scale(1.0)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(-154,562) scale(0.8)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(-70,562) scale(1.15)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(0,562) scale(1.0)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(86,562) scale(0.8)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(170,562) scale(1.15)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(240,562) scale(1.0)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(326,562) scale(0.8)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(410,562) scale(1.15)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(480,562) scale(1.0)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(566,562) scale(0.8)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(650,562) scale(1.15)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(720,562) scale(1.0)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(806,562) scale(0.8)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(890,562) scale(1.15)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(960,562) scale(1.0)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(1046,562) scale(0.8)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g><g transform=\"translate(1130,562) scale(1.15)\"><path d=\"M0,0 C-4,-14 -14,-20 -18,-30 C-6,-24 -2,-14 0,-6 C2,-16 8,-24 16,-32 C10,-20 6,-12 4,0 Z\"/></g></g>\n</svg>";
-		/** Scoped stylesheet: IK pedaling keyframes plus scene loops. */
-		const PELICAN_CSS = ".dshPelicanBike svg *{transform-box:view-box}\n@keyframes pb_thighPedal{0%{transform:rotate(0deg)}2.78%{transform:rotate(4.97deg)}5.56%{transform:rotate(10.13deg)}8.33%{transform:rotate(15.35deg)}11.11%{transform:rotate(20.46deg)}13.89%{transform:rotate(25.2deg)}16.67%{transform:rotate(29.17deg)}19.44%{transform:rotate(31.89deg)}22.22%{transform:rotate(33.18deg)}25%{transform:rotate(33.37deg)}27.78%{transform:rotate(32.85deg)}30.56%{transform:rotate(31.9deg)}33.33%{transform:rotate(30.65deg)}36.11%{transform:rotate(29.16deg)}38.89%{transform:rotate(27.46deg)}41.67%{transform:rotate(25.53deg)}44.44%{transform:rotate(23.37deg)}47.22%{transform:rotate(20.93deg)}50%{transform:rotate(18.19deg)}52.78%{transform:rotate(15.09deg)}55.56%{transform:rotate(11.6deg)}58.33%{transform:rotate(7.7deg)}61.11%{transform:rotate(3.41deg)}63.89%{transform:rotate(-1.16deg)}66.67%{transform:rotate(-5.82deg)}69.44%{transform:rotate(-10.27deg)}72.22%{transform:rotate(-14.18deg)}75%{transform:rotate(-17.22deg)}77.78%{transform:rotate(-19.18deg)}80.56%{transform:rotate(-19.96deg)}83.33%{transform:rotate(-19.6deg)}86.11%{transform:rotate(-18.18deg)}88.89%{transform:rotate(-15.84deg)}91.67%{transform:rotate(-12.72deg)}94.44%{transform:rotate(-8.96deg)}97.22%{transform:rotate(-4.68deg)}100%{transform:rotate(0deg)}}\n@keyframes pb_shinPedal{0%{transform:rotate(0deg)}2.78%{transform:rotate(-7.39deg)}5.56%{transform:rotate(-14.69deg)}8.33%{transform:rotate(-21.72deg)}11.11%{transform:rotate(-28.22deg)}13.89%{transform:rotate(-33.71deg)}16.67%{transform:rotate(-37.37deg)}19.44%{transform:rotate(-38.23deg)}22.22%{transform:rotate(-35.99deg)}25%{transform:rotate(-31.37deg)}27.78%{transform:rotate(-25.34deg)}30.56%{transform:rotate(-18.55deg)}33.33%{transform:rotate(-11.37deg)}36.11%{transform:rotate(-4.02deg)}38.89%{transform:rotate(3.38deg)}41.67%{transform:rotate(10.72deg)}44.44%{transform:rotate(17.91deg)}47.22%{transform:rotate(24.86deg)}50%{transform:rotate(31.48deg)}52.78%{transform:rotate(37.67deg)}55.56%{transform:rotate(43.28deg)}58.33%{transform:rotate(48.17deg)}61.11%{transform:rotate(52.17deg)}63.89%{transform:rotate(55.09deg)}66.67%{transform:rotate(56.79deg)}69.44%{transform:rotate(57.16deg)}72.22%{transform:rotate(56.17deg)}75%{transform:rotate(53.9deg)}77.78%{transform:rotate(50.46deg)}80.56%{transform:rotate(46.04deg)}83.33%{transform:rotate(40.8deg)}86.11%{transform:rotate(34.9deg)}88.89%{transform:rotate(28.5deg)}91.67%{transform:rotate(21.72deg)}94.44%{transform:rotate(14.64deg)}97.22%{transform:rotate(7.38deg)}100%{transform:rotate(0deg)}}\n@keyframes pb_wheelSpin{to{transform:rotate(360deg)}}\n@keyframes pb_crankSpin{to{transform:rotate(360deg)}}\n@keyframes pb_pedalCtr{to{transform:rotate(-360deg)}}\n@keyframes pb_bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}\n@keyframes pb_shadowPulse{0%,100%{transform:scaleX(1);opacity:.17}50%{transform:scaleX(.93);opacity:.24}}\n@keyframes pb_raysTurn{to{transform:rotate(360deg)}}\n@keyframes pb_cloudDrift{to{transform:translateX(-1750px)}}\n@keyframes pb_hillScroll{to{transform:translateX(-1680px)}}\n@keyframes pb_hillScroll2{to{transform:translateX(-1680px)}}\n@keyframes pb_treeScroll{to{transform:translateX(-300px)}}\n@keyframes pb_dashScroll{to{transform:translateX(-130px)}}\n@keyframes pb_grassScroll{to{transform:translateX(-240px)}}\n@keyframes pb_chainRun{to{stroke-dashoffset:-52}}\n@keyframes pb_nod{0%,100%{transform:rotate(0deg)}25%{transform:rotate(1.6deg)}75%{transform:rotate(-1.2deg)}}\n@keyframes pb_flap{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-3.5deg)}}\n@keyframes pb_tailWag{0%,100%{transform:rotate(0deg)}50%{transform:rotate(3.5deg)}}\n@keyframes pb_squawk{\n    0%,76%{transform:rotate(0deg)}\n    81%{transform:rotate(13deg)}\n    85%{transform:rotate(9deg)}\n    89%{transform:rotate(16deg)}\n    94%,100%{transform:rotate(0deg)}\n  }\n@keyframes pb_bubbleShow{\n    0%,73%{opacity:0;transform:translateY(10px)}\n    79%,90%{opacity:1;transform:translateY(0)}\n    97%,100%{opacity:0;transform:translateY(-6px)}\n  }\n@keyframes pb_whoosh{\n    0%{opacity:0;transform:translateX(20px)}\n    35%{opacity:.75}\n    70%,100%{opacity:0;transform:translateX(-42px)}\n  }\n.dshPelicanBike .riderBob{animation:pb_bob .8s ease-in-out infinite}\n.dshPelicanBike .shadow{transform-box:fill-box;transform-origin:center;animation:pb_shadowPulse .8s ease-in-out infinite}\n.dshPelicanBike .rays{animation:pb_raysTurn 26s linear infinite}\n.dshPelicanBike .cl1{animation:pb_cloudDrift 22s linear infinite;animation-delay:-7s}\n.dshPelicanBike .cl2{animation:pb_cloudDrift 32s linear infinite;animation-delay:-19s}\n.dshPelicanBike .cl3{animation:pb_cloudDrift 15s linear infinite;animation-delay:-3s}\n.dshPelicanBike .hillsFar{animation:pb_hillScroll 24s linear infinite}\n.dshPelicanBike .hillsNear{animation:pb_hillScroll2 12s linear infinite}\n.dshPelicanBike .trees{animation:pb_treeScroll 1.9s linear infinite}\n.dshPelicanBike .roadDash{animation:pb_dashScroll .42s linear infinite}\n.dshPelicanBike .grassFG{animation:pb_grassScroll .75s linear infinite}\n.dshPelicanBike .chainLink{stroke-dasharray:7 6;animation:pb_chainRun .55s linear infinite}\n.dshPelicanBike .wheelSpin{animation:pb_wheelSpin 1.6s linear infinite}\n.dshPelicanBike .crank{animation:pb_crankSpin 1.6s linear infinite}\n.dshPelicanBike .crankFar{animation:pb_crankSpin 1.6s linear infinite;animation-delay:-.8s}\n.dshPelicanBike .pedalC{animation:pb_pedalCtr 1.6s linear infinite}\n.dshPelicanBike .pedalCFar{animation:pb_pedalCtr 1.6s linear infinite;animation-delay:-.8s}\n.dshPelicanBike .thighR,.dshPelicanBike .thighF{transform-origin:402px 288px;animation:pb_thighPedal 1.6s linear infinite}\n.dshPelicanBike .thighF{animation-delay:-.8s}\n.dshPelicanBike .shinR,.dshPelicanBike .shinF{transform-origin:487.14px 330.15px;animation:pb_shinPedal 1.6s linear infinite}\n.dshPelicanBike .shinF{animation-delay:-.8s}\n.dshPelicanBike .headNod{transform-origin:506px 152px;animation:pb_nod .8s ease-in-out infinite}\n.dshPelicanBike .wingFlap{transform-origin:432px 212px;animation:pb_flap .8s ease-in-out infinite}\n.dshPelicanBike .tailWag{transform-origin:332px 214px;animation:pb_tailWag 1.6s ease-in-out infinite}\n.dshPelicanBike .pouchSq{transform-origin:524px 148px;animation:pb_squawk 7s ease-in-out infinite}\n.dshPelicanBike .bubble{transform-origin:700px 80px;animation:pb_bubbleShow 7s ease-out infinite}\n.dshPelicanBike .sl1{animation:pb_whoosh 1.7s linear infinite}\n.dshPelicanBike .sl2{animation:pb_whoosh 1.7s linear infinite;animation-delay:.28s}\n.dshPelicanBike .sl3{animation:pb_whoosh 1.7s linear infinite;animation-delay:.56s}\n@media (prefers-reduced-motion:reduce){.dshPelicanBike svg *{animation-play-state:paused!important}}";
-		//#endregion
-		//#region src/client/pelican/prefs.ts
-		/** localStorage key for the persisted preferences. */
-		const PELICAN_PREFS_STORAGE_KEY = "dsh.wallpaper.pelican.v1";
-		/** Defaults: translucent enough to read the UI above the artwork. */
-		const DEFAULT_PELICAN_PREFS = { opacity: .35 };
-		/** Clamp an incoming opacity into the valid range; non-finite falls back. */
-		function clampOpacity$1(value) {
-			if (typeof value !== "number" || !Number.isFinite(value)) return DEFAULT_PELICAN_PREFS.opacity;
-			return Math.min(1, Math.max(0, value));
-		}
-		function load$1() {
-			try {
-				const raw = localStorage.getItem(PELICAN_PREFS_STORAGE_KEY);
-				if (raw === null) return DEFAULT_PELICAN_PREFS;
-				const parsed = JSON.parse(raw);
-				if (typeof parsed !== "object" || parsed === null) return DEFAULT_PELICAN_PREFS;
-				return { opacity: clampOpacity$1(parsed.opacity) };
-			} catch {
-				return DEFAULT_PELICAN_PREFS;
-			}
-		}
-		function save$1(prefs) {
-			try {
-				localStorage.setItem(PELICAN_PREFS_STORAGE_KEY, JSON.stringify(prefs));
-			} catch {}
-		}
-		let current$1 = load$1();
-		const listeners$1 = /* @__PURE__ */ new Set();
-		/** Read the current preferences. */
-		function getPelicanPrefs() {
-			return current$1;
-		}
-		/**
-		* Merge a patch into the preferences, persist it, and notify readers.
-		* @param patch - fields to change.
-		*/
-		function setPelicanPrefs(patch) {
-			current$1 = {
-				...current$1,
-				...patch.opacity !== void 0 ? { opacity: clampOpacity$1(patch.opacity) } : {}
-			};
-			save$1(current$1);
-			for (const fn of listeners$1) fn();
-		}
-		/**
-		* Subscribe to preference changes.
-		* @param fn - listener invoked after every change.
-		* @returns its disposer.
-		*/
-		function subscribePelicanPrefs(fn) {
-			listeners$1.add(fn);
-			return () => {
-				listeners$1.delete(fn);
-			};
-		}
-		//#endregion
-		//#region \0dsh-css:src/client/pelican/PelicanBikeWallpaper.module.css.mjs
-		const css$6 = ".PelicanBikeWallpaper-module_host{z-index:-1;position:fixed;inset:0;overflow:hidden}.PelicanBikeWallpaper-module_artRoot,.PelicanBikeWallpaper-module_artRoot svg{width:100%;height:100%;display:block}.PelicanBikeWallpaper-module_fade{pointer-events:none;background:linear-gradient(#10182200,#1018229e);height:96px;position:absolute;bottom:0;left:0;right:0}";
-		const tagId$6 = "dsh-wallpapers/PelicanBikeWallpaper.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$6) + "]") === null) {
-			const tag = document.createElement("style");
-			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$6;
-			tag.textContent = css$6;
-			document.head.appendChild(tag);
-		}
-		var PelicanBikeWallpaper_module_css_default = {
-			"artRoot": "PelicanBikeWallpaper-module_artRoot",
-			"fade": "PelicanBikeWallpaper-module_fade",
-			"host": "PelicanBikeWallpaper-module_host"
-		};
-		//#endregion
-		//#region src/client/pelican/PelicanBikeWallpaper.tsx
-		/**
-		* The 鹈鹕骑行 wallpaper component: the generated pure-CSS SVG animation (a
-		* pelican pedaling a bicycle, IK-solved legs baked into keyframes) mounted as
-		* a background layer. Artwork markup and the scoped stylesheet come from the
-		* generator output `art.ts`; regenerate with
-		* `python pelican-bike/build_pelican.py`.
-		*
-		* Visibility follows the wallpaper registry through the same module-level
-		* bridge as the other layers (the registry may hide this layer before the
-		* component ever mounts); hiding sets display:none, which also stops every
-		* CSS animation inside at zero cost. Layer opacity ("壁纸浓度") persists
-		* through prefs.ts and defaults translucent so the conversation stays
-		* readable whether this layer paints above the UI (stock harness) or beneath
-		* it (underlay mode).
-		*
-		* @module dsh-wallpapers/src/client/pelican/PelicanBikeWallpaper
-		*/
-		/** Registry → component visibility bridge; set on mount, read at registration time. */
-		const visibility$2 = {
-			apply: null,
-			desired: true
-		};
-		/** The 鹈鹕骑行 wallpaper entry. */
-		function PelicanBikeWallpaper() {
-			const hostRef = (0, react.useRef)(null);
-			const [opacity, setOpacity] = (0, react.useState)(() => getPelicanPrefs().opacity);
-			(0, react.useEffect)(() => {
-				visibility$2.apply = (on) => {
-					if (hostRef.current !== null) {
-						hostRef.current.style.display = on ? "" : "none";
-						hostRef.current.style.pointerEvents = "none";
-					}
-				};
-				visibility$2.apply(visibility$2.desired);
-				return () => {
-					visibility$2.apply = null;
-				};
-			}, []);
-			(0, react.useEffect)(() => subscribePelicanPrefs(() => {
-				setOpacity(getPelicanPrefs().opacity);
-			}), []);
-			return /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
-				ref: hostRef,
-				className: PelicanBikeWallpaper_module_css_default.host,
-				"aria-hidden": "true",
-				children: [
-					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("style", { children: PELICAN_CSS }),
-					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", {
-						className: `${PelicanBikeWallpaper_module_css_default.artRoot} ${PELICAN_SCOPE}`,
-						dangerouslySetInnerHTML: { __html: PELICAN_SVG },
-						style: { opacity }
-					}),
-					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("div", { className: PelicanBikeWallpaper_module_css_default.fade })
-				]
-			});
-		}
-		//#endregion
-		//#region \0dsh-css:src/client/pelican/PelicanBikeSettings.module.css.mjs
-		const css$5 = ".PelicanBikeSettings-module_card{border:1px solid var(--dsw-alias-border-l1);background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary);text-align:left;border-radius:12px;flex-direction:column;gap:10px;margin:2px 0 8px;padding:12px;font-size:12.5px;display:flex}.PelicanBikeSettings-module_cap{color:var(--dsw-alias-label-tertiary);margin-bottom:4px;font-size:11px;display:block}.PelicanBikeSettings-module_opline{align-items:center;gap:10px;display:flex}.PelicanBikeSettings-module_opline input[type=range]{accent-color:var(--dsw-alias-state-business-primary,#4080ff);flex:1}.PelicanBikeSettings-module_val{font-variant-numeric:tabular-nums;min-width:42px;color:var(--dsw-alias-label-secondary,var(--dsw-alias-label-primary));font-size:12px}.PelicanBikeSettings-module_tip{color:var(--dsw-alias-label-tertiary);margin:0;font-size:11px;line-height:1.6}";
-		const tagId$5 = "dsh-wallpapers/PelicanBikeSettings.module.css";
-		if (typeof document !== "undefined" && document.querySelector("style[data-plugin-css=" + JSON.stringify(tagId$5) + "]") === null) {
-			const tag = document.createElement("style");
-			tag.dataset.plugin = "dsh-wallpapers";
-			tag.dataset.pluginCss = tagId$5;
-			tag.textContent = css$5;
-			document.head.appendChild(tag);
-		}
-		var PelicanBikeSettings_module_css_default = {
-			"cap": "PelicanBikeSettings-module_cap",
-			"card": "PelicanBikeSettings-module_card",
-			"opline": "PelicanBikeSettings-module_opline",
-			"tip": "PelicanBikeSettings-module_tip",
-			"val": "PelicanBikeSettings-module_val"
-		};
-		//#endregion
-		//#region src/client/pelican/PelicanBikeSettings.tsx
-		/**
-		* The 鹈鹕骑行 settings card, rendered by the 壁纸 section under the selected
-		* row: one persisted opacity slider ("壁纸浓度") feeding prefs.ts live — the
-		* artwork behind (or above) the open panel updates as the slider moves.
-		*
-		* @module dsh-wallpapers/src/client/pelican/PelicanBikeSettings
-		*/
-		/** The settings card for the 鹈鹕骑行 wallpaper. */
-		function PelicanBikeSettings() {
-			const [opacity, setOpacityState] = (0, react.useState)(() => getPelicanPrefs().opacity);
-			(0, react.useEffect)(() => subscribePelicanPrefs(() => {
-				setOpacityState(getPelicanPrefs().opacity);
-			}), []);
-			return /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
-				className: PelicanBikeSettings_module_css_default.card,
-				children: [
-					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("span", {
-						className: PelicanBikeSettings_module_css_default.cap,
-						children: "壁纸浓度"
-					}),
-					/* @__PURE__ */ (0, react_jsx_runtime.jsxs)("div", {
-						className: PelicanBikeSettings_module_css_default.opline,
-						children: [/* @__PURE__ */ (0, react_jsx_runtime.jsx)("input", {
-							type: "range",
-							min: "0",
-							max: "1",
-							step: "0.05",
-							value: String(opacity),
-							onChange: (e) => {
-								setPelicanPrefs({ opacity: Number(e.target.value) });
-							}
-						}), /* @__PURE__ */ (0, react_jsx_runtime.jsxs)("span", {
-							className: PelicanBikeSettings_module_css_default.val,
-							children: [Math.round(opacity * 100), "%"]
-						})]
-					}),
-					/* @__PURE__ */ (0, react_jsx_runtime.jsx)("p", {
-						className: PelicanBikeSettings_module_css_default.tip,
-						children: "浓度越低界面文字越清晰；「壁纸衬底」开启时壁纸整体垫在栏目后面，可适当调高。"
 					})
 				]
 			});
@@ -5998,8 +5790,7 @@ void main() {
 		* Browser half of dsh-wallpapers: the wallpaper registry (a page-local
 		* service background layers register into) plus its Settings section, the
 		* thinking-orb canvas, the GARGANTUA black-hole layer, the Kerr-Newman
-		* black-hole layer, the generated pure-CSS 鹈鹕骑行 layer (IK-pedal SVG
-		* artwork), and the 本地媒体 layer (one local image/video, or a folder
+		* black-hole layer, and the 本地媒体 layer (one local image/video, or a folder
 		* rotation served by the host-half routes). Selection persists in localStorage;
 		* wallpapers that register while not selected are hidden through their own
 		* `show`/`hide` callbacks (a hidden layer pauses its render loop), so no
@@ -6059,12 +5850,12 @@ void main() {
 				label: "GARGANTUA 黑洞",
 				note: "引力透镜光线追踪 · WebGL2",
 				show: () => {
-					visibility$4.desired = true;
-					visibility$4.apply?.(true);
+					visibility$3.desired = true;
+					visibility$3.apply?.(true);
 				},
 				hide: () => {
-					visibility$4.desired = false;
-					visibility$4.apply?.(false);
+					visibility$3.desired = false;
+					visibility$3.apply?.(false);
 				}
 			});
 			ctx.effect(() => stopBlackhole);
@@ -6079,45 +5870,23 @@ void main() {
 				label: "Kerr–Newman 黑洞",
 				note: "KN 度规哈密顿光追 · 体积吸积盘",
 				show: () => {
-					visibility$3.desired = true;
-					visibility$3.apply?.(true);
-				},
-				hide: () => {
-					visibility$3.desired = false;
-					visibility$3.apply?.(false);
-				}
-			});
-			ctx.effect(() => stopKerrNewman);
-			{
-				const applyUnderlay = () => {
-					const id = registry.current();
-					if (id === "pelican-bike" || id === "local-media") enableUnderlay();
-					else disableUnderlay();
-				};
-				applyUnderlay();
-				ctx.effect(() => registry.subscribe(applyUnderlay));
-			}
-			ctx.slots.inject("shell.overlay", () => ctx.slots.register({
-				name: "shell.overlay",
-				id: "pelican-bike-wallpaper",
-				order: -1800,
-				label: "鹈鹕骑行壁纸"
-			}, PelicanBikeWallpaper));
-			const stopPelicanBike = registry.register({
-				id: "pelican-bike",
-				label: "鹈鹕骑行",
-				note: "SVG 两连杆逆解踩踏 · 纯 CSS 动画",
-				show: () => {
 					visibility$2.desired = true;
 					visibility$2.apply?.(true);
 				},
 				hide: () => {
 					visibility$2.desired = false;
 					visibility$2.apply?.(false);
-				},
-				renderSettings: () => (0, react.createElement)(PelicanBikeSettings)
+				}
 			});
-			ctx.effect(() => stopPelicanBike);
+			ctx.effect(() => stopKerrNewman);
+			{
+				const applyUnderlay = () => {
+					if (registry.current() === "local-media") enableUnderlay();
+					else disableUnderlay();
+				};
+				applyUnderlay();
+				ctx.effect(() => registry.subscribe(applyUnderlay));
+			}
 			ctx.slots.inject("shell.overlay", () => ctx.slots.register({
 				name: "shell.overlay",
 				id: "local-media-wallpaper",

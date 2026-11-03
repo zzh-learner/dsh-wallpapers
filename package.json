@@ -1,7 +1,7 @@
 {
   "name": "dsh-wallpapers",
   "version": "0.1.0",
-  "description": "DeepSeek Harness wallpapers: the wallpaper registry (Settings section + background-layer service), the thinking-orb canvas, the GARGANTUA black-hole WebGL2 layer, the generated pure-CSS pelican-bike SVG layer, the local-media layer (image / video / folder rotation), and the orbActivity session projection that feeds them · DSH 壁纸：思考球体 + 鹈鹕骑行 + 黑洞 + 本地媒体 + 壁纸注册表",
+  "description": "DeepSeek Harness wallpapers: the wallpaper registry (Settings section + background-layer service), the thinking-orb canvas, the GARGANTUA black-hole WebGL2 layer, the local-media layer (image / video / folder rotation), and the orbActivity session projection that feeds them · DSH 壁纸：思考球体 + 黑洞 + 本地媒体 + 壁纸注册表",
   "type": "module",
   "license": "MIT",
   "main": "lib/index.js",
