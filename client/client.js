@@ -5626,7 +5626,7 @@ void main() {
 			`[data-shell-overlay]{z-index:0 !important}`,
 			`[${FRAME_ATTR}]{background:transparent !important}`,
 			`[${COL_ATTR}]{position:relative;z-index:5;background:transparent !important}`,
-			`[${SEAT_ATTR}]{background:linear-gradient(180deg, transparent 0px, rgba(21, 21, 23, 0.45) 36px) !important}`,
+			`[${SEAT_ATTR}]{background:transparent !important}`,
 			`body[data-ds-dark-theme]{--dsw-specific-menu:#30313666;--dsw-menu-backdrop-filter:blur(28px) saturate(150%)}`
 		].join("\n");
 		let observer = null;

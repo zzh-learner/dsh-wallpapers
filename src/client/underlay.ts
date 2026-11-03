@@ -33,9 +33,10 @@ const UNDERLAY_CSS = [
   `[${FRAME_ATTR}]{background:transparent !important}`,
   `[${COL_ATTR}]{position:relative;z-index:5;background:transparent !important}`,
   // The composer's sticky seat fades to a FULLY OPAQUE bg-base band; over a
-  // wallpaper that reads as a black slab under the message box. Slim it to a
-  // translucent readability fade instead of deleting it outright.
-  `[${SEAT_ATTR}]{background:linear-gradient(180deg, transparent 0px, rgba(21, 21, 23, 0.45) 36px) !important}`,
+  // wallpaper that reads as a black slab under the message box. Remove the
+  // fade entirely while underlay is on (user preference: no darkening there
+  // at all — scrolling content may slide under the composer card).
+  `[${SEAT_ATTR}]{background:transparent !important}`,
   // Surface slimming: with a wallpaper behind the UI, the theme's near-opaque
   // menu/composer fill (#303136f0, 94%) reads as a big black slab over bright
   // wallpapers. While underlay is on, thin the dark-theme surface fill and
