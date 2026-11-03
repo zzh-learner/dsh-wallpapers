@@ -5533,7 +5533,7 @@ void main() {
 		function createWallpaperRegistry() {
 			const layers = /* @__PURE__ */ new Map();
 			const listeners = /* @__PURE__ */ new Set();
-			let selected = readStoredSelection() ?? "gargantua";
+			let selected = readStoredSelection() ?? "none";
 			const notify = () => {
 				for (const fn of listeners) fn();
 			};

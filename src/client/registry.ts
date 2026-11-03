@@ -84,9 +84,9 @@ function writeStoredSelection(id: string): void {
 export function createWallpaperRegistry(): WallpaperRegistry {
   const layers = new Map<string, StoredLayer>()
   const listeners = new Set<() => void>()
-  // Default to the blackhole wallpaper when nothing is persisted yet; an
-  // unknown persisted id (a removed plugin) falls back at first list().
-  let selected = readStoredSelection() ?? 'gargantua'
+  // Default to no wallpaper when nothing is persisted yet; an unknown
+  // persisted id (a removed plugin) falls back at first list().
+  let selected = readStoredSelection() ?? 'none'
 
   const notify = (): void => {
     for (const fn of listeners) fn()
