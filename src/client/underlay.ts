@@ -29,6 +29,13 @@ const UNDERLAY_CSS = [
   `${'[data-shell-overlay]'}{z-index:0 !important}`,
   `[${FRAME_ATTR}]{background:transparent !important}`,
   `[${COL_ATTR}]{position:relative;z-index:5}`,
+  // Surface slimming: with a wallpaper behind the UI, the theme's near-opaque
+  // menu/composer fill (#303136f0, 94%) reads as a big black slab over bright
+  // wallpapers. While underlay is on, thin the dark-theme surface fill and
+  // soften its blur so the wallpaper shows through; light theme already uses
+  // a pale fill and needs no change. Keyed off the theme's own custom
+  // properties — no hashed class names involved.
+  `body[data-ds-dark-theme]{--dsw-specific-menu:#30313666;--dsw-menu-backdrop-filter:blur(28px) saturate(150%)}`,
 ].join('\n')
 
 let observer: MutationObserver | null = null

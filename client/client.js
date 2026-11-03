@@ -5623,7 +5623,8 @@ void main() {
 			`#${STYLE_ID}[data-off]{display:none}`,
 			`[data-shell-overlay]{z-index:0 !important}`,
 			`[${FRAME_ATTR}]{background:transparent !important}`,
-			`[${COL_ATTR}]{position:relative;z-index:5}`
+			`[${COL_ATTR}]{position:relative;z-index:5}`,
+			`body[data-ds-dark-theme]{--dsw-specific-menu:#30313666;--dsw-menu-backdrop-filter:blur(28px) saturate(150%)}`
 		].join("\n");
 		let observer = null;
 		let rafHandle = 0;
